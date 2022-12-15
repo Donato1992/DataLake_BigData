@@ -1,0 +1,261 @@
+import sys
+import logging
+import os
+import csv
+import pandas as pd
+from itertools import zip_longest
+import math
+import json
+from datasketch import MinHashLSHEnsemble, MinHash
+import time
+from datetime import datetime
+import rdflib
+import re
+import asyncio
+
+#Debugging
+if os.path.exists("test_graph_nofile_dict.log"):
+	os.remove("test_graph_nofile_dict.log")
+logging.basicConfig(filename='test_graph_nofile_dict.log',level=logging.DEBUG)
+
+
+
+
+DEFAULT_DIR = "datasets/"
+DEFAULT_DIMENSIONS_DIR="dimensions/"
+DEFAULT_COD_DIR_T="dimensions/filter/"
+DEFAULT_COD_DIR = "_cod_lists/"
+DEFAULT_DIM_CHECK="filter.csv"
+GEO_CONTINENT="./dimensions/Geo.continent"
+DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
+print(DEFAULT_ENTRY_FILE)
+NUM_PERM = 512
+NUM_PART = 32
+THRESHOLD = 0.8
+DICTIONARY_CONTINENT={}
+DICTIONARY_FREQUENCY={}
+DATA=[]
+LABEL=[]
+CONTINET_PERCENT=pd.DataFrame([],
+	columns=['Country', 'Percent'])
+GRAPH = rdflib.Graph()
+GRAPH.parse("knowladge_graph.ttl",format="turtle")
+
+def map_file(mydir, filename, suffix):
+	print("Initializing the mapper...")
+	# Create an LSH Ensemble index with threshold and number of partition settings.
+	lshensemble = MinHashLSHEnsemble(threshold=THRESHOLD, num_perm=NUM_PERM, num_part=NUM_PART)
+
+	# Initialize LSHEnsemble
+	# RICORDATI DI SPOSTARE EVENTUALMENTE LE MIE DIMENSIONI GEO.CONTINENT IN UN ALTRA CARTELLA
+	
+	q_result=GRAPH.query("""SELECT ?x ?y  WHERE {?x ?z ?y.FILTER(?z=property:inLevel && ?x!=member:month && ?x!=member:year)}""")
+	my_dimension=[]
+	index=[]
+	for row in q_result:
+		my_dimension.append(str(row.y).split("#")[1])
+
+	my_dimension=list(set(my_dimension))
+
+	for x in my_dimension:
+		m = MinHash(num_perm=NUM_PERM)
+		contatore=0
+		for row in q_result:
+			# Create the MinHash for the i-th level
+			# encoding = 'ISO-8859-1' in caso estremo ma meglio utilizzare utf-8 in quanto ha molto più caratteri
+			dimension=str(row.y).split("#")[1]
+			content=str(row.x).split("#")[1]
+			# Update the MinHash
+			if x==dimension:
+				contatore=contatore+1
+				m.update_batch([content.encode('utf8')])
+			#for d in content:
+			#	m.update(d.encode('utf8'))
+			#print(index)
+			#print(f"{row.x}")
+		index.append(tuple((x,m,contatore)))
+		
+	lshensemble.index(index)		
+
+	
+
+	# Read the entry for the input file
+	print("Reading source metadata...")
+	with open(DEFAULT_ENTRY_FILE,"r") as entryF:
+		#print(DEFAULT_ENTRY_FILE)
+		entries_decoded=json.load(entryF)
+		entry = entries_decoded[mydir+filename+"."+suffix]
+		#for each column of the data source
+		durationsHashing=[]
+		durationsQuery=[]
+		for c in range(entry["num_columns"]):
+			
+			#print(entry["num_columns"])
+			m1 = MinHash(NUM_PERM)
+			with open(DEFAULT_COD_DIR+filename+"."+str(c),"r") as col:
+				#print(DEFAULT_COD_DIR+filename+"."+str(c))
+				startTimeHashing = time.time()
+				values=col.read().split("\n")
+				valori=set(values)
+				#print("Vediamo"+str(len(valori)))
+				for v in valori:
+					m1.update(v.encode('utf8'))
+				#m1.update_batch([s.encode('utf8') for s in values])
+				durationHashing = time.time() - startTimeHashing
+				durationsHashing.append(durationHashing)
+				startTimeQuery = time.time()
+				for mapping in lshensemble.query(m1, len(valori)):		
+					print("Column "+str(c)+" -> "+mapping)
+					logging.debug("Column "+str(c)+" -> "+mapping)
+					colums_joinable(mapping,values,filename)
+					asyncio.run(frequency(values,mapping))
+				with open(filename+'_json_data.json', 'w') as outfile:
+					json.dump(DICTIONARY_FREQUENCY, outfile)
+				durationQuery = time.time() - startTimeQuery
+				durationsQuery.append(durationQuery)
+		sum_durations = sum(durationsHashing)
+		print("Sum durations hashing = "+str(sum_durations))
+		print("Avg durations hashing = "+str((sum_durations/len(durationsHashing))))
+		sum_durations_query = sum(durationsQuery)
+		print("Sum durations query = "+str(sum_durations_query))
+		print("Avg durations query = "+str((sum_durations_query/len(durationsQuery))))
+		logging.debug(DICTIONARY_FREQUENCY)
+
+		
+def read_entries():
+	with open(DEFAULT_ENTRY_FILE,"r") as f:
+		data_decoded = json.load(f)
+		print(data_decoded.keys())
+
+
+def main():
+	# Map single dataset
+	print(sys.argv[1])
+	if (len(sys.argv)==2 and sys.argv[1]=="list"):
+		#List all sources
+		with open(DEFAULT_ENTRY_FILE,"r") as f:
+			data_decoded=json.load(f)
+			for k in data_decoded.keys():
+				print(k)
+	elif (len(sys.argv)==3 and sys.argv[1]=="source"):
+		if(os.path.exists(sys.argv[2])):
+			path = sys.argv[2]
+			mydir=path[:path.rfind("/")+1]
+			filename=path[path.rfind("/")+1:path.rfind(".")]
+			suffix=path[path.rfind(".")+1:]
+			map_file(mydir,filename,suffix)
+		else:
+			print("Error: no such file.")
+	else:
+		print("Error: invalid call. Usage: mapper [list | source sourcename]")
+
+def colums_joinable(colum_ok,values,filename):
+	with open(DEFAULT_COD_DIR_T+str(colum_ok+"."+filename),"w",encoding="UTF-8") as f:
+		for s in values:
+			if isinstance(s,str) or not math.isnan(s):
+				f.write(str(s)+"\n")
+	f.close()
+
+
+async def frequency(values,type_dimension):
+	freq = {}
+	dizionario_key={}
+	# We calculate the percentage for the single year only
+	dataframe_continent=continent_analysis(CONTINET_PERCENT)
+	if (type_dimension=="day"):
+		for item in values:
+			date_str = str(item)
+			if(date_str!=""):
+				now = datetime.strptime(date_str, '%Y-%m-%d').date()
+				year = now.strftime("%Y")
+				year=int(year)
+				if (year in freq):
+					freq[year] += 1
+				else:
+					freq[year] = 1
+		
+		for key, value in freq.items():
+			temp=[]
+			dimension_colum=len(values)
+			percentual_time=str(round(value/dimension_colum*100, 2))+"%"
+			print ("% d : % d : %s"%(key, value, percentual_time))
+			temp.append([value,str(str(percentual_time)+"%")])
+			dizionario_key[key]=dict(temp)
+		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)
+	else:
+		for item in values:
+			if(item!=""):
+				if (item in freq):
+					freq[item] += 1
+
+				else:
+					freq[item] = 1
+
+		numeber_sum=0
+		q_result=GRAPH.query("""SELECT ?x ?y WHERE {?x property:rollup ?y. ?x property:inLevel level:country.} ORDER BY ASC(?X)""")
+		
+		#In this line I fill the dictionary
+		for row in q_result:
+			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
+
+		
+		#dizionario[type_dimension]=dict(freq)
+		for key, value in freq.items():
+			temp=[]
+			dimension_colum=len(values)
+			number_percent=round(float(value)/dimension_colum*100, 2)
+			numeber_sum=numeber_sum+number_percent
+			percentual_value=str(number_percent)+"%"
+			if type_dimension=="country":
+				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
+				await task
+			
+			print ("% s : % d : %s"%(key, value,percentual_value))
+			temp.append([value,str(str(percentual_value)+"%")])
+			dizionario_key[key]=dict(temp)
+		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
+		# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
+		if type_dimension=="country":
+			logging.debug(dataframe_continent)
+			print(dataframe_continent)
+			DICTIONARY_FREQUENCY["rollup"]=dict(dataframe_continent.to_dict())
+
+def continent_analysis(dataframe):
+	read_continent = open(GEO_CONTINENT, "r")
+	dataframe_new=pd.DataFrame([],
+	columns=['Country', 'Percent'])
+	for x in read_continent:
+		dataframe_new.loc[len(dataframe_new),['Country','Percent']]=[x.splitlines()[0],[]]
+	frames=[dataframe,dataframe_new]
+	result=pd.concat(frames,ignore_index=True)
+	return result
+
+
+async def all_continent(country,dataframe,percent_value):
+	
+	country=re.sub('[^0-9a-zA-Z]', '_', country)
+	
+	try:
+		if DICTIONARY_CONTINENT[country]:
+			index=0
+			for index_continent in range(len(dataframe.index)):
+				if DICTIONARY_CONTINENT[country]==dataframe.loc[index_continent,"Country"]:
+					index=index_continent
+			if dataframe.loc[index,"Percent"]==[]:
+					percent_sum=round(0.00+percent_value,2)
+					dataframe.loc[index,"Percent"]=percent_sum
+			else:
+				percent_sum=round(float(dataframe.loc[index,"Percent"])+percent_value,2)
+				dataframe.loc[index,"Percent"]=percent_sum
+
+	except KeyError:
+		
+		print("Non esiste-->"+str(country)+"nel nostro Grafo")
+		logging.debug("NON ESISTE-->"+str(country))
+	
+		#Print used only to see the results of the query	
+		#print(f" {row.x}")		
+	
+	
+if __name__ == "__main__":
+    main()
