@@ -23,7 +23,6 @@ logging.basicConfig(filename='test_graph_nofile_dict.log',level=logging.DEBUG)
 
 DEFAULT_DIR = "datasets/"
 DEFAULT_DIMENSIONS_DIR="dimensions/"
-DEFAULT_COD_DIR_T="dimensions/filter/"
 DEFAULT_COD_DIR = "_cod_lists/"
 DEFAULT_DIM_CHECK="filter.csv"
 GEO_CONTINENT="./dimensions/Geo.continent"
@@ -107,7 +106,6 @@ def map_file(mydir, filename, suffix):
 				for mapping in lshensemble.query(m1, len(valori)):		
 					print("Column "+str(c)+" -> "+mapping)
 					logging.debug("Column "+str(c)+" -> "+mapping)
-					colums_joinable(mapping,values,filename)
 					asyncio.run(frequency(values,mapping))
 				with open(filename+'_json_data.json', 'w') as outfile:
 					json.dump(DICTIONARY_FREQUENCY, outfile)
@@ -148,14 +146,6 @@ def main():
 			print("Error: no such file.")
 	else:
 		print("Error: invalid call. Usage: mapper [list | source sourcename]")
-
-def colums_joinable(colum_ok,values,filename):
-	with open(DEFAULT_COD_DIR_T+str(colum_ok+"."+filename),"w",encoding="UTF-8") as f:
-		for s in values:
-			if isinstance(s,str) or not math.isnan(s):
-				f.write(str(s)+"\n")
-	f.close()
-
 
 async def frequency(values,type_dimension):
 	freq = {}

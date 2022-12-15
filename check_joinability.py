@@ -13,7 +13,7 @@ if os.path.exists("check_joinability.log"):
 	os.remove("check_joinability.log")
 logging.basicConfig(filename='check_joinability.log',level=logging.DEBUG)
 
-DEFAULT_DIR = "./DATALAKEdatasets/"
+DEFAULT_DIR = "datasets/"
 DEFAULT_DIMENSIONS_DIR="dimensions/"
 DEFAULT_COD_DIR = "_cod_lists/"
 DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
