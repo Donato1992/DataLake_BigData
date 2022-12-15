@@ -50,8 +50,14 @@ def main():
 	df3_total=df3[list_df3[0]].astype(str) + " " + df3[list_df3[1]].astype(str)
 	df5_total=df5[list_df5[1]].astype(str) + " " + df5[list_df5[0]].astype(str)
 
-	print("SONO QUI")
+	print("SONO DF1")
+	logging.debug("DF1")
 	logging.debug(df1_total)
+	logging.debug("DF3")
+	logging.debug(df3_total)
+	logging.debug("DF5")
+	logging.debug(df5_total)
+	
 	print(df1_total)
 	
 	start = time.time()
