@@ -7,6 +7,8 @@ from datasketch import MinHashLSHEnsemble, MinHash
 import time
 import logging
 
+
+#Commento Nuovo
 if os.path.exists("check_joinability.log"):
 	os.remove("check_joinability.log")
 logging.basicConfig(filename='check_joinability.log',level=logging.DEBUG)
