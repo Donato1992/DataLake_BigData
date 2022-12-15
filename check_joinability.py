@@ -117,6 +117,8 @@ def main():
 	print("Hashing time:"+str(hashing_time))	
 	print("Querying time:"+str(querying_time))	
 	print("Total time:"+str(hashing_time + querying_time))	
+
+	
 	
 			
 # Speciale variabile per poter far eseguire lo script
