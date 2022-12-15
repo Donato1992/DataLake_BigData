@@ -27,7 +27,7 @@ def main():
 	s3 = "datasets/ecdc_cases.csv"
 	s5 = "datasets/covid-hospitalizations.csv"
 
-	#Qua sotto mi prendo le colonne che hanno la dato e le iso. Naturalmente le colonne le conosco di default	
+	#Qua sotto mi prendo le colonne che hanno la data e le iso_3. Naturalmente le colonne le conosco di default	
 	c1 = [1,11]
 	c3 = [0,8]
 	c5 = [1,2]
@@ -39,7 +39,7 @@ def main():
 	print("\treading files")
 	#Setting to see all rows of the dataframe
 	pd.set_option('display.max_rows', None)	
-	
+
 	df1 = pd.read_csv(s1, dtype='unicode',usecols=c1)
 	list_df1 = list(df1)
 	df3 = pd.read_csv(s3, dtype='unicode',usecols=c3)
