@@ -27,6 +27,7 @@ DEFAULT_COD_DIR = "_cod_lists/"
 DEFAULT_DIM_CHECK="filter.csv"
 GEO_CONTINENT="./dimensions/Geo.continent"
 DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
+COLUMS_JOINABLE="./joinable.json"
 print(DEFAULT_ENTRY_FILE)
 NUM_PERM = 512
 NUM_PART = 32
@@ -105,10 +106,14 @@ def map_file(mydir, filename, suffix):
 				startTimeQuery = time.time()
 				for mapping in lshensemble.query(m1, len(valori)):		
 					print("Column "+str(c)+" -> "+mapping)
+					colums_joinable(mapping,filename,c)
 					logging.debug("Column "+str(c)+" -> "+mapping)
 					asyncio.run(frequency(values,mapping))
-				with open(filename+'_json_data.json', 'w') as outfile:
-					json.dump(DICTIONARY_FREQUENCY, outfile)
+				with open(filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
+					json.dump(DICTIONARY_FREQUENCY, outfile, 
+                        indent=4,  
+                        separators=(',',': '))
+			
 				durationQuery = time.time() - startTimeQuery
 				durationsQuery.append(durationQuery)
 		sum_durations = sum(durationsHashing)
@@ -141,7 +146,14 @@ def main():
 			mydir=path[:path.rfind("/")+1]
 			filename=path[path.rfind("/")+1:path.rfind(".")]
 			suffix=path[path.rfind(".")+1:]
-			map_file(mydir,filename,suffix)
+			if os.path.exists(COLUMS_JOINABLE):
+				
+				map_file(mydir,filename,suffix)
+			else:
+				with open(COLUMS_JOINABLE, 'w') as f_json:
+					print("The json file is created")
+				f_json.close()
+				map_file(mydir,filename,suffix)
 		else:
 			print("Error: no such file.")
 	else:
@@ -202,7 +214,7 @@ async def frequency(values,type_dimension):
 			
 			print ("% s : % d : %s"%(key, value,percentual_value))
 			temp.append([value,str(str(percentual_value)+"%")])
-			dizionario_key[key]=dict(temp)
+			dizionario_key[re.sub('[^0-9a-zA-Z]', '_', key)]=dict(temp)
 		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
 		# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
 		if type_dimension=="country":
@@ -245,6 +257,43 @@ async def all_continent(country,dataframe,percent_value):
 	
 		#Print used only to see the results of the query	
 		#print(f" {row.x}")		
+
+
+def colums_joinable(dimension,dataset,colum):
+	dictObj = []
+ 
+	# Check if file exists
+	if os.path.isfile(COLUMS_JOINABLE) is False:
+		raise Exception("File not found")
+	
+	# Read JSON file
+	with open(COLUMS_JOINABLE) as fp:
+		try:
+			dictObj = json.load(fp)
+		except:
+			dictObj=dict()
+		print("File Json Empty")
+
+	if bool(dictObj):
+		try:
+			if dictObj[dimension]:
+				dictObj[dimension].update({dataset: colum})
+		except:
+			dictObj[dimension]=({dataset: colum})
+
+	else:
+		dictObj[dimension]=({dataset: colum})
+
+	
+	# Verify updated dict
+	print(dictObj)
+	
+	with open(COLUMS_JOINABLE, 'w', encoding="utf-8") as json_file:
+		json.dump(dictObj, json_file, 
+							indent=4,  
+							separators=(',',': '))
+	
+	print('Successfully written to the JSON file')
 	
 	
 if __name__ == "__main__":

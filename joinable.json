@@ -1,0 +1,34 @@
+{
+    "day": {
+        "bing_covid-19_data": 1,
+        "covid-hospitalizations": 2,
+        "covid_policy_tracker": 2,
+        "covid_tracking": 0,
+        "ecdc_cases": 13
+    },
+    "iso2": {
+        "bing_covid-19_data": 10,
+        "covid_policy_tracker": 36,
+        "ecdc_cases": 12
+    },
+    "iso3": {
+        "bing_covid-19_data": 11,
+        "covid_policy_tracker": 1,
+        "ecdc_cases": 8
+    },
+    "country": {
+        "bing_covid-19_data": 12,
+        "covid-hospitalizations": 0,
+        "ecdc_cases": 6
+    },
+    "region": {
+        "bing_covid-19_data": 13
+    },
+    "iso_region": {
+        "bing_covid-19_data": 14,
+        "covid_tracking": 28
+    },
+    "continent": {
+        "ecdc_cases": 10
+    }
+}
