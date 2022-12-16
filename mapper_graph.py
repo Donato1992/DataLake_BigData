@@ -14,9 +14,10 @@ import re
 import asyncio
 
 #Debugging
-if os.path.exists("test_graph_nofile_dict.log"):
-	os.remove("test_graph_nofile_dict.log")
-logging.basicConfig(filename='test_graph_nofile_dict.log',level=logging.DEBUG)
+LOG_FILE='test_graph_nofile_dict.log'
+if os.path.exists(LOG_FILE):
+	os.remove(LOG_FILE)
+logging.basicConfig(filename=LOG_FILE,level=logging.DEBUG)
 
 
 
@@ -47,7 +48,6 @@ def map_file(mydir, filename, suffix):
 	lshensemble = MinHashLSHEnsemble(threshold=THRESHOLD, num_perm=NUM_PERM, num_part=NUM_PART)
 
 	# Initialize LSHEnsemble
-	# RICORDATI DI SPOSTARE EVENTUALMENTE LE MIE DIMENSIONI GEO.CONTINENT IN UN ALTRA CARTELLA
 	
 	q_result=GRAPH.query("""SELECT ?x ?y  WHERE {?x ?z ?y.FILTER(?z=property:inLevel && ?x!=member:month && ?x!=member:year)}""")
 	my_dimension=[]
@@ -59,7 +59,7 @@ def map_file(mydir, filename, suffix):
 
 	for x in my_dimension:
 		m = MinHash(num_perm=NUM_PERM)
-		contatore=0
+		counter=0
 		for row in q_result:
 			# Create the MinHash for the i-th level
 			# encoding = 'ISO-8859-1' in caso estremo ma meglio utilizzare utf-8 in quanto ha molto più caratteri
@@ -67,13 +67,13 @@ def map_file(mydir, filename, suffix):
 			content=str(row.x).split("#")[1]
 			# Update the MinHash
 			if x==dimension:
-				contatore=contatore+1
+				counter=counter+1
 				m.update_batch([content.encode('utf8')])
 			#for d in content:
 			#	m.update(d.encode('utf8'))
 			#print(index)
 			#print(f"{row.x}")
-		index.append(tuple((x,m,contatore)))
+		index.append(tuple((x,m,counter)))
 		
 	lshensemble.index(index)		
 
@@ -147,7 +147,6 @@ def main():
 			filename=path[path.rfind("/")+1:path.rfind(".")]
 			suffix=path[path.rfind(".")+1:]
 			if os.path.exists(COLUMS_JOINABLE):
-				
 				map_file(mydir,filename,suffix)
 			else:
 				with open(COLUMS_JOINABLE, 'w') as f_json:

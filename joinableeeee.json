@@ -1,0 +1,14 @@
+{
+    "rollup": {
+        "age": {
+            "Sally": 50,
+            "Mary": 40,
+            "John": 30
+        },
+        "qualified": {
+            "Sally": true,
+            "Mary": false,
+            "John": false
+        }
+    }
+}
