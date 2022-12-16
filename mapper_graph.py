@@ -38,7 +38,9 @@ DICTIONARY_FREQUENCY={}
 DATA=[]
 LABEL=[]
 CONTINET_PERCENT=pd.DataFrame([],
-	columns=['Country', 'Percent'])
+	[],
+	columns=['Percent']
+	)
 GRAPH = rdflib.Graph()
 GRAPH.parse("knowladge_graph.ttl",format="turtle")
 
@@ -193,11 +195,24 @@ async def frequency(values,type_dimension):
 					freq[item] = 1
 
 		numeber_sum=0
-		q_result=GRAPH.query("""SELECT ?x ?y WHERE {?x property:rollup ?y. ?x property:inLevel level:country.} ORDER BY ASC(?X)""")
-		
-		#In this line I fill the dictionary
-		for row in q_result:
-			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
+		if type_dimension=="country":
+			q_result=GRAPH.query("""SELECT ?x ?y WHERE {?x property:rollup ?y. ?x property:inLevel level:country.} ORDER BY ASC(?X)""")
+			#In this line I fill the dictionary
+			for row in q_result:
+				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
+		if type_dimension=="iso2" or type_dimension=="iso3":
+			q_result=GRAPH.query("""SELECT ?y ?z ?x WHERE {?x property:refer_to ?y. ?x property:inLevel level:"""+str(type_dimension)+""". ?y property:rollup ?z} ORDER BY ASC(?X)""")
+			#In this line I fill the dictionary
+			for row in q_result:
+				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.z).split("#")[1]
+		if type_dimension=="iso_region":
+			q_result=GRAPH.query("""SELECT ?x ?k WHERE{?x property:inLevel level:iso_region. ?x property:refer_to ?y. ?y property:rollup ?z. ?z property:rollup ?k} ORDER BY ASC(?X)""")
+			#In this line I fill the dictionary
+			for row in q_result:
+				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
+		logging.debug(len(freq))
+		logging.debug(len(DICTIONARY_CONTINENT))
+		logging.debug(DICTIONARY_CONTINENT)
 
 		
 		#dizionario[type_dimension]=dict(freq)
@@ -207,47 +222,55 @@ async def frequency(values,type_dimension):
 			number_percent=round(float(value)/dimension_colum*100, 2)
 			numeber_sum=numeber_sum+number_percent
 			percentual_value=str(number_percent)+"%"
+
 			if type_dimension=="country":
+				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
+				await task
+			if type_dimension=="iso2":
+				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
+				await task
+			if type_dimension=="iso3":
+				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
+				await task
+			if type_dimension=="iso_region":
 				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
 				await task
 			
 			print ("% s : % d : %s"%(key, value,percentual_value))
 			temp.append([value,str(str(percentual_value)+"%")])
-			dizionario_key[re.sub('[^0-9a-zA-Z]', '_', key)]=dict(temp)
+			dizionario_key[re.sub('[^0-9a-zA-Z]-', '_', key)]=dict(temp)
 		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
 		# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
-		if type_dimension=="country":
+		if type_dimension=="country" or type_dimension=="iso2" or type_dimension=="iso3" or type_dimension=="iso_region":
 			logging.debug(dataframe_continent)
 			print(dataframe_continent)
-			DICTIONARY_FREQUENCY["rollup"]=dict(dataframe_continent.to_dict())
+			DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
 
 def continent_analysis(dataframe):
 	read_continent = open(GEO_CONTINENT, "r")
-	dataframe_new=pd.DataFrame([],
-	columns=['Country', 'Percent'])
+	rows=[]
 	for x in read_continent:
-		dataframe_new.loc[len(dataframe_new),['Country','Percent']]=[x.splitlines()[0],[]]
-	frames=[dataframe,dataframe_new]
-	result=pd.concat(frames,ignore_index=True)
-	return result
+		rows.append(str(x.splitlines()[0]))
+	length=range(len(rows))
+	dataframe_new=pd.DataFrame([None for x in length],
+	rows,
+	['Percent'])
+	return dataframe_new
 
 
 async def all_continent(country,dataframe,percent_value):
 	
 	country=re.sub('[^0-9a-zA-Z]', '_', country)
-	
 	try:
+		print("VEDIAMO COSA VEDIAMO--->"+str(DICTIONARY_CONTINENT[country])+str(country))
 		if DICTIONARY_CONTINENT[country]:
-			index=0
-			for index_continent in range(len(dataframe.index)):
-				if DICTIONARY_CONTINENT[country]==dataframe.loc[index_continent,"Country"]:
-					index=index_continent
-			if dataframe.loc[index,"Percent"]==[]:
+			logging.debug("VEDIAMO COSA VEDIAMO--->"+str(DICTIONARY_CONTINENT[country])+str(country))
+			if dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]==None:
 					percent_sum=round(0.00+percent_value,2)
-					dataframe.loc[index,"Percent"]=percent_sum
+					dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]=percent_sum
 			else:
-				percent_sum=round(float(dataframe.loc[index,"Percent"])+percent_value,2)
-				dataframe.loc[index,"Percent"]=percent_sum
+				percent_sum=round(float(dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"])+percent_value,2)
+				dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]=percent_sum
 
 	except KeyError:
 		

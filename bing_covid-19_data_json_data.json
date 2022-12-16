@@ -699,6 +699,16 @@
             "854": "0.03%%"
         }
     },
+    "rollup_iso2": {
+        "Percent": {
+            "Other": null,
+            "Africa": 0.98,
+            "Asia": 14.81,
+            "America": 70.86,
+            "Europe": 11.2,
+            "Oceania": 0.31
+        }
+    },
     "iso3": {
         "AFG": {
             "679": "0.02%%"
@@ -1391,6 +1401,16 @@
             "854": "0.03%%"
         }
     },
+    "rollup_iso3": {
+        "Percent": {
+            "Other": null,
+            "Africa": 1.0,
+            "Asia": 14.8,
+            "America": 70.84,
+            "Europe": 11.2,
+            "Oceania": 0.31
+        }
+    },
     "country": {
         "Worldwide": {
             "689": "0.02%%"
@@ -1404,7 +1424,7 @@
         "Algeria": {
             "680": "0.02%%"
         },
-        "American_Samoa": {
+        "American Samoa": {
             "955": "0.03%%"
         },
         "Andorra": {
@@ -1419,7 +1439,7 @@
         "Antarctica": {
             "278": "0.01%%"
         },
-        "Antigua_and_Barbuda": {
+        "Antigua and Barbuda": {
             "659": "0.02%%"
         },
         "Argentina": {
@@ -1476,7 +1496,7 @@
         "Bonaire": {
             "544": "0.02%%"
         },
-        "Bosnia_and_Herzegovina": {
+        "Bosnia and Herzegovina": {
             "671": "0.02%%"
         },
         "Botswana": {
@@ -1485,10 +1505,10 @@
         "Brazil": {
             "16787": "0.55%%"
         },
-        "British_Indian_Ocean_Territory": {
+        "British Indian Ocean Territory": {
             "136": "0.0%%"
         },
-        "British_Virgin_Islands": {
+        "British Virgin Islands": {
             "558": "0.02%%"
         },
         "Brunei": {
@@ -1497,13 +1517,13 @@
         "Bulgaria": {
             "741": "0.02%%"
         },
-        "Burkina_Faso": {
+        "Burkina Faso": {
             "663": "0.02%%"
         },
         "Burundi": {
             "644": "0.02%%"
         },
-        "Cabo_Verde": {
+        "Cabo Verde": {
             "654": "0.02%%"
         },
         "Cambodia": {
@@ -1515,10 +1535,10 @@
         "Canada": {
             "9252": "0.3%%"
         },
-        "Cayman_Islands": {
+        "Cayman Islands": {
             "558": "0.02%%"
         },
-        "Central_African_Republic": {
+        "Central African Republic": {
             "654": "0.02%%"
         },
         "Chad": {
@@ -1530,7 +1550,7 @@
         "China": {
             "1102": "0.04%%"
         },
-        "China__mainland_": {
+        "China (mainland)": {
             "18902": "0.62%%"
         },
         "Colombia": {
@@ -1542,16 +1562,19 @@
         "Congo": {
             "559": "0.02%%"
         },
-        "Congo__DRC_": {
+        "Congo (DRC)": {
             "662": "0.02%%"
         },
-        "Cook_Islands": {
+        "Cook Islands": {
             "70": "0.0%%"
         },
-        "Costa_Rica": {
+        "Costa Rica": {
             "44029": "1.44%%"
         },
-        "C_te_d_Ivoire": {
+        "C\u00f4te d\u2019Ivoire": {
+            "397": "0.01%%"
+        },
+        "C\u00f4te d'Ivoire": {
             "505": "0.02%%"
         },
         "Croatia": {
@@ -1560,7 +1583,7 @@
         "Cuba": {
             "662": "0.02%%"
         },
-        "Cura_ao": {
+        "Cura\u00e7ao": {
             "579": "0.02%%"
         },
         "Cyprus": {
@@ -1578,7 +1601,7 @@
         "Dominica": {
             "645": "0.02%%"
         },
-        "Dominican_Republic": {
+        "Dominican Republic": {
             "1960": "0.06%%"
         },
         "Ecuador": {
@@ -1587,10 +1610,10 @@
         "Egypt": {
             "692": "0.02%%"
         },
-        "El_Salvador": {
+        "El Salvador": {
             "2192": "0.07%%"
         },
-        "Equatorial_Guinea": {
+        "Equatorial Guinea": {
             "656": "0.02%%"
         },
         "Eritrea": {
@@ -1605,13 +1628,13 @@
         "Ethiopia": {
             "664": "0.02%%"
         },
-        "Falkland_Islands": {
+        "Falkland Islands": {
             "556": "0.02%%"
         },
-        "Faroe_Islands": {
+        "Faroe Islands": {
             "589": "0.02%%"
         },
-        "Federated_States_of_Micronesia": {
+        "Federated States of Micronesia": {
             "684": "0.02%%"
         },
         "Fiji": {
@@ -1623,22 +1646,22 @@
         "France": {
             "743": "0.02%%"
         },
-        "French_Guiana": {
+        "French Guiana": {
             "443": "0.01%%"
         },
-        "French_Polynesia": {
+        "French Polynesia": {
             "576": "0.02%%"
         },
-        "French_Guadeloupe": {
+        "French-Guadeloupe": {
             "19": "0.0%%"
         },
-        "French_Martinique": {
+        "French-Martinique": {
             "19": "0.0%%"
         },
         "Gabon": {
             "660": "0.02%%"
         },
-        "Gaza_Strip": {
+        "Gaza Strip": {
             "602": "0.02%%"
         },
         "Georgia": {
@@ -1677,7 +1700,7 @@
         "Guinea": {
             "661": "0.02%%"
         },
-        "Guinea_Bissau": {
+        "Guinea-Bissau": {
             "648": "0.02%%"
         },
         "Guyana": {
@@ -1689,7 +1712,7 @@
         "Honduras": {
             "2673": "0.09%%"
         },
-        "Hong_Kong_SAR": {
+        "Hong Kong SAR": {
             "687": "0.02%%"
         },
         "Hungary": {
@@ -1713,7 +1736,7 @@
         "Ireland": {
             "677": "0.02%%"
         },
-        "Isle_of_Man": {
+        "Isle of Man": {
             "566": "0.02%%"
         },
         "Israel": {
@@ -1779,7 +1802,7 @@
         "Luxembourg": {
             "674": "0.02%%"
         },
-        "Macao_SAR": {
+        "Macao SAR": {
             "597": "0.02%%"
         },
         "Madagascar": {
@@ -1800,7 +1823,7 @@
         "Malta": {
             "670": "0.02%%"
         },
-        "Marshall_Islands": {
+        "Marshall Islands": {
             "434": "0.01%%"
         },
         "Martinique": {
@@ -1851,10 +1874,10 @@
         "Netherlands": {
             "8789": "0.29%%"
         },
-        "New_Caledonia": {
+        "New Caledonia": {
             "562": "0.02%%"
         },
-        "New_Zealand": {
+        "New Zealand": {
             "678": "0.02%%"
         },
         "Nicaragua": {
@@ -1866,10 +1889,10 @@
         "Nigeria": {
             "679": "0.02%%"
         },
-        "North_Macedonia": {
+        "North Macedonia": {
             "679": "0.02%%"
         },
-        "Northern_Mariana_Islands": {
+        "Northern Mariana Islands": {
             "655": "0.02%%"
         },
         "Norway": {
@@ -1887,7 +1910,7 @@
         "Panama": {
             "667": "0.02%%"
         },
-        "Papua_New_Guinea": {
+        "Papua New Guinea": {
             "650": "0.02%%"
         },
         "Paraguay": {
@@ -1905,16 +1928,16 @@
         "Portugal": {
             "1392": "0.05%%"
         },
-        "Puerto_Rico": {
+        "Puerto Rico": {
             "643": "0.02%%"
         },
         "Qatar": {
             "678": "0.02%%"
         },
-        "Republic_of_the_Congo": {
+        "Republic of the Congo": {
             "398": "0.01%%"
         },
-        "R_union": {
+        "R\u00e9union": {
             "40": "0.0%%"
         },
         "Romania": {
@@ -1929,34 +1952,34 @@
         "Saba": {
             "530": "0.02%%"
         },
-        "Saint_Barth_lemy": {
+        "Saint Barth\u00e9lemy": {
             "65": "0.0%%"
         },
-        "Saint_Helena__Ascension_and_Tristan_da_Cunha": {
+        "Saint Helena, Ascension and Tristan da Cunha": {
             "201": "0.01%%"
         },
-        "Saint_Lucia": {
+        "Saint Lucia": {
             "657": "0.02%%"
         },
-        "Saint_Martin": {
+        "Saint Martin": {
             "50": "0.0%%"
         },
-        "Saint_Pierre_and_Miquelon": {
+        "Saint Pierre and Miquelon": {
             "552": "0.02%%"
         },
-        "Saint_Vincent_and_the_Grenadines": {
+        "Saint Vincent and the Grenadines": {
             "647": "0.02%%"
         },
         "Samoa": {
             "413": "0.01%%"
         },
-        "San_Marino": {
+        "San Marino": {
             "677": "0.02%%"
         },
-        "S_o_Tom__and_Pr_ncipe": {
+        "S\u00e3o Tom\u00e9 and Pr\u00edncipe": {
             "634": "0.02%%"
         },
-        "Saudi_Arabia": {
+        "Saudi Arabia": {
             "673": "0.02%%"
         },
         "Senegal": {
@@ -1968,7 +1991,7 @@
         "Seychelles": {
             "655": "0.02%%"
         },
-        "Sierra_Leone": {
+        "Sierra Leone": {
             "644": "0.02%%"
         },
         "Singapore": {
@@ -1980,34 +2003,34 @@
         "Slovenia": {
             "672": "0.02%%"
         },
-        "Solomon_Islands": {
+        "Solomon Islands": {
             "457": "0.01%%"
         },
         "Somalia": {
             "659": "0.02%%"
         },
-        "South_Africa": {
+        "South Africa": {
             "1039": "0.03%%"
         },
-        "South_Korea": {
+        "South Korea": {
             "11550": "0.38%%"
         },
-        "South_Sudan": {
+        "South Sudan": {
             "639": "0.02%%"
         },
         "Spain": {
             "16241": "0.53%%"
         },
-        "Sri_Lanka": {
+        "Sri Lanka": {
             "708": "0.02%%"
         },
-        "St_Kitts_and_Nevis": {
+        "St Kitts and Nevis": {
             "620": "0.02%%"
         },
-        "St_Marten": {
+        "St Marten": {
             "12": "0.0%%"
         },
-        "St_Vincent_and_the_Grenadines": {
+        "St Vincent and the Grenadines": {
             "14": "0.0%%"
         },
         "Sudan": {
@@ -2037,10 +2060,10 @@
         "Thailand": {
             "716": "0.02%%"
         },
-        "The_Gambia": {
+        "The Gambia": {
             "654": "0.02%%"
         },
-        "Timor_Leste": {
+        "Timor-Leste": {
             "652": "0.02%%"
         },
         "Togo": {
@@ -2049,7 +2072,7 @@
         "Tonga": {
             "69": "0.0%%"
         },
-        "Trinidad_and_Tobago": {
+        "Trinidad and Tobago": {
             "660": "0.02%%"
         },
         "Tunisia": {
@@ -2058,10 +2081,10 @@
         "Turkey": {
             "665": "0.02%%"
         },
-        "Turks_and_Caicos_Islands": {
+        "Turks and Caicos Islands": {
             "561": "0.02%%"
         },
-        "U_S__Virgin_Islands": {
+        "U.S. Virgin Islands": {
             "589": "0.02%%"
         },
         "Uganda": {
@@ -2070,19 +2093,19 @@
         "Ukraine": {
             "10179": "0.33%%"
         },
-        "United_Arab_Emirates": {
+        "United Arab Emirates": {
             "704": "0.02%%"
         },
-        "United_Kingdom": {
+        "United Kingdom": {
             "21445": "0.7%%"
         },
-        "United_States": {
+        "United States": {
             "1962849": "64.32%%"
         },
         "Uruguay": {
             "664": "0.02%%"
         },
-        "US_Virgin_Islands": {
+        "US Virgin Islands": {
             "13": "0.0%%"
         },
         "Uzbekistan": {
@@ -2091,7 +2114,7 @@
         "Vanuatu": {
             "421": "0.01%%"
         },
-        "Vatican_City": {
+        "Vatican City": {
             "666": "0.02%%"
         },
         "Venezuela": {
@@ -2100,10 +2123,10 @@
         "Vietnam": {
             "714": "0.02%%"
         },
-        "Wallis_and_Futuna": {
+        "Wallis and Futuna": {
             "360": "0.01%%"
         },
-        "West_Bank": {
+        "West Bank": {
             "606": "0.02%%"
         },
         "Yemen": {
@@ -2116,26 +2139,18 @@
             "854": "0.03%%"
         }
     },
-    "rollup": {
-        "Country": {
-            "0": "Other",
-            "1": "Africa",
-            "2": "Asia",
-            "3": "America",
-            "4": "Europe",
-            "5": "Oceania"
-        },
+    "rollup_country": {
         "Percent": {
-            "0": 0.02,
-            "1": 0.99,
-            "2": 14.82,
-            "3": 70.74,
-            "4": 11.19,
-            "5": 0.31
+            "Other": 0.02,
+            "Africa": 0.99,
+            "Asia": 14.82,
+            "America": 70.74,
+            "Europe": 11.19,
+            "Oceania": 0.31
         }
     },
     "region": {
-        "Buenos_Aires": {
+        "Buenos Aires": {
             "137": "0.0%%"
         },
         "Catamarca": {
@@ -2147,7 +2162,7 @@
         "Chaco": {
             "626": "0.02%%"
         },
-        "City_of_Buenos_Aires": {
+        "City of Buenos Aires": {
             "1224": "0.04%%"
         },
         "Chubut": {
@@ -2156,7 +2171,7 @@
         "Corrientes": {
             "620": "0.02%%"
         },
-        "Entre_Rios": {
+        "Entre Rios": {
             "752": "0.03%%"
         },
         "Formosa": {
@@ -2165,7 +2180,7 @@
         "Jujuy": {
             "621": "0.02%%"
         },
-        "La_Rioja": {
+        "La Rioja": {
             "2582": "0.09%%"
         },
         "Misiones": {
@@ -2177,46 +2192,46 @@
         "Neuquen": {
             "758": "0.03%%"
         },
-        "Rio_Negro": {
+        "Rio Negro": {
             "620": "0.02%%"
         },
         "Salta": {
             "623": "0.02%%"
         },
-        "San_Juan": {
+        "San Juan": {
             "659": "0.02%%"
         },
-        "Santiago_del_Estero": {
+        "Santiago del Estero": {
             "621": "0.02%%"
         },
-        "Santa_Fe": {
+        "Santa Fe": {
             "625": "0.02%%"
         },
-        "San_Luis": {
+        "San Luis": {
             "621": "0.02%%"
         },
-        "Tierra_del_Fuego__Antarctica__and_South_Atlantic_Islands": {
+        "Tierra del Fuego, Antarctica, and South Atlantic Islands": {
             "103": "0.0%%"
         },
         "Tucuman": {
             "622": "0.02%%"
         },
-        "Australian_Capital_Territory": {
+        "Australian Capital Territory": {
             "621": "0.02%%"
         },
-        "Jervis_Bay_Territory": {
+        "Jervis Bay Territory": {
             "6": "0.0%%"
         },
-        "New_South_Wales": {
+        "New South Wales": {
             "626": "0.02%%"
         },
-        "Northern_Territory": {
+        "Northern Territory": {
             "598": "0.02%%"
         },
         "Queensland": {
             "625": "0.02%%"
         },
-        "South_Australia": {
+        "South Australia": {
             "623": "0.02%%"
         },
         "Tasmania": {
@@ -2225,7 +2240,7 @@
         "Victoria": {
             "625": "0.02%%"
         },
-        "Western_Australia": {
+        "Western Australia": {
             "625": "0.02%%"
         },
         "Burgenland": {
@@ -2234,7 +2249,7 @@
         "Carinthia": {
             "624": "0.02%%"
         },
-        "Lower_Austria": {
+        "Lower Austria": {
             "626": "0.02%%"
         },
         "Salzburg": {
@@ -2246,7 +2261,7 @@
         "Tyrol": {
             "615": "0.02%%"
         },
-        "Upper_Austria": {
+        "Upper Austria": {
             "625": "0.02%%"
         },
         "Vienna": {
@@ -2255,7 +2270,7 @@
         "Vorarlberg": {
             "624": "0.02%%"
         },
-        "Brussels_Region": {
+        "Brussels Region": {
             "398": "0.01%%"
         },
         "Beni": {
@@ -2267,7 +2282,7 @@
         "Cochabamba": {
             "592": "0.02%%"
         },
-        "La_Paz": {
+        "La Paz": {
             "810": "0.03%%"
         },
         "Oruro": {
@@ -2276,10 +2291,10 @@
         "Pando": {
             "592": "0.02%%"
         },
-        "Potos_": {
+        "Potos\u00ed": {
             "593": "0.02%%"
         },
-        "Santa_Cruz": {
+        "Santa Cruz": {
             "591": "0.02%%"
         },
         "Tarija": {
@@ -2294,7 +2309,7 @@
         "Alagoas": {
             "597": "0.02%%"
         },
-        "Amap_": {
+        "Amap\u00e1": {
             "598": "0.02%%"
         },
         "Amazonas": {
@@ -2303,64 +2318,64 @@
         "Bahia": {
             "597": "0.02%%"
         },
-        "Cear_": {
+        "Cear\u00e1": {
             "591": "0.02%%"
         },
-        "Esp_rito_Santo": {
+        "Esp\u00edrito Santo": {
             "600": "0.02%%"
         },
-        "Federal_District": {
+        "Federal District": {
             "597": "0.02%%"
         },
-        "Goi_s": {
+        "Goi\u00e1s": {
             "585": "0.02%%"
         },
-        "Maranh_o": {
+        "Maranh\u00e3o": {
             "596": "0.02%%"
         },
-        "Mato_Grosso": {
+        "Mato Grosso": {
             "592": "0.02%%"
         },
-        "Mato_Grosso_do_Sul": {
+        "Mato Grosso do Sul": {
             "595": "0.02%%"
         },
-        "Minas_Gerais": {
+        "Minas Gerais": {
             "600": "0.02%%"
         },
-        "Par_": {
+        "Par\u00e1": {
             "595": "0.02%%"
         },
         "Paraiba": {
             "595": "0.02%%"
         },
-        "Paran_": {
+        "Paran\u00e1": {
             "599": "0.02%%"
         },
         "Pernambuco": {
             "597": "0.02%%"
         },
-        "Piau_": {
+        "Piau\u00ed": {
             "597": "0.02%%"
         },
-        "Rio_de_Janeiro": {
+        "Rio de Janeiro": {
             "595": "0.02%%"
         },
-        "Rio_Grande_do_Norte": {
+        "Rio Grande do Norte": {
             "598": "0.02%%"
         },
-        "Rio_Grande_do_Sul": {
+        "Rio Grande do Sul": {
             "598": "0.02%%"
         },
-        "Rond_nia": {
+        "Rond\u00f4nia": {
             "595": "0.02%%"
         },
         "Roraima": {
             "599": "0.02%%"
         },
-        "Santa_Catarina": {
+        "Santa Catarina": {
             "599": "0.02%%"
         },
-        "S_o_Paulo": {
+        "S\u00e3o Paulo": {
             "602": "0.02%%"
         },
         "Sergipe": {
@@ -2369,28 +2384,28 @@
         "Tocantins": {
             "594": "0.02%%"
         },
-        "Sofia_City": {
+        "Sofia City": {
             "73": "0.0%%"
         },
         "Alberta": {
             "665": "0.02%%"
         },
-        "British_Columbia": {
+        "British Columbia": {
             "678": "0.02%%"
         },
         "Manitoba": {
             "658": "0.02%%"
         },
-        "New_Brunswick": {
+        "New Brunswick": {
             "661": "0.02%%"
         },
-        "Newfoundland_and_Labrador": {
+        "Newfoundland and Labrador": {
             "652": "0.02%%"
         },
-        "Nova_Scotia": {
+        "Nova Scotia": {
             "654": "0.02%%"
         },
-        "Northwest_Territories": {
+        "Northwest Territories": {
             "649": "0.02%%"
         },
         "Nunavut": {
@@ -2399,7 +2414,7 @@
         "Ontario": {
             "679": "0.02%%"
         },
-        "Prince_Edward_Island": {
+        "Prince Edward Island": {
             "650": "0.02%%"
         },
         "Quebec": {
@@ -2408,58 +2423,58 @@
         "Saskatchewan": {
             "658": "0.02%%"
         },
-        "Yukon_Territory": {
+        "Yukon Territory": {
             "652": "0.02%%"
         },
-        "Aisen_of_Gral__C__Ib__ez_del_Campo": {
+        "Aisen of Gral. C. Ib\u00e1\u00f1ez del Campo": {
             "621": "0.02%%"
         },
         "Antofagasta": {
             "627": "0.02%%"
         },
-        "Araucan_a": {
+        "Araucan\u00eda": {
             "626": "0.02%%"
         },
-        "Arica_y_Parinacota": {
+        "Arica y Parinacota": {
             "625": "0.02%%"
         },
         "Atacama": {
             "622": "0.02%%"
         },
-        "Bio_Bio": {
+        "Bio-Bio": {
             "626": "0.02%%"
         },
         "Coquimbo": {
             "621": "0.02%%"
         },
-        "Los_Lagos": {
+        "Los Lagos": {
             "626": "0.02%%"
         },
-        "Los_R_os": {
+        "Los R\u00edos": {
             "1249": "0.04%%"
         },
-        "Magallanes_and_Antarctic_Region": {
+        "Magallanes and Antarctic Region": {
             "748": "0.03%%"
         },
         "Maule": {
             "627": "0.02%%"
         },
-        "_uble": {
+        "\u00d1uble": {
             "600": "0.02%%"
         },
-        "O_Higgins": {
+        "O\u2019Higgins": {
             "600": "0.02%%"
         },
-        "Santiago_Metropolitan": {
+        "Santiago Metropolitan": {
             "627": "0.02%%"
         },
-        "Tarapac_": {
+        "Tarapac\u00e1": {
             "627": "0.02%%"
         },
-        "Valpara_so": {
+        "Valpara\u00edso": {
             "629": "0.02%%"
         },
-        "Guangxi_Zhuang": {
+        "Guangxi Zhuang": {
             "621": "0.02%%"
         },
         "Tibet": {
@@ -2504,7 +2519,7 @@
         "Hunan": {
             "629": "0.02%%"
         },
-        "Inner_Mongolia": {
+        "Inner Mongolia": {
             "624": "0.02%%"
         },
         "Jiangsu": {
@@ -2573,7 +2588,7 @@
         "Caldas": {
             "623": "0.02%%"
         },
-        "Capital_District": {
+        "Capital District": {
             "625": "0.02%%"
         },
         "Caqueta": {
@@ -2603,7 +2618,7 @@
         "Huila": {
             "625": "0.02%%"
         },
-        "La_Guajira": {
+        "La Guajira": {
             "623": "0.02%%"
         },
         "Magdalena": {
@@ -2615,7 +2630,7 @@
         "Narino": {
             "625": "0.02%%"
         },
-        "Norte_de_Santander": {
+        "Norte de Santander": {
             "625": "0.02%%"
         },
         "Putumayo": {
@@ -2627,7 +2642,7 @@
         "Risaralda": {
             "625": "0.02%%"
         },
-        "San_Andr_s_and_Providencia": {
+        "San Andr\u00e9s and Providencia": {
             "622": "0.02%%"
         },
         "Santander": {
@@ -2639,7 +2654,7 @@
         "Tolima": {
             "625": "0.02%%"
         },
-        "Valle_del_Cauca": {
+        "Valle del Cauca": {
             "625": "0.02%%"
         },
         "Vaupes": {
@@ -2666,22 +2681,22 @@
         "Puntarenas": {
             "5851": "0.2%%"
         },
-        "San_Jose": {
+        "San Jose": {
             "10230": "0.35%%"
         },
-        "Central_Bohemia": {
+        "Central Bohemia": {
             "330": "0.01%%"
         },
-        "Hradec_Kr_lov_": {
+        "Hradec Kr\u00e1lov\u00e9": {
             "390": "0.01%%"
         },
-        "Karlovy_Vary": {
+        "Karlovy Vary": {
             "328": "0.01%%"
         },
         "Liberec": {
             "403": "0.01%%"
         },
-        "Moravia_Silesia": {
+        "Moravia-Silesia": {
             "330": "0.01%%"
         },
         "Olomouc": {
@@ -2690,37 +2705,37 @@
         "Pardubice": {
             "330": "0.01%%"
         },
-        "Plze_": {
+        "Plze\u0148": {
             "330": "0.01%%"
         },
         "Prague": {
             "330": "0.01%%"
         },
-        "South_Bohemia": {
+        "South Bohemia": {
             "328": "0.01%%"
         },
-        "South_Moravia": {
+        "South Moravia": {
             "329": "0.01%%"
         },
-        "_st__nad_Labem": {
+        "\u00dast\u00ed nad Labem": {
             "330": "0.01%%"
         },
-        "Vyso_ina": {
+        "Vyso\u010dina": {
             "327": "0.01%%"
         },
         "Zlin": {
             "328": "0.01%%"
         },
-        "Capital_Region": {
+        "Capital Region": {
             "123": "0.0%%"
         },
-        "Middle_Jutland": {
+        "Middle Jutland": {
             "122": "0.0%%"
         },
-        "North_Jutland": {
+        "North Jutland": {
             "122": "0.0%%"
         },
-        "South_Denmark": {
+        "South Denmark": {
             "125": "0.0%%"
         },
         "Zealand": {
@@ -2735,49 +2750,49 @@
         "Barahona": {
             "41": "0.0%%"
         },
-        "Dajab_n": {
+        "Dajab\u00f3n": {
             "39": "0.0%%"
         },
-        "Distrito_Nacional": {
+        "Distrito Nacional": {
             "41": "0.0%%"
         },
         "Duarte": {
             "41": "0.0%%"
         },
-        "El_Seibo": {
+        "El Seibo": {
             "39": "0.0%%"
         },
-        "El_as_Pi_a": {
+        "El\u00edas Pi\u00f1a": {
             "39": "0.0%%"
         },
         "Espaillat": {
             "41": "0.0%%"
         },
-        "Hato_Mayor": {
+        "Hato Mayor": {
             "40": "0.0%%"
         },
         "Independencia": {
             "39": "0.0%%"
         },
-        "La_Altagracia": {
+        "La Altagracia": {
             "41": "0.0%%"
         },
-        "La_Romana": {
+        "La Romana": {
             "41": "0.0%%"
         },
-        "La_Vega": {
+        "La Vega": {
             "41": "0.0%%"
         },
-        "Mar_a_Trinidad_S_nchez": {
+        "Mar\u00eda Trinidad S\u00e1nchez": {
             "40": "0.0%%"
         },
-        "Monse_or_Nouel": {
+        "Monse\u00f1or Nouel": {
             "41": "0.0%%"
         },
-        "Monte_Cristi": {
+        "Monte Cristi": {
             "40": "0.0%%"
         },
-        "Monte_Plata": {
+        "Monte Plata": {
             "39": "0.0%%"
         },
         "Pedernales": {
@@ -2786,34 +2801,34 @@
         "Peravia": {
             "41": "0.0%%"
         },
-        "Puerto_Plata": {
+        "Puerto Plata": {
             "41": "0.0%%"
         },
         "Salcedo": {
             "39": "0.0%%"
         },
-        "Saman_": {
+        "Saman\u00e1": {
             "39": "0.0%%"
         },
-        "San_Crist_bal": {
+        "San Crist\u00f3bal": {
             "41": "0.0%%"
         },
-        "San_Jos__de_Ocoa": {
+        "San Jos\u00e9 de Ocoa": {
             "40": "0.0%%"
         },
-        "San_Pedro_de_Macor_s": {
+        "San Pedro de Macor\u00eds": {
             "41": "0.0%%"
         },
-        "S_nchez_Ram_rez": {
+        "S\u00e1nchez Ram\u00edrez": {
             "41": "0.0%%"
         },
         "Santiago": {
             "41": "0.0%%"
         },
-        "Santiago_Rodr_guez": {
+        "Santiago Rodr\u00edguez": {
             "40": "0.0%%"
         },
-        "Santo_Domingo": {
+        "Santo Domingo": {
             "41": "0.0%%"
         },
         "Valverde": {
@@ -2822,10 +2837,10 @@
         "Azuay": {
             "622": "0.02%%"
         },
-        "Bol_var": {
+        "Bol\u00edvar": {
             "622": "0.02%%"
         },
-        "Ca_ar": {
+        "Ca\u00f1ar": {
             "622": "0.02%%"
         },
         "Carchi": {
@@ -2837,13 +2852,13 @@
         "Cotopaxi": {
             "622": "0.02%%"
         },
-        "El_Oro": {
+        "El Oro": {
             "622": "0.02%%"
         },
         "Esmeraldas": {
             "622": "0.02%%"
         },
-        "Gal_pagos": {
+        "Gal\u00e1pagos": {
             "618": "0.02%%"
         },
         "Guayas": {
@@ -2855,10 +2870,10 @@
         "Loja": {
             "622": "0.02%%"
         },
-        "Manab_": {
+        "Manab\u00ed": {
             "622": "0.02%%"
         },
-        "Morona_Santiago": {
+        "Morona Santiago": {
             "622": "0.02%%"
         },
         "Napo": {
@@ -2873,61 +2888,61 @@
         "Pichincha": {
             "622": "0.02%%"
         },
-        "Santa_Elena": {
+        "Santa Elena": {
             "622": "0.02%%"
         },
-        "Santo_Domingo_de_los_Ts_chilas": {
+        "Santo Domingo de los Ts\u00e1chilas": {
             "622": "0.02%%"
         },
-        "Sucumb_os": {
+        "Sucumb\u00edos": {
             "621": "0.02%%"
         },
         "Tungurahua": {
             "622": "0.02%%"
         },
-        "Zamora_Chinchipe": {
+        "Zamora Chinchipe": {
             "621": "0.02%%"
         },
-        "Ahuachap_n": {
+        "Ahuachap\u00e1n": {
             "111": "0.0%%"
         },
-        "Caba_as": {
+        "Caba\u00f1as": {
             "115": "0.0%%"
         },
         "Chalatenango": {
             "104": "0.0%%"
         },
-        "Cuscatl_n": {
+        "Cuscatl\u00e1n": {
             "109": "0.0%%"
         },
-        "La_Libertad": {
+        "La Libertad": {
             "740": "0.03%%"
         },
-        "La_Uni_n": {
+        "La Uni\u00f3n": {
             "107": "0.0%%"
         },
-        "Moraz_n": {
+        "Moraz\u00e1n": {
             "111": "0.0%%"
         },
-        "San_Miguel": {
+        "San Miguel": {
             "110": "0.0%%"
         },
-        "San_Salvador": {
+        "San Salvador": {
             "108": "0.0%%"
         },
-        "San_Vicente": {
+        "San Vicente": {
             "105": "0.0%%"
         },
-        "Santa_Ana": {
+        "Santa Ana": {
             "115": "0.0%%"
         },
         "Sonsonate": {
             "110": "0.0%%"
         },
-        "Usulut_n": {
+        "Usulut\u00e1n": {
             "113": "0.0%%"
         },
-        "Ile_de_France": {
+        "Ile-de-France": {
             "30": "0.0%%"
         },
         "Occitanie": {
@@ -2942,13 +2957,13 @@
         "Berlin": {
             "647": "0.02%%"
         },
-        "Baden_W_rttemberg": {
+        "Baden-W\u00fcrttemberg": {
             "14843": "0.51%%"
         },
         "Bavaria": {
             "25321": "0.87%%"
         },
-        "DE_ST": {
+        "DE-ST": {
             "4732": "0.16%%"
         },
         "Bremen": {
@@ -2960,19 +2975,19 @@
         "Hamburg": {
             "984": "0.03%%"
         },
-        "Mecklenburg_West_Pomerania": {
+        "Mecklenburg-West Pomerania": {
             "3012": "0.1%%"
         },
-        "Lower_Saxony": {
+        "Lower Saxony": {
             "15180": "0.52%%"
         },
-        "North_Rhine_Westphalia": {
+        "North Rhine-Westphalia": {
             "18560": "0.64%%"
         },
-        "Rhineland_Palatinate": {
+        "Rhineland-Palatinate": {
             "12138": "0.42%%"
         },
-        "Schleswig_Holstein": {
+        "Schleswig-Holstein": {
             "5716": "0.2%%"
         },
         "Saarland": {
@@ -2981,7 +2996,7 @@
         "Saxony": {
             "4702": "0.16%%"
         },
-        "Saxony_Anhalt": {
+        "Saxony-Anhalt": {
             "631": "0.02%%"
         },
         "Thuringia": {
@@ -2990,40 +3005,40 @@
         "Attica": {
             "5": "0.0%%"
         },
-        "Southern_Aegean": {
+        "Southern Aegean": {
             "3": "0.0%%"
         },
-        "Atl_ntida": {
+        "Atl\u00e1ntida": {
             "124": "0.0%%"
         },
         "Choluteca": {
             "123": "0.0%%"
         },
-        "Col_n": {
+        "Col\u00f3n": {
             "122": "0.0%%"
         },
         "Comayagua": {
             "123": "0.0%%"
         },
-        "Cop_n": {
+        "Cop\u00e1n": {
             "127": "0.0%%"
         },
-        "Cort_s": {
+        "Cort\u00e9s": {
             "121": "0.0%%"
         },
-        "El_Para_so": {
+        "El Para\u00edso": {
             "121": "0.0%%"
         },
-        "Francisco_Moraz_n": {
+        "Francisco Moraz\u00e1n": {
             "123": "0.0%%"
         },
-        "Gracias_a_Dios": {
+        "Gracias a Dios": {
             "5": "0.0%%"
         },
-        "Intibuc_": {
+        "Intibuc\u00e1": {
             "113": "0.0%%"
         },
-        "Islas_de_la_Bah_a": {
+        "Islas de la Bah\u00eda": {
             "86": "0.0%%"
         },
         "Lempira": {
@@ -3035,7 +3050,7 @@
         "Olancho": {
             "104": "0.0%%"
         },
-        "Santa_B_rbara": {
+        "Santa B\u00e1rbara": {
             "124": "0.0%%"
         },
         "Valle": {
@@ -3044,43 +3059,43 @@
         "Yoro": {
             "125": "0.0%%"
         },
-        "B_cs_Kiskun": {
+        "B\u00e1cs-Kiskun": {
             "619": "0.02%%"
         },
         "Baranya": {
             "620": "0.02%%"
         },
-        "B_k_s": {
+        "B\u00e9k\u00e9s": {
             "620": "0.02%%"
         },
-        "Borsod_Aba_j_Zempl_n": {
+        "Borsod-Aba\u00faj-Zempl\u00e9n": {
             "620": "0.02%%"
         },
         "Budapest": {
             "625": "0.02%%"
         },
-        "Csongr_d": {
+        "Csongr\u00e1d": {
             "113": "0.0%%"
         },
-        "Fej_r": {
+        "Fej\u00e9r": {
             "625": "0.02%%"
         },
-        "Gy_r_Moson_Sopron": {
+        "Gy\u0151r-Moson-Sopron": {
             "622": "0.02%%"
         },
-        "Hajd__Bihar": {
+        "Hajd_Bihar": {
             "620": "0.02%%"
         },
         "Heves": {
             "621": "0.02%%"
         },
-        "J_sz_Nagykun_Szolnok": {
+        "J\u00e1sz-Nagykun-Szolnok": {
             "622": "0.02%%"
         },
-        "Kom_rom_Esztergom": {
+        "Kom\u00e1rom-Esztergom": {
             "624": "0.02%%"
         },
-        "N_gr_d": {
+        "N\u00f3gr\u00e1d": {
             "619": "0.02%%"
         },
         "Pest": {
@@ -3089,7 +3104,7 @@
         "Somogy": {
             "620": "0.02%%"
         },
-        "Szabolcs_Szatm_r_Bereg": {
+        "Szabolcs-Szatm\u00e1r-Bereg": {
             "620": "0.02%%"
         },
         "Tolna": {
@@ -3098,16 +3113,16 @@
         "Vas": {
             "619": "0.02%%"
         },
-        "Veszpr_m": {
+        "Veszpr\u00e9m": {
             "1246": "0.04%%"
         },
         "Zala": {
             "622": "0.02%%"
         },
-        "Andaman_and_Nicobar_Islands": {
+        "Andaman and Nicobar Islands": {
             "1925": "0.07%%"
         },
-        "Andhra_Pradesh": {
+        "Andhra Pradesh": {
             "7021": "0.24%%"
         },
         "Assam": {
@@ -3122,13 +3137,13 @@
         "Chhattisgarh": {
             "14308": "0.49%%"
         },
-        "Daman_and_Diu": {
+        "Daman and Diu": {
             "438": "0.02%%"
         },
         "Delhi": {
             "5588": "0.19%%"
         },
-        "Dadra_and_Nagar_Haveli": {
+        "Dadra and Nagar Haveli": {
             "37": "0.0%%"
         },
         "Goa": {
@@ -3137,7 +3152,7 @@
         "Gujarat": {
             "17838": "0.61%%"
         },
-        "Himachal_Pradesh": {
+        "Himachal Pradesh": {
             "6712": "0.23%%"
         },
         "Haryana": {
@@ -3146,7 +3161,7 @@
         "Jharkhand": {
             "12773": "0.44%%"
         },
-        "Jammu_and_Kashmir__state_": {
+        "Jammu and Kashmir (state)": {
             "11": "0.0%%"
         },
         "Karnataka": {
@@ -3167,7 +3182,7 @@
         "Manipur": {
             "4597": "0.16%%"
         },
-        "Madhya_Pradesh": {
+        "Madhya Pradesh": {
             "26960": "0.93%%"
         },
         "Mizoram": {
@@ -3191,7 +3206,7 @@
         "Sikkim": {
             "2332": "0.08%%"
         },
-        "Tamil_Nadu": {
+        "Tamil Nadu": {
             "18798": "0.65%%"
         },
         "Tripura": {
@@ -3203,10 +3218,10 @@
         "Uttarakhand": {
             "7230": "0.25%%"
         },
-        "Uttar_Pradesh": {
+        "Uttar Pradesh": {
             "38622": "1.33%%"
         },
-        "West_Bengal": {
+        "West Bengal": {
             "10241": "0.35%%"
         },
         "Aceh": {
@@ -3215,7 +3230,7 @@
         "Bali": {
             "462": "0.02%%"
         },
-        "Bangka_Belitung": {
+        "Bangka-Belitung": {
             "458": "0.02%%"
         },
         "Banten": {
@@ -3224,22 +3239,22 @@
         "Bengkulu": {
             "455": "0.02%%"
         },
-        "Central_Java": {
+        "Central Java": {
             "461": "0.02%%"
         },
-        "Central_Kalimantan": {
+        "Central Kalimantan": {
             "462": "0.02%%"
         },
-        "Central_Sulawesi": {
+        "Central Sulawesi": {
             "458": "0.02%%"
         },
-        "East_Java": {
+        "East Java": {
             "461": "0.02%%"
         },
-        "East_Kalimantan": {
+        "East Kalimantan": {
             "459": "0.02%%"
         },
-        "East_Nusa_Tenggara": {
+        "East Nusa Tenggara": {
             "456": "0.02%%"
         },
         "Gorontalo": {
@@ -3257,16 +3272,16 @@
         "Maluku": {
             "914": "0.03%%"
         },
-        "North_Kalimantan": {
+        "North Kalimantan": {
             "460": "0.02%%"
         },
-        "North_Maluku": {
+        "North Maluku": {
             "456": "0.02%%"
         },
-        "North_Sulawesi": {
+        "North Sulawesi": {
             "457": "0.02%%"
         },
-        "North_Sumatra": {
+        "North Sumatra": {
             "458": "0.02%%"
         },
         "Papua": {
@@ -3275,55 +3290,55 @@
         "Riau": {
             "459": "0.02%%"
         },
-        "Riau_Islands": {
+        "Riau Islands": {
             "459": "0.02%%"
         },
-        "South_East_Sulawesi": {
+        "South East Sulawesi": {
             "458": "0.02%%"
         },
-        "South_Kalimantan": {
+        "South Kalimantan": {
             "459": "0.02%%"
         },
-        "South_Sulawesi": {
+        "South Sulawesi": {
             "462": "0.02%%"
         },
-        "South_Sumatra": {
+        "South Sumatra": {
             "460": "0.02%%"
         },
-        "West_Java": {
+        "West Java": {
             "461": "0.02%%"
         },
-        "West_Kalimantan": {
+        "West Kalimantan": {
             "458": "0.02%%"
         },
-        "West_Nusa_Tenggara": {
+        "West Nusa Tenggara": {
             "461": "0.02%%"
         },
-        "West_Papua": {
+        "West Papua": {
             "458": "0.02%%"
         },
-        "West_Sulawesi": {
+        "West Sulawesi": {
             "459": "0.02%%"
         },
-        "West_Sumatra": {
+        "West Sumatra": {
             "462": "0.02%%"
         },
         "Yogyakarta": {
             "460": "0.02%%"
         },
-        "Alborz_Province": {
+        "Alborz Province": {
             "623": "0.02%%"
         },
         "Ardabil": {
             "622": "0.02%%"
         },
-        "B_shehr": {
+        "B\u016bshehr": {
             "568": "0.02%%"
         },
-        "Chahar_Mahall_va_Bakhtiari": {
+        "Chahar Mahall va Bakhtiari": {
             "621": "0.02%%"
         },
-        "East_Azerbaijan": {
+        "East Azerbaijan": {
             "621": "0.02%%"
         },
         "Esfahan": {
@@ -3356,7 +3371,7 @@
         "Khuzestan": {
             "621": "0.02%%"
         },
-        "Kohgiluyeh_va_Buyer_Ahmad": {
+        "Kohgiluyeh va Buyer Ahmad": {
             "621": "0.02%%"
         },
         "Lorestan": {
@@ -3368,7 +3383,7 @@
         "Mazandaran": {
             "623": "0.02%%"
         },
-        "North_Khorasan_Province": {
+        "North Khorasan Province": {
             "623": "0.02%%"
         },
         "Qazvin": {
@@ -3377,22 +3392,22 @@
         "Qom": {
             "622": "0.02%%"
         },
-        "Razavi_Khorasan_Province": {
+        "Razavi Khorasan Province": {
             "623": "0.02%%"
         },
         "Semnan": {
             "623": "0.02%%"
         },
-        "Sistan_va_Baluchestan": {
+        "Sistan va Baluchestan": {
             "622": "0.02%%"
         },
-        "South_Khorasan_Province": {
+        "South Khorasan Province": {
             "623": "0.02%%"
         },
         "Tehran": {
             "621": "0.02%%"
         },
-        "West_Azerbaijan": {
+        "West Azerbaijan": {
             "622": "0.02%%"
         },
         "Yazd": {
@@ -3413,10 +3428,10 @@
         "Campania": {
             "621": "0.02%%"
         },
-        "Emilia_Romagna": {
+        "Emilia-Romagna": {
             "654": "0.02%%"
         },
-        "Friuli_Venezia_Giulia": {
+        "Friuli-Venezia Giulia": {
             "1043": "0.04%%"
         },
         "Latium": {
@@ -3449,7 +3464,7 @@
         "Tuscany": {
             "640": "0.02%%"
         },
-        "Trentino_Alto_Adige": {
+        "Trentino-Alto Adige": {
             "1254": "0.04%%"
         },
         "Trentino": {
@@ -3458,7 +3473,7 @@
         "Umbria": {
             "640": "0.02%%"
         },
-        "Valle_d_Aosta": {
+        "Valle d'Aosta": {
             "658": "0.02%%"
         },
         "Veneto": {
@@ -3617,7 +3632,7 @@
         "Malacca": {
             "106": "0.0%%"
         },
-        "Negri_Sembilan": {
+        "Negri Sembilan": {
             "107": "0.0%%"
         },
         "Pahang": {
@@ -3647,10 +3662,10 @@
         "Aguascalientes": {
             "623": "0.02%%"
         },
-        "Baja_California": {
+        "Baja California": {
             "624": "0.02%%"
         },
-        "Baja_California_Sur": {
+        "Baja California Sur": {
             "623": "0.02%%"
         },
         "Campeche": {
@@ -3683,13 +3698,13 @@
         "Jalisco": {
             "624": "0.02%%"
         },
-        "M_xico": {
+        "M\u00e9xico": {
             "624": "0.02%%"
         },
-        "Mexico_City": {
+        "Mexico City": {
             "622": "0.02%%"
         },
-        "Michoac_n": {
+        "Michoac\u00e1n": {
             "624": "0.02%%"
         },
         "Morelos": {
@@ -3698,7 +3713,7 @@
         "Nayarit": {
             "622": "0.02%%"
         },
-        "Nuevo_Le_n": {
+        "Nuevo Le\u00f3n": {
             "621": "0.02%%"
         },
         "Oaxaca": {
@@ -3707,13 +3722,13 @@
         "Puebla": {
             "624": "0.02%%"
         },
-        "Quer_taro": {
+        "Quer\u00e9taro": {
             "624": "0.02%%"
         },
-        "Quintana_Roo": {
+        "Quintana Roo": {
             "623": "0.02%%"
         },
-        "San_Luis_Potos_": {
+        "San Luis Potos\u00ed": {
             "622": "0.02%%"
         },
         "Sinaloa": {
@@ -3734,13 +3749,13 @@
         "Veracruz": {
             "623": "0.02%%"
         },
-        "Yucat_n": {
+        "Yucat\u00e1n": {
             "623": "0.02%%"
         },
         "Zacatecas": {
             "622": "0.02%%"
         },
-        "Western_Sahara": {
+        "Western Sahara": {
             "7": "0.0%%"
         },
         "Drenthe": {
@@ -3761,16 +3776,16 @@
         "Limburg": {
             "626": "0.02%%"
         },
-        "North_Brabant": {
+        "North Brabant": {
             "625": "0.02%%"
         },
-        "North_Holland": {
+        "North Holland": {
             "1266": "0.04%%"
         },
         "Overijssel": {
             "626": "0.02%%"
         },
-        "South_Holland": {
+        "South Holland": {
             "626": "0.02%%"
         },
         "Utrecht": {
@@ -3782,13 +3797,13 @@
         "Akershus": {
             "629": "0.02%%"
         },
-        "Aust_Agder": {
+        "Aust-Agder": {
             "630": "0.02%%"
         },
         "Finnmark": {
             "630": "0.02%%"
         },
-        "M_re_og_Romsdal": {
+        "M\u00f8re og Romsdal": {
             "1257": "0.04%%"
         },
         "Nordland": {
@@ -3806,73 +3821,73 @@
         "Trondelag": {
             "630": "0.02%%"
         },
-        "Vestfold_og_Telemark": {
+        "Vestfold og Telemark": {
             "627": "0.02%%"
         },
-        "Azad_Kashmir": {
+        "Azad Kashmir": {
             "2": "0.0%%"
         },
         "Baluchistan": {
             "517": "0.02%%"
         },
-        "Gilgit_and_Baltistan": {
+        "Gilgit and Baltistan": {
             "397": "0.01%%"
         },
         "Islamabad": {
             "529": "0.02%%"
         },
-        "Khyber_Pakhtunkhwa": {
+        "Khyber Pakhtunkhwa": {
             "517": "0.02%%"
         },
         "Sindh": {
             "525": "0.02%%"
         },
-        "Alto_Paran_": {
+        "Alto Paran\u00e1": {
             "86": "0.0%%"
         },
         "Amambay": {
             "86": "0.0%%"
         },
-        "Asunci_n": {
+        "Asunci\u00f3n": {
             "85": "0.0%%"
         },
-        "Boquer_n": {
+        "Boquer\u00f3n": {
             "87": "0.0%%"
         },
-        "Caaguaz_": {
+        "Caaguaz\u00fa": {
             "75": "0.0%%"
         },
-        "Caazap_": {
+        "Caazap\u00e1": {
             "77": "0.0%%"
         },
-        "Canindey_": {
+        "Canindey\u00fa": {
             "87": "0.0%%"
         },
         "Central": {
             "82": "0.0%%"
         },
-        "Concepci_n": {
+        "Concepci\u00f3n": {
             "70": "0.0%%"
         },
         "Cordillera": {
             "86": "0.0%%"
         },
-        "Guair_": {
+        "Guair\u00e1": {
             "77": "0.0%%"
         },
-        "Itap_a": {
+        "Itap\u00faa": {
             "83": "0.0%%"
         },
-        "_eembuc_": {
+        "\u00d1eembuc\u00fa": {
             "84": "0.0%%"
         },
-        "Paraguar_": {
+        "Paraguar\u00ed": {
             "78": "0.0%%"
         },
-        "Presidente_Hayes": {
+        "Presidente Hayes": {
             "62": "0.0%%"
         },
-        "San_Pedro": {
+        "San Pedro": {
             "82": "0.0%%"
         },
         "Ancash": {
@@ -3905,7 +3920,7 @@
         "Ica": {
             "624": "0.02%%"
         },
-        "Jun_n": {
+        "Jun\u00edn": {
             "624": "0.02%%"
         },
         "Lambayeque": {
@@ -3917,7 +3932,7 @@
         "Loreto": {
             "624": "0.02%%"
         },
-        "Madre_de_Dios": {
+        "Madre de Dios": {
             "626": "0.02%%"
         },
         "Moquegua": {
@@ -3932,7 +3947,7 @@
         "Puno": {
             "622": "0.02%%"
         },
-        "San_Martin": {
+        "San Martin": {
             "624": "0.02%%"
         },
         "Tacna": {
@@ -3944,16 +3959,16 @@
         "Ucayali": {
             "623": "0.02%%"
         },
-        "Western_Visayas": {
+        "Western Visayas": {
             "1": "0.0%%"
         },
-        "Dolno_l_skie": {
+        "Dolno\u015bl\u0105skie": {
             "115": "0.0%%"
         },
-        "Kujawsko_pomorskie": {
+        "Kujawsko-pomorskie": {
             "129": "0.0%%"
         },
-        "__dzkie": {
+        "\u0141\u00f3dzkie": {
             "117": "0.0%%"
         },
         "Lubelskie": {
@@ -3962,7 +3977,7 @@
         "Lubuskie": {
             "116": "0.0%%"
         },
-        "Ma_opolskie": {
+        "Ma\u0142opolskie": {
             "110": "0.0%%"
         },
         "Mazowieckie": {
@@ -3980,13 +3995,13 @@
         "Pomorskie": {
             "119": "0.0%%"
         },
-        "_l_skie": {
+        "\u015al\u0105skie": {
             "112": "0.0%%"
         },
-        "_wi_tokrzyskie": {
+        "\u015awi\u0119tokrzyskie": {
             "128": "0.0%%"
         },
-        "Warmi_sko_mazurskie": {
+        "Warmi\u0144sko-mazurskie": {
             "122": "0.0%%"
         },
         "Wielkopolskie": {
@@ -4001,7 +4016,7 @@
         "Coimbra": {
             "109": "0.0%%"
         },
-        "_vora": {
+        "\u00c9vora": {
             "106": "0.0%%"
         },
         "Faro": {
@@ -4010,7 +4025,7 @@
         "Lisbon": {
             "101": "0.0%%"
         },
-        "Madeira_Island": {
+        "Madeira Island": {
             "95": "0.0%%"
         },
         "Porto": {
@@ -4025,16 +4040,16 @@
         "Altay": {
             "617": "0.02%%"
         },
-        "Altay_Territory": {
+        "Altay Territory": {
             "626": "0.02%%"
         },
         "Amur": {
             "624": "0.02%%"
         },
-        "Arkhangel_sk": {
+        "Arkhangel\u2019sk": {
             "625": "0.02%%"
         },
-        "Astrakhan_": {
+        "Astrakhan\u2019": {
             "625": "0.02%%"
         },
         "Bashkortostan": {
@@ -4076,7 +4091,7 @@
         "Ivanovo": {
             "626": "0.02%%"
         },
-        "Kabardino_Balkaria": {
+        "Kabardino-Balkaria": {
             "627": "0.02%%"
         },
         "Kaliningrad": {
@@ -4091,7 +4106,7 @@
         "Kamchatka": {
             "625": "0.02%%"
         },
-        "Karachay_Cherkessia": {
+        "Karachay-Cherkessia": {
             "627": "0.02%%"
         },
         "Karelia": {
@@ -4106,7 +4121,7 @@
         "Khakassia": {
             "626": "0.02%%"
         },
-        "Khanty_Mansi": {
+        "Khanty-Mansi": {
             "626": "0.02%%"
         },
         "Kirov": {
@@ -4115,7 +4130,7 @@
         "Komi": {
             "548": "0.02%%"
         },
-        "Komi_Permyak": {
+        "Komi-Permyak": {
             "111": "0.0%%"
         },
         "Kostroma": {
@@ -4133,7 +4148,7 @@
         "Kursk": {
             "626": "0.02%%"
         },
-        "Leningrad_Oblast": {
+        "Leningrad Oblast": {
             "548": "0.02%%"
         },
         "Lipetsk": {
@@ -4142,7 +4157,7 @@
         "Magadan": {
             "625": "0.02%%"
         },
-        "Mari_El": {
+        "Mari El": {
             "627": "0.02%%"
         },
         "Mordovia": {
@@ -4151,7 +4166,7 @@
         "Moscow": {
             "550": "0.02%%"
         },
-        "Moscow_City": {
+        "Moscow City": {
             "625": "0.02%%"
         },
         "Murmansk": {
@@ -4160,10 +4175,10 @@
         "Nenets": {
             "620": "0.02%%"
         },
-        "Nizhniy_Novgorod": {
+        "Nizhniy Novgorod": {
             "626": "0.02%%"
         },
-        "North_Ossetia_Alania": {
+        "North Ossetia-Alania": {
             "627": "0.02%%"
         },
         "Novgorod": {
@@ -4196,7 +4211,7 @@
         "Rostov": {
             "626": "0.02%%"
         },
-        "Ryazan_": {
+        "Ryazan\u2019": {
             "626": "0.02%%"
         },
         "Sakha": {
@@ -4214,7 +4229,7 @@
         "Smolensk": {
             "626": "0.02%%"
         },
-        "St_Petersburg_City": {
+        "St Petersburg City": {
             "625": "0.02%%"
         },
         "Stavropol": {
@@ -4238,16 +4253,16 @@
         "Tuva": {
             "622": "0.02%%"
         },
-        "Tver_": {
+        "Tver\u2019": {
             "625": "0.02%%"
         },
-        "Tyumen_": {
+        "Tyumen\u2019": {
             "626": "0.02%%"
         },
         "Udmurtia": {
             "626": "0.02%%"
         },
-        "Ul_yanovsk": {
+        "Ul\u2019yanovsk": {
             "625": "0.02%%"
         },
         "Vladimir": {
@@ -4262,16 +4277,16 @@
         "Voronezh": {
             "626": "0.02%%"
         },
-        "Yamalo_Nenets": {
+        "Yamalo-Nenets": {
             "627": "0.02%%"
         },
-        "Yaroslavl_": {
+        "Yaroslavl\u2019": {
             "623": "0.02%%"
         },
-        "Zabaykalsky_Krai": {
+        "Zabaykalsky Krai": {
             "625": "0.02%%"
         },
-        "North_West": {
+        "North-West": {
             "369": "0.01%%"
         },
         "Busan": {
@@ -4298,13 +4313,13 @@
         "Jeju": {
             "637": "0.02%%"
         },
-        "North_Chungcheong": {
+        "North Chungcheong": {
             "637": "0.02%%"
         },
-        "North_Gyeongsang": {
+        "North Gyeongsang": {
             "638": "0.02%%"
         },
-        "North_Jeolla": {
+        "North Jeolla": {
             "636": "0.02%%"
         },
         "Sejong": {
@@ -4313,13 +4328,13 @@
         "Seoul": {
             "637": "0.02%%"
         },
-        "South_Chungcheong": {
+        "South Chungcheong": {
             "638": "0.02%%"
         },
-        "South_Gyeongsang": {
+        "South Gyeongsang": {
             "638": "0.02%%"
         },
-        "South_Jeolla": {
+        "South Jeolla": {
             "638": "0.02%%"
         },
         "Ulsan": {
@@ -4334,28 +4349,28 @@
         "Asturias": {
             "664": "0.02%%"
         },
-        "Autonomous_Community_of_Balearic_Islands": {
+        "Autonomous Community of Balearic Islands": {
             "397": "0.01%%"
         },
-        "Balearic_Islands": {
+        "Balearic Islands": {
             "666": "0.02%%"
         },
-        "Basque_Country": {
+        "Basque Country": {
             "667": "0.02%%"
         },
-        "Canary_Islands": {
+        "Canary Islands": {
             "664": "0.02%%"
         },
         "Cantabria": {
             "1328": "0.05%%"
         },
-        "Castile_La_Mancha": {
+        "Castile La Mancha": {
             "667": "0.02%%"
         },
-        "Castilla_and_Leon": {
+        "Castilla and Leon": {
             "397": "0.01%%"
         },
-        "Castilla_Leon": {
+        "Castilla Leon": {
             "669": "0.02%%"
         },
         "Catalonia": {
@@ -4364,10 +4379,10 @@
         "Ceuta": {
             "648": "0.02%%"
         },
-        "Chartered_Community_of_Navarre": {
+        "Chartered Community of Navarre": {
             "396": "0.01%%"
         },
-        "Community_of_Madrid": {
+        "Community of Madrid": {
             "551": "0.02%%"
         },
         "Extremadura": {
@@ -4391,85 +4406,85 @@
         "Valencia": {
             "668": "0.02%%"
         },
-        "Saint_Vincent": {
+        "Saint Vincent": {
             "6": "0.0%%"
         },
-        "Blekinge_County": {
+        "Blekinge County": {
             "621": "0.02%%"
         },
-        "Dalarna_County": {
+        "Dalarna County": {
             "625": "0.02%%"
         },
-        "Gavleborg_County": {
+        "Gavleborg County": {
             "625": "0.02%%"
         },
-        "Gotland_County": {
+        "Gotland County": {
             "621": "0.02%%"
         },
-        "Halland_County": {
+        "Halland County": {
             "623": "0.02%%"
         },
-        "Jamtland_County": {
+        "Jamtland County": {
             "624": "0.02%%"
         },
-        "Jonkoping_County": {
+        "Jonkoping County": {
             "625": "0.02%%"
         },
-        "Kalmar_County": {
+        "Kalmar County": {
             "625": "0.02%%"
         },
-        "Kronoberg_County": {
+        "Kronoberg County": {
             "624": "0.02%%"
         },
         "Norrbotten": {
             "624": "0.02%%"
         },
-        "Orebro_County": {
+        "Orebro County": {
             "625": "0.02%%"
         },
-        "Ostergotland_County": {
+        "Ostergotland County": {
             "623": "0.02%%"
         },
-        "Skane_County": {
+        "Skane County": {
             "623": "0.02%%"
         },
-        "Sodermanland_County": {
+        "Sodermanland County": {
             "622": "0.02%%"
         },
-        "Stockholm_County": {
+        "Stockholm County": {
             "623": "0.02%%"
         },
-        "Uppsala_County": {
+        "Uppsala County": {
             "623": "0.02%%"
         },
-        "Varmland_County": {
+        "Varmland County": {
             "623": "0.02%%"
         },
-        "V_sterbotten": {
+        "V\u00e4sterbotten": {
             "621": "0.02%%"
         },
-        "V_sternorrland": {
+        "V\u00e4sternorrland": {
             "621": "0.02%%"
         },
-        "Vastmanland_County": {
+        "Vastmanland County": {
             "621": "0.02%%"
         },
-        "Vastra_Gotaland_County": {
+        "Vastra Gotaland County": {
             "623": "0.02%%"
         },
         "Aargau": {
             "644": "0.02%%"
         },
-        "Appenzell_Inner_Rhoden": {
+        "Appenzell Inner-Rhoden": {
             "629": "0.02%%"
         },
-        "Appenzell_Outer_Rhoden": {
+        "Appenzell Outer-Rhoden": {
             "432": "0.01%%"
         },
-        "Basel_Country": {
+        "Basel-Country": {
             "660": "0.02%%"
         },
-        "Basel_Town": {
+        "Basel-Town": {
             "660": "0.02%%"
         },
         "Berne": {
@@ -4484,7 +4499,7 @@
         "Glarus": {
             "628": "0.02%%"
         },
-        "Graub_nden": {
+        "Graub\u00fcnden": {
             "654": "0.02%%"
         },
         "Jura": {
@@ -4493,7 +4508,7 @@
         "Lucerne": {
             "637": "0.02%%"
         },
-        "Neuch_tel": {
+        "Neuch\u00e2tel": {
             "634": "0.02%%"
         },
         "Nidwalden": {
@@ -4502,7 +4517,7 @@
         "Obwalden": {
             "626": "0.02%%"
         },
-        "St_Gallen": {
+        "St Gallen": {
             "642": "0.02%%"
         },
         "Schaffhausen": {
@@ -4550,7 +4565,7 @@
         "Donetsk": {
             "396": "0.01%%"
         },
-        "Ivano_Frankivsk": {
+        "Ivano-Frankivsk": {
             "396": "0.01%%"
         },
         "Kharkiv": {
@@ -4610,7 +4625,7 @@
         "England": {
             "17851": "0.61%%"
         },
-        "Northern_Ireland": {
+        "Northern Ireland": {
             "525": "0.02%%"
         },
         "Scotland": {
@@ -4640,7 +4655,7 @@
         "Connecticut": {
             "5776": "0.2%%"
         },
-        "District_of_Columbia": {
+        "District of Columbia": {
             "702": "0.02%%"
         },
         "Delaware": {
@@ -4700,28 +4715,28 @@
         "Montana": {
             "21116": "0.73%%"
         },
-        "North_Carolina": {
+        "North Carolina": {
             "64837": "2.23%%"
         },
-        "North_Dakota": {
+        "North Dakota": {
             "33243": "1.14%%"
         },
         "Nebraska": {
             "59070": "2.03%%"
         },
-        "New_Hampshire": {
+        "New Hampshire": {
             "7067": "0.24%%"
         },
-        "New_Jersey": {
+        "New Jersey": {
             "14477": "0.5%%"
         },
-        "New_Mexico": {
+        "New Mexico": {
             "21104": "0.73%%"
         },
         "Nevada": {
             "9692": "0.33%%"
         },
-        "New_York": {
+        "New York": {
             "41249": "1.42%%"
         },
         "Ohio": {
@@ -4736,13 +4751,13 @@
         "Pennsylvania": {
             "43930": "1.51%%"
         },
-        "Rhode_Island": {
+        "Rhode Island": {
             "3088": "0.11%%"
         },
-        "South_Carolina": {
+        "South Carolina": {
             "30358": "1.05%%"
         },
-        "South_Dakota": {
+        "South Dakota": {
             "36480": "1.26%%"
         },
         "Tennessee": {
@@ -4766,7 +4781,7 @@
         "Wisconsin": {
             "47114": "1.62%%"
         },
-        "West_Virginia": {
+        "West Virginia": {
             "33905": "1.17%%"
         },
         "Wyoming": {
@@ -4777,1481 +4792,1491 @@
         }
     },
     "iso_region": {
-        "AR_B": {
+        "AR-B": {
             "137": "0.01%%"
         },
-        "AR_K": {
+        "AR-K": {
             "618": "0.02%%"
         },
-        "AR_H": {
+        "AR-H": {
             "626": "0.02%%"
         },
-        "AR_U": {
+        "AR-U": {
             "618": "0.02%%"
         },
-        "AR_W": {
+        "AR-W": {
             "620": "0.02%%"
         },
-        "AR_P": {
+        "AR-P": {
             "614": "0.02%%"
         },
-        "AR_Y": {
+        "AR-Y": {
             "621": "0.02%%"
         },
-        "AR_F": {
+        "AR-F": {
             "1244": "0.05%%"
         },
-        "AR_N": {
+        "AR-N": {
             "621": "0.02%%"
         },
-        "AR_M": {
+        "AR-M": {
             "624": "0.02%%"
         },
-        "AR_A": {
+        "AR-A": {
             "623": "0.02%%"
         },
-        "AR_J": {
+        "AR-J": {
             "618": "0.02%%"
         },
-        "AR_G": {
+        "AR-G": {
             "621": "0.02%%"
         },
-        "AR_S": {
+        "AR-S": {
             "625": "0.02%%"
         },
-        "AR_D": {
+        "AR-D": {
             "621": "0.02%%"
         },
-        "AU_ACT": {
+        "AU-ACT": {
             "621": "0.02%%"
         },
-        "AU_NSW": {
+        "AU-NSW": {
             "626": "0.02%%"
         },
-        "AU_NT": {
+        "AU-NT": {
             "598": "0.02%%"
         },
-        "AU_QLD": {
+        "AU-QLD": {
             "625": "0.02%%"
         },
-        "AU_SA": {
+        "AU-SA": {
             "623": "0.02%%"
         },
-        "AU_TAS": {
+        "AU-TAS": {
             "625": "0.02%%"
         },
-        "AU_VIC": {
+        "AU-VIC": {
             "625": "0.02%%"
         },
-        "AU_WA": {
+        "AU-WA": {
             "625": "0.02%%"
         },
-        "AT_1": {
+        "AT-1": {
             "625": "0.02%%"
         },
-        "AT_5": {
+        "AT-5": {
             "609": "0.02%%"
         },
-        "AT_8": {
+        "AT-8": {
             "624": "0.02%%"
         },
-        "BO_H": {
+        "BO-H": {
             "593": "0.02%%"
         },
-        "BO_C": {
+        "BO-C": {
             "592": "0.02%%"
         },
-        "BO_L": {
+        "BO-L": {
             "593": "0.02%%"
         },
-        "BO_O": {
+        "BO-O": {
             "593": "0.02%%"
         },
-        "BO_N": {
+        "BO-N": {
             "592": "0.02%%"
         },
-        "BO_P": {
+        "BO-P": {
             "593": "0.02%%"
         },
-        "BO_S": {
+        "BO-S": {
             "591": "0.02%%"
         },
-        "BO_T": {
+        "BO-T": {
             "592": "0.02%%"
         },
-        "BQ_BO": {
+        "BQ-BO": {
             "17": "0.0%%"
         },
-        "BR_AC": {
+        "BR-AC": {
             "599": "0.02%%"
         },
-        "BR_AL": {
+        "BR-AL": {
             "597": "0.02%%"
         },
-        "BR_AP": {
+        "BR-AP": {
             "598": "0.02%%"
         },
-        "BR_AM": {
+        "BR-AM": {
             "597": "0.02%%"
         },
-        "BR_BA": {
+        "BR-BA": {
             "597": "0.02%%"
         },
-        "BR_CE": {
+        "BR-CE": {
             "591": "0.02%%"
         },
-        "BR_ES": {
+        "BR-ES": {
             "600": "0.02%%"
         },
-        "BR_GO": {
+        "BR-GO": {
             "585": "0.02%%"
         },
-        "BR_MA": {
+        "BR-MA": {
             "596": "0.02%%"
         },
-        "BR_MT": {
+        "BR-MT": {
             "592": "0.02%%"
         },
-        "BR_MS": {
+        "BR-MS": {
             "595": "0.02%%"
         },
-        "BR_MG": {
+        "BR-MG": {
             "600": "0.02%%"
         },
-        "BR_PA": {
+        "BR-PA": {
             "595": "0.02%%"
         },
-        "BR_PR": {
+        "BR-PR": {
             "599": "0.02%%"
         },
-        "BR_PE": {
+        "BR-PE": {
             "597": "0.02%%"
         },
-        "BR_PI": {
+        "BR-PI": {
             "597": "0.02%%"
         },
-        "BR_RJ": {
+        "BR-RJ": {
             "595": "0.02%%"
         },
-        "BR_RN": {
+        "BR-RN": {
             "598": "0.02%%"
         },
-        "BR_RS": {
+        "BR-RS": {
             "598": "0.02%%"
         },
-        "BR_RO": {
+        "BR-RO": {
             "595": "0.02%%"
         },
-        "BR_RR": {
+        "BR-RR": {
             "599": "0.02%%"
         },
-        "BR_SC": {
+        "BR-SC": {
             "599": "0.02%%"
         },
-        "BR_SP": {
+        "BR-SP": {
             "602": "0.02%%"
         },
-        "BR_SE": {
+        "BR-SE": {
             "601": "0.02%%"
         },
-        "BR_TO": {
+        "BR-TO": {
             "594": "0.02%%"
         },
-        "CA_AB": {
+        "CA-AB": {
             "665": "0.03%%"
         },
-        "CA_BC": {
+        "CA-BC": {
             "678": "0.03%%"
         },
-        "CA_MB": {
+        "CA-MB": {
             "658": "0.03%%"
         },
-        "CA_NB": {
+        "CA-NB": {
             "661": "0.03%%"
         },
-        "CA_NL": {
+        "CA-NL": {
             "652": "0.03%%"
         },
-        "CA_NS": {
+        "CA-NS": {
             "654": "0.03%%"
         },
-        "CA_NT": {
+        "CA-NT": {
             "649": "0.03%%"
         },
-        "CA_NU": {
+        "CA-NU": {
             "615": "0.02%%"
         },
-        "CA_ON": {
+        "CA-ON": {
             "679": "0.03%%"
         },
-        "CA_PE": {
+        "CA-PE": {
             "650": "0.03%%"
         },
-        "CA_QC": {
+        "CA-QC": {
             "670": "0.03%%"
         },
-        "CA_SK": {
+        "CA-SK": {
             "658": "0.03%%"
         },
-        "CL_AN": {
+        "CL-AN": {
             "627": "0.02%%"
         },
-        "CL_AP": {
+        "CL-AP": {
             "625": "0.02%%"
         },
-        "CL_AT": {
+        "CL-AT": {
             "622": "0.02%%"
         },
-        "CL_CO": {
+        "CL-CO": {
             "621": "0.02%%"
         },
-        "CL_LL": {
+        "CL-LL": {
             "626": "0.02%%"
         },
-        "CL_LR": {
+        "CL-LR": {
             "627": "0.02%%"
         },
-        "CL_ML": {
+        "CL-ML": {
             "627": "0.02%%"
         },
-        "CL_NB": {
+        "CL-NB": {
             "600": "0.02%%"
         },
-        "CL_TA": {
+        "CL-TA": {
             "627": "0.02%%"
         },
-        "CL_VS": {
+        "CL-VS": {
             "629": "0.02%%"
         },
-        "CO_AMA": {
+        "CO-AMA": {
             "619": "0.02%%"
         },
-        "CO_ANT": {
+        "CO-ANT": {
             "625": "0.02%%"
         },
-        "CO_ARA": {
+        "CO-ARA": {
             "586": "0.02%%"
         },
-        "CO_CAL": {
+        "CO-CAL": {
             "623": "0.02%%"
         },
-        "CO_CAS": {
+        "CO-CAS": {
             "623": "0.02%%"
         },
-        "CO_CAU": {
+        "CO-CAU": {
             "624": "0.02%%"
         },
-        "CO_CES": {
+        "CO-CES": {
             "625": "0.02%%"
         },
-        "CO_CUN": {
+        "CO-CUN": {
             "625": "0.02%%"
         },
-        "CO_GUV": {
+        "CO-GUV": {
             "571": "0.02%%"
         },
-        "CO_HUI": {
+        "CO-HUI": {
             "625": "0.02%%"
         },
-        "CO_LAG": {
+        "CO-LAG": {
             "623": "0.02%%"
         },
-        "CO_MAG": {
+        "CO-MAG": {
             "625": "0.02%%"
         },
-        "CO_MET": {
+        "CO-MET": {
             "624": "0.02%%"
         },
-        "CO_NSA": {
+        "CO-NSA": {
             "625": "0.02%%"
         },
-        "CO_PUT": {
+        "CO-PUT": {
             "601": "0.02%%"
         },
-        "CO_RIS": {
+        "CO-RIS": {
             "625": "0.02%%"
         },
-        "CO_SAN": {
+        "CO-SAN": {
             "625": "0.02%%"
         },
-        "CO_SUC": {
+        "CO-SUC": {
             "622": "0.02%%"
         },
-        "CO_TOL": {
+        "CO-TOL": {
             "625": "0.02%%"
         },
-        "CO_VAC": {
+        "CO-VAC": {
             "625": "0.02%%"
         },
-        "CO_VID": {
+        "CO-VID": {
             "579": "0.02%%"
         },
-        "CR_A": {
+        "CR-A": {
             "8276": "0.32%%"
         },
-        "CR_C": {
+        "CR-C": {
             "4390": "0.17%%"
         },
-        "CR_G": {
+        "CR-G": {
             "5840": "0.23%%"
         },
-        "CR_H": {
+        "CR-H": {
             "5361": "0.21%%"
         },
-        "CR_L": {
+        "CR-L": {
             "3413": "0.13%%"
         },
-        "CR_P": {
+        "CR-P": {
             "5851": "0.23%%"
         },
-        "CR_SJ": {
+        "CR-SJ": {
             "10230": "0.4%%"
         },
-        "CZ_521": {
+        "CZ-521": {
             "390": "0.02%%"
         },
-        "CZ_412": {
+        "CZ-412": {
             "328": "0.01%%"
         },
-        "CZ_513": {
+        "CZ-513": {
             "403": "0.02%%"
         },
-        "CZ_712": {
+        "CZ-712": {
             "404": "0.02%%"
         },
-        "CZ_532": {
+        "CZ-532": {
             "330": "0.01%%"
         },
-        "CZ_427": {
+        "CZ-427": {
             "330": "0.01%%"
         },
-        "DO_02": {
+        "DO-02": {
             "41": "0.0%%"
         },
-        "DO_03": {
+        "DO-03": {
             "39": "0.0%%"
         },
-        "DO_04": {
+        "DO-04": {
             "41": "0.0%%"
         },
-        "DO_05": {
+        "DO-05": {
             "39": "0.0%%"
         },
-        "DO_06": {
+        "DO-06": {
             "41": "0.0%%"
         },
-        "DO_08": {
+        "DO-08": {
             "39": "0.0%%"
         },
-        "DO_07": {
+        "DO-07": {
             "39": "0.0%%"
         },
-        "DO_09": {
+        "DO-09": {
             "41": "0.0%%"
         },
-        "DO_30": {
+        "DO-30": {
             "40": "0.0%%"
         },
-        "DO_10": {
+        "DO-10": {
             "39": "0.0%%"
         },
-        "DO_11": {
+        "DO-11": {
             "41": "0.0%%"
         },
-        "DO_12": {
+        "DO-12": {
             "41": "0.0%%"
         },
-        "DO_13": {
+        "DO-13": {
             "41": "0.0%%"
         },
-        "DO_14": {
+        "DO-14": {
             "40": "0.0%%"
         },
-        "DO_28": {
+        "DO-28": {
             "41": "0.0%%"
         },
-        "DO_15": {
+        "DO-15": {
             "40": "0.0%%"
         },
-        "DO_29": {
+        "DO-29": {
             "39": "0.0%%"
         },
-        "DO_16": {
+        "DO-16": {
             "38": "0.0%%"
         },
-        "DO_17": {
+        "DO-17": {
             "41": "0.0%%"
         },
-        "DO_18": {
+        "DO-18": {
             "41": "0.0%%"
         },
-        "DO_20": {
+        "DO-20": {
             "39": "0.0%%"
         },
-        "DO_21": {
+        "DO-21": {
             "41": "0.0%%"
         },
-        "DO_31": {
+        "DO-31": {
             "40": "0.0%%"
         },
-        "DO_22": {
+        "DO-22": {
             "41": "0.0%%"
         },
-        "DO_23": {
+        "DO-23": {
             "41": "0.0%%"
         },
-        "DO_24": {
+        "DO-24": {
             "41": "0.0%%"
         },
-        "DO_25": {
+        "DO-25": {
             "41": "0.0%%"
         },
-        "DO_26": {
+        "DO-26": {
             "40": "0.0%%"
         },
-        "DO_32": {
+        "DO-32": {
             "41": "0.0%%"
         },
-        "DO_27": {
+        "DO-27": {
             "39": "0.0%%"
         },
-        "EC_A": {
+        "EC-A": {
             "622": "0.02%%"
         },
-        "EC_B": {
+        "EC-B": {
             "622": "0.02%%"
         },
-        "EC_F": {
+        "EC-F": {
             "622": "0.02%%"
         },
-        "EC_C": {
+        "EC-C": {
             "622": "0.02%%"
         },
-        "EC_H": {
+        "EC-H": {
             "622": "0.02%%"
         },
-        "EC_X": {
+        "EC-X": {
             "622": "0.02%%"
         },
-        "EC_O": {
+        "EC-O": {
             "622": "0.02%%"
         },
-        "EC_E": {
+        "EC-E": {
             "622": "0.02%%"
         },
-        "EC_W": {
+        "EC-W": {
             "618": "0.02%%"
         },
-        "EC_G": {
+        "EC-G": {
             "622": "0.02%%"
         },
-        "EC_I": {
+        "EC-I": {
             "622": "0.02%%"
         },
-        "EC_L": {
+        "EC-L": {
             "622": "0.02%%"
         },
-        "EC_R": {
+        "EC-R": {
             "622": "0.02%%"
         },
-        "EC_M": {
+        "EC-M": {
             "622": "0.02%%"
         },
-        "EC_S": {
+        "EC-S": {
             "622": "0.02%%"
         },
-        "EC_N": {
+        "EC-N": {
             "620": "0.02%%"
         },
-        "EC_D": {
+        "EC-D": {
             "622": "0.02%%"
         },
-        "EC_Y": {
+        "EC-Y": {
             "621": "0.02%%"
         },
-        "EC_P": {
+        "EC-P": {
             "622": "0.02%%"
         },
-        "EC_SE": {
+        "EC-SE": {
             "622": "0.02%%"
         },
-        "EC_SD": {
+        "EC-SD": {
             "622": "0.02%%"
         },
-        "EC_U": {
+        "EC-U": {
             "621": "0.02%%"
         },
-        "EC_T": {
+        "EC-T": {
             "622": "0.02%%"
         },
-        "EC_Z": {
+        "EC-Z": {
             "621": "0.02%%"
         },
-        "SV_AH": {
+        "SV-AH": {
             "111": "0.0%%"
         },
-        "SV_CA": {
+        "SV-CA": {
             "115": "0.0%%"
         },
-        "SV_CH": {
+        "SV-CH": {
             "104": "0.0%%"
         },
-        "SV_CU": {
+        "SV-CU": {
             "109": "0.0%%"
         },
-        "SV_LI": {
+        "SV-LI": {
             "116": "0.0%%"
         },
-        "SV_PA": {
+        "SV-PA": {
             "101": "0.0%%"
         },
-        "SV_UN": {
+        "SV-UN": {
             "107": "0.0%%"
         },
-        "SV_MO": {
+        "SV-MO": {
             "111": "0.0%%"
         },
-        "SV_SM": {
+        "SV-SM": {
             "110": "0.0%%"
         },
-        "SV_SS": {
+        "SV-SS": {
             "108": "0.0%%"
         },
-        "SV_SV": {
+        "SV-SV": {
             "105": "0.0%%"
         },
-        "SV_SA": {
+        "SV-SA": {
             "115": "0.0%%"
         },
-        "SV_SO": {
+        "SV-SO": {
             "110": "0.0%%"
         },
-        "SV_US": {
+        "SV-US": {
             "113": "0.0%%"
         },
-        "FR_OCC": {
+        "FR-OCC": {
             "1": "0.0%%"
         },
-        "GE_AB": {
+        "GE-AB": {
             "531": "0.02%%"
         },
-        "DE_BB": {
+        "DE-BB": {
             "6730": "0.26%%"
         },
-        "DE_BE": {
+        "DE-BE": {
             "647": "0.03%%"
         },
-        "DE_BW": {
+        "DE-BW": {
             "14843": "0.58%%"
         },
-        "DE_HB": {
+        "DE-HB": {
             "1322": "0.05%%"
         },
-        "DE_HH": {
+        "DE-HH": {
             "984": "0.04%%"
         },
-        "DE_SH": {
+        "DE-SH": {
             "5716": "0.22%%"
         },
-        "DE_SL": {
+        "DE-SL": {
             "2674": "0.1%%"
         },
-        "HN_AT": {
+        "HN-AT": {
             "124": "0.0%%"
         },
-        "HN_CH": {
+        "HN-CH": {
             "123": "0.0%%"
         },
-        "HN_CL": {
+        "HN-CL": {
             "122": "0.0%%"
         },
-        "HN_CM": {
+        "HN-CM": {
             "123": "0.0%%"
         },
-        "HN_CP": {
+        "HN-CP": {
             "127": "0.0%%"
         },
-        "HN_CR": {
+        "HN-CR": {
             "121": "0.0%%"
         },
-        "HN_EP": {
+        "HN-EP": {
             "121": "0.0%%"
         },
-        "HN_FM": {
+        "HN-FM": {
             "123": "0.0%%"
         },
-        "HN_GD": {
+        "HN-GD": {
             "5": "0.0%%"
         },
-        "HN_IN": {
+        "HN-IN": {
             "113": "0.0%%"
         },
-        "HN_IB": {
+        "HN-IB": {
             "86": "0.0%%"
         },
-        "HN_LP": {
+        "HN-LP": {
             "116": "0.0%%"
         },
-        "HN_LE": {
+        "HN-LE": {
             "123": "0.0%%"
         },
-        "HN_OC": {
+        "HN-OC": {
             "115": "0.0%%"
         },
-        "HN_OL": {
+        "HN-OL": {
             "104": "0.0%%"
         },
-        "HN_SB": {
+        "HN-SB": {
             "124": "0.0%%"
         },
-        "HN_VA": {
+        "HN-VA": {
             "113": "0.0%%"
         },
-        "HN_YO": {
+        "HN-YO": {
             "125": "0.0%%"
         },
-        "HU_BK": {
+        "HU-BK": {
             "619": "0.02%%"
         },
-        "HU_BA": {
+        "HU-BA": {
             "620": "0.02%%"
         },
-        "HU_BE": {
+        "HU-BE": {
             "620": "0.02%%"
         },
-        "HU_BZ": {
+        "HU-BZ": {
             "620": "0.02%%"
         },
-        "HU_BU": {
+        "HU-BU": {
             "625": "0.02%%"
         },
-        "HU_CS": {
+        "HU-CS": {
             "113": "0.0%%"
         },
-        "HU_FE": {
+        "HU-FE": {
             "625": "0.02%%"
         },
-        "HU_GS": {
+        "HU-GS": {
             "622": "0.02%%"
         },
-        "HU_HB": {
+        "HU-HB": {
             "620": "0.02%%"
         },
-        "HU_HE": {
+        "HU-HE": {
             "621": "0.02%%"
         },
-        "HU_JN": {
+        "HU-JN": {
             "622": "0.02%%"
         },
-        "HU_KE": {
+        "HU-KE": {
             "624": "0.02%%"
         },
-        "HU_NO": {
+        "HU-NO": {
             "619": "0.02%%"
         },
-        "HU_PE": {
+        "HU-PE": {
             "624": "0.02%%"
         },
-        "HU_SO": {
+        "HU-SO": {
             "620": "0.02%%"
         },
-        "HU_SZ": {
+        "HU-SZ": {
             "620": "0.02%%"
         },
-        "HU_TO": {
+        "HU-TO": {
             "620": "0.02%%"
         },
-        "HU_VA": {
+        "HU-VA": {
             "619": "0.02%%"
         },
-        "HU_VM": {
+        "HU-VM": {
             "623": "0.02%%"
         },
-        "HU_VE": {
+        "HU-VE": {
             "623": "0.02%%"
         },
-        "HU_ZA": {
+        "HU-ZA": {
             "622": "0.02%%"
         },
-        "IN_AN": {
+        "IN-AN": {
             "1925": "0.07%%"
         },
-        "IN_AP": {
+        "IN-AP": {
             "7021": "0.27%%"
         },
-        "IN_AS": {
+        "IN-AS": {
             "12923": "0.5%%"
         },
-        "IN_BR": {
+        "IN-BR": {
             "19385": "0.75%%"
         },
-        "IN_CH": {
+        "IN-CH": {
             "1140": "0.04%%"
         },
-        "IN_CT": {
+        "IN-CT": {
             "14308": "0.56%%"
         },
-        "IN_DD": {
+        "IN-DD": {
             "438": "0.02%%"
         },
-        "IN_DL": {
+        "IN-DL": {
             "5588": "0.22%%"
         },
-        "IN_DN": {
+        "IN-DN": {
             "37": "0.0%%"
         },
-        "IN_GA": {
+        "IN-GA": {
             "1511": "0.06%%"
         },
-        "IN_GJ": {
+        "IN-GJ": {
             "17838": "0.69%%"
         },
-        "IN_HP": {
+        "IN-HP": {
             "6712": "0.26%%"
         },
-        "IN_HR": {
+        "IN-HR": {
             "11302": "0.44%%"
         },
-        "IN_JH": {
+        "IN-JH": {
             "12773": "0.5%%"
         },
-        "IN_KA": {
+        "IN-KA": {
             "14863": "0.58%%"
         },
-        "IN_KL": {
+        "IN-KL": {
             "7773": "0.3%%"
         },
-        "IN_LD": {
+        "IN-LD": {
             "1081": "0.04%%"
         },
-        "IN_MH": {
+        "IN-MH": {
             "19616": "0.76%%"
         },
-        "IN_ML": {
+        "IN-ML": {
             "6165": "0.24%%"
         },
-        "IN_MN": {
+        "IN-MN": {
             "4597": "0.18%%"
         },
-        "IN_MP": {
+        "IN-MP": {
             "26960": "1.05%%"
         },
-        "IN_MZ": {
+        "IN-MZ": {
             "4675": "0.18%%"
         },
-        "IN_NL": {
+        "IN-NL": {
             "6140": "0.24%%"
         },
-        "IN_PB": {
+        "IN-PB": {
             "11282": "0.44%%"
         },
-        "IN_PY": {
+        "IN-PY": {
             "2660": "0.1%%"
         },
-        "IN_RJ": {
+        "IN-RJ": {
             "18097": "0.7%%"
         },
-        "IN_SK": {
+        "IN-SK": {
             "2332": "0.09%%"
         },
-        "IN_TN": {
+        "IN-TN": {
             "18798": "0.73%%"
         },
-        "IN_TR": {
+        "IN-TR": {
             "4663": "0.18%%"
         },
-        "IN_TG": {
+        "IN-TG": {
             "10407": "0.41%%"
         },
-        "IN_UT": {
+        "IN-UT": {
             "7230": "0.28%%"
         },
-        "IN_UP": {
+        "IN-UP": {
             "38622": "1.5%%"
         },
-        "IN_WB": {
+        "IN-WB": {
             "10241": "0.4%%"
         },
-        "ID_AC": {
+        "ID-AC": {
             "458": "0.02%%"
         },
-        "ID_BA": {
+        "ID-BA": {
             "462": "0.02%%"
         },
-        "ID_BT": {
+        "ID-BT": {
             "460": "0.02%%"
         },
-        "ID_BE": {
+        "ID-BE": {
             "455": "0.02%%"
         },
-        "ID_GO": {
+        "ID-GO": {
             "459": "0.02%%"
         },
-        "ID_JA": {
+        "ID-JA": {
             "459": "0.02%%"
         },
-        "ID_LA": {
+        "ID-LA": {
             "457": "0.02%%"
         },
-        "ID_ML": {
+        "ID-ML": {
             "457": "0.02%%"
         },
-        "ID_MA": {
+        "ID-MA": {
             "457": "0.02%%"
         },
-        "ID_PP": {
+        "ID-PP": {
             "460": "0.02%%"
         },
-        "ID_PA": {
+        "ID-PA": {
             "460": "0.02%%"
         },
-        "ID_RI": {
+        "ID-RI": {
             "459": "0.02%%"
         },
-        "ID_YO": {
+        "ID-YO": {
             "460": "0.02%%"
         },
-        "IR_06": {
+        "IR-06": {
             "568": "0.02%%"
         },
-        "IR_26": {
+        "IR-26": {
             "622": "0.02%%"
         },
-        "IR_25": {
+        "IR-25": {
             "622": "0.02%%"
         },
-        "IT_77": {
+        "IT-77": {
             "656": "0.03%%"
         },
-        "IT_78": {
+        "IT-78": {
             "659": "0.03%%"
         },
-        "IT_72": {
+        "IT-72": {
             "621": "0.02%%"
         },
-        "IT_45": {
+        "IT-45": {
             "654": "0.03%%"
         },
-        "IT_42": {
+        "IT-42": {
             "666": "0.03%%"
         },
-        "IT_67": {
+        "IT-67": {
             "655": "0.03%%"
         },
-        "IT_32": {
+        "IT-32": {
             "1254": "0.05%%"
         },
-        "IT_55": {
+        "IT-55": {
             "640": "0.02%%"
         },
-        "IT_23": {
+        "IT-23": {
             "658": "0.03%%"
         },
-        "IT_34": {
+        "IT-34": {
             "624": "0.02%%"
         },
-        "JP_05": {
+        "JP-05": {
             "628": "0.02%%"
         },
-        "JP_02": {
+        "JP-02": {
             "631": "0.02%%"
         },
-        "JP_38": {
+        "JP-38": {
             "632": "0.02%%"
         },
-        "JP_10": {
+        "JP-10": {
             "632": "0.02%%"
         },
-        "JP_08": {
+        "JP-08": {
             "632": "0.02%%"
         },
-        "JP_03": {
+        "JP-03": {
             "623": "0.02%%"
         },
-        "JP_37": {
+        "JP-37": {
             "631": "0.02%%"
         },
-        "JP_14": {
+        "JP-14": {
             "632": "0.02%%"
         },
-        "JP_43": {
+        "JP-43": {
             "630": "0.02%%"
         },
-        "JP_24": {
+        "JP-24": {
             "628": "0.02%%"
         },
-        "JP_04": {
+        "JP-04": {
             "632": "0.02%%"
         },
-        "JP_45": {
+        "JP-45": {
             "629": "0.02%%"
         },
-        "JP_20": {
+        "JP-20": {
             "632": "0.02%%"
         },
-        "JP_42": {
+        "JP-42": {
             "630": "0.02%%"
         },
-        "JP_29": {
+        "JP-29": {
             "632": "0.02%%"
         },
-        "JP_15": {
+        "JP-15": {
             "631": "0.02%%"
         },
-        "JP_33": {
+        "JP-33": {
             "629": "0.02%%"
         },
-        "JP_47": {
+        "JP-47": {
             "623": "0.02%%"
         },
-        "JP_41": {
+        "JP-41": {
             "629": "0.02%%"
         },
-        "JP_11": {
+        "JP-11": {
             "632": "0.02%%"
         },
-        "JP_31": {
+        "JP-31": {
             "624": "0.02%%"
         },
-        "JP_16": {
+        "JP-16": {
             "632": "0.02%%"
         },
-        "JP_30": {
+        "JP-30": {
             "630": "0.02%%"
         },
-        "JP_06": {
+        "JP-06": {
             "632": "0.02%%"
         },
-        "MY_02": {
+        "MY-02": {
             "107": "0.0%%"
         },
-        "MY_03": {
+        "MY-03": {
             "107": "0.0%%"
         },
-        "MY_06": {
+        "MY-06": {
             "107": "0.0%%"
         },
-        "MY_08": {
+        "MY-08": {
             "107": "0.0%%"
         },
-        "MY_09": {
+        "MY-09": {
             "107": "0.0%%"
         },
-        "MY_12": {
+        "MY-12": {
             "107": "0.0%%"
         },
-        "MY_13": {
+        "MY-13": {
             "107": "0.0%%"
         },
-        "MY_10": {
+        "MY-10": {
             "107": "0.0%%"
         },
-        "MY_11": {
+        "MY-11": {
             "107": "0.0%%"
         },
-        "MX_AGU": {
+        "MX-AGU": {
             "623": "0.02%%"
         },
-        "MX_BCN": {
+        "MX-BCN": {
             "624": "0.02%%"
         },
-        "MX_BCS": {
+        "MX-BCS": {
             "623": "0.02%%"
         },
-        "MX_CAM": {
+        "MX-CAM": {
             "624": "0.02%%"
         },
-        "MX_CHP": {
+        "MX-CHP": {
             "624": "0.02%%"
         },
-        "MX_CHH": {
+        "MX-CHH": {
             "624": "0.02%%"
         },
-        "MX_COL": {
+        "MX-COL": {
             "621": "0.02%%"
         },
-        "MX_DUR": {
+        "MX-DUR": {
             "624": "0.02%%"
         },
-        "MX_GUA": {
+        "MX-GUA": {
             "624": "0.02%%"
         },
-        "MX_GRO": {
+        "MX-GRO": {
             "623": "0.02%%"
         },
-        "MX_HID": {
+        "MX-HID": {
             "624": "0.02%%"
         },
-        "MX_JAL": {
+        "MX-JAL": {
             "624": "0.02%%"
         },
-        "MX_MEX": {
+        "MX-MEX": {
             "624": "0.02%%"
         },
-        "MX_MOR": {
+        "MX-MOR": {
             "624": "0.02%%"
         },
-        "MX_NAY": {
+        "MX-NAY": {
             "622": "0.02%%"
         },
-        "MX_NLE": {
+        "MX-NLE": {
             "621": "0.02%%"
         },
-        "MX_OAX": {
+        "MX-OAX": {
             "592": "0.02%%"
         },
-        "MX_PUE": {
+        "MX-PUE": {
             "624": "0.02%%"
         },
-        "MX_QUE": {
+        "MX-QUE": {
             "624": "0.02%%"
         },
-        "MX_ROO": {
+        "MX-ROO": {
             "623": "0.02%%"
         },
-        "MX_SLP": {
+        "MX-SLP": {
             "622": "0.02%%"
         },
-        "MX_SIN": {
+        "MX-SIN": {
             "623": "0.02%%"
         },
-        "MX_SON": {
+        "MX-SON": {
             "624": "0.02%%"
         },
-        "MX_TAB": {
+        "MX-TAB": {
             "624": "0.02%%"
         },
-        "MX_TAM": {
+        "MX-TAM": {
             "623": "0.02%%"
         },
-        "MX_TLA": {
+        "MX-TLA": {
             "624": "0.02%%"
         },
-        "MX_YUC": {
+        "MX-YUC": {
             "623": "0.02%%"
         },
-        "MX_ZAC": {
+        "MX-ZAC": {
             "622": "0.02%%"
         },
-        "NL_DR": {
+        "NL-DR": {
             "625": "0.02%%"
         },
-        "NL_FL": {
+        "NL-FL": {
             "626": "0.02%%"
         },
-        "NL_GE": {
+        "NL-GE": {
             "625": "0.02%%"
         },
-        "NL_GR": {
+        "NL-GR": {
             "626": "0.02%%"
         },
-        "NL_LI": {
+        "NL-LI": {
             "626": "0.02%%"
         },
-        "NL_OV": {
+        "NL-OV": {
             "626": "0.02%%"
         },
-        "NL_UT": {
+        "NL-UT": {
             "626": "0.02%%"
         },
-        "NL_ZE": {
+        "NL-ZE": {
             "626": "0.02%%"
         },
-        "NO_02": {
+        "NO-02": {
             "629": "0.02%%"
         },
-        "NO_09": {
+        "NO-09": {
             "630": "0.02%%"
         },
-        "NO_15": {
+        "NO-15": {
             "1257": "0.05%%"
         },
-        "NO_18": {
+        "NO-18": {
             "629": "0.02%%"
         },
-        "NO_05": {
+        "NO-05": {
             "629": "0.02%%"
         },
-        "NO_03": {
+        "NO-03": {
             "630": "0.02%%"
         },
-        "NO_11": {
+        "NO-11": {
             "629": "0.02%%"
         },
-        "NO_38": {
+        "NO-38": {
             "627": "0.02%%"
         },
-        "PK_SD": {
+        "PK-SD": {
             "525": "0.02%%"
         },
-        "PY_10": {
+        "PY-10": {
             "86": "0.0%%"
         },
-        "PY_13": {
+        "PY-13": {
             "86": "0.0%%"
         },
-        "PY_ASU": {
+        "PY-ASU": {
             "85": "0.0%%"
         },
-        "PY_19": {
+        "PY-19": {
             "87": "0.0%%"
         },
-        "PY_5": {
+        "PY-5": {
             "75": "0.0%%"
         },
-        "PY_6": {
+        "PY-6": {
             "77": "0.0%%"
         },
-        "PY_14": {
+        "PY-14": {
             "87": "0.0%%"
         },
-        "PY_11": {
+        "PY-11": {
             "82": "0.0%%"
         },
-        "PY_1": {
+        "PY-1": {
             "70": "0.0%%"
         },
-        "PY_3": {
+        "PY-3": {
             "86": "0.0%%"
         },
-        "PY_4": {
+        "PY-4": {
             "77": "0.0%%"
         },
-        "PY_7": {
+        "PY-7": {
             "83": "0.0%%"
         },
-        "PY_8": {
+        "PY-8": {
             "86": "0.0%%"
         },
-        "PY_12": {
+        "PY-12": {
             "84": "0.0%%"
         },
-        "PY_9": {
+        "PY-9": {
             "78": "0.0%%"
         },
-        "PY_15": {
+        "PY-15": {
             "62": "0.0%%"
         },
-        "PY_2": {
+        "PY-2": {
             "82": "0.0%%"
         },
-        "PE_AMA": {
+        "PE-AMA": {
             "626": "0.02%%"
         },
-        "PE_ANC": {
+        "PE-ANC": {
             "624": "0.02%%"
         },
-        "PE_ARE": {
+        "PE-ARE": {
             "624": "0.02%%"
         },
-        "PE_AYA": {
+        "PE-AYA": {
             "624": "0.02%%"
         },
-        "PE_CAJ": {
+        "PE-CAJ": {
             "624": "0.02%%"
         },
-        "PE_HUV": {
+        "PE-HUV": {
             "625": "0.02%%"
         },
-        "PE_ICA": {
+        "PE-ICA": {
             "624": "0.02%%"
         },
-        "PE_JUN": {
+        "PE-JUN": {
             "624": "0.02%%"
         },
-        "PE_LAL": {
+        "PE-LAL": {
             "624": "0.02%%"
         },
-        "PE_LAM": {
+        "PE-LAM": {
             "625": "0.02%%"
         },
-        "PE_LIM": {
+        "PE-LIM": {
             "617": "0.02%%"
         },
-        "PE_LOR": {
+        "PE-LOR": {
             "624": "0.02%%"
         },
-        "PE_MDD": {
+        "PE-MDD": {
             "626": "0.02%%"
         },
-        "PE_MOQ": {
+        "PE-MOQ": {
             "624": "0.02%%"
         },
-        "PE_PAS": {
+        "PE-PAS": {
             "626": "0.02%%"
         },
-        "PE_PIU": {
+        "PE-PIU": {
             "624": "0.02%%"
         },
-        "PE_PUN": {
+        "PE-PUN": {
             "622": "0.02%%"
         },
-        "PE_TAC": {
+        "PE-TAC": {
             "624": "0.02%%"
         },
-        "PE_TUM": {
+        "PE-TUM": {
             "624": "0.02%%"
         },
-        "PE_UCA": {
+        "PE-UCA": {
             "623": "0.02%%"
         },
-        "PL_02": {
+        "PL-02": {
             "115": "0.0%%"
         },
-        "PL_04": {
+        "PL-04": {
             "129": "0.01%%"
         },
-        "PL_10": {
+        "PL-10": {
             "117": "0.0%%"
         },
-        "PL_06": {
+        "PL-06": {
             "117": "0.0%%"
         },
-        "PL_08": {
+        "PL-08": {
             "116": "0.0%%"
         },
-        "PL_12": {
+        "PL-12": {
             "110": "0.0%%"
         },
-        "PL_14": {
+        "PL-14": {
             "120": "0.0%%"
         },
-        "PL_16": {
+        "PL-16": {
             "121": "0.0%%"
         },
-        "PL_18": {
+        "PL-18": {
             "127": "0.0%%"
         },
-        "PL_20": {
+        "PL-20": {
             "128": "0.0%%"
         },
-        "PL_22": {
+        "PL-22": {
             "119": "0.0%%"
         },
-        "PL_24": {
+        "PL-24": {
             "112": "0.0%%"
         },
-        "PL_26": {
+        "PL-26": {
             "128": "0.0%%"
         },
-        "PL_28": {
+        "PL-28": {
             "122": "0.0%%"
         },
-        "PL_30": {
+        "PL-30": {
             "124": "0.0%%"
         },
-        "PL_32": {
+        "PL-32": {
             "128": "0.0%%"
         },
-        "PT_06": {
+        "PT-06": {
             "109": "0.0%%"
         },
-        "PT_07": {
+        "PT-07": {
             "106": "0.0%%"
         },
-        "PT_08": {
+        "PT-08": {
             "108": "0.0%%"
         },
-        "PT_13": {
+        "PT-13": {
             "103": "0.0%%"
         },
-        "ES_O": {
+        "ES-O": {
             "664": "0.03%%"
         },
-        "ES_CB": {
+        "ES-CB": {
             "664": "0.03%%"
         },
-        "ES_S": {
+        "ES-S": {
             "664": "0.03%%"
         },
-        "ES_CE": {
+        "ES-CE": {
             "648": "0.03%%"
         },
-        "ES_EX": {
+        "ES-EX": {
             "666": "0.03%%"
         },
-        "ES_RI": {
+        "ES-RI": {
             "669": "0.03%%"
         },
-        "ES_LO": {
+        "ES-LO": {
             "669": "0.03%%"
         },
-        "ES_M": {
+        "ES-M": {
             "529": "0.02%%"
         },
-        "ES_ML": {
+        "ES-ML": {
             "651": "0.03%%"
         },
-        "ES_MU": {
+        "ES-MU": {
             "662": "0.03%%"
         },
-        "ES_V": {
+        "ES-V": {
             "668": "0.03%%"
         },
-        "GB_ENG": {
+        "GB-ENG": {
             "17851": "0.69%%"
         },
-        "GB_NIR": {
+        "GB-NIR": {
             "525": "0.02%%"
         },
-        "GB_SCT": {
+        "GB-SCT": {
             "1590": "0.06%%"
         },
-        "GB_WLS": {
+        "GB-WLS": {
             "774": "0.03%%"
         },
-        "US_AK": {
+        "US-AK": {
             "13650": "0.53%%"
         },
-        "US_AL": {
+        "US-AL": {
             "43881": "1.71%%"
         },
-        "US_AR": {
+        "US-AR": {
             "48750": "1.9%%"
         },
-        "US_AZ": {
+        "US-AZ": {
             "10364": "0.4%%"
         },
-        "US_CA": {
+        "US-CA": {
             "37483": "1.46%%"
         },
-        "US_CO": {
+        "US-CO": {
             "42077": "1.64%%"
         },
-        "US_CT": {
+        "US-CT": {
             "5776": "0.22%%"
         },
-        "US_DC": {
+        "US-DC": {
             "702": "0.03%%"
         },
-        "US_DE": {
+        "US-DE": {
             "2630": "0.1%%"
         },
-        "US_FL": {
+        "US-FL": {
             "44363": "1.73%%"
         },
-        "US_GA": {
+        "US-GA": {
             "102663": "4.0%%"
         },
-        "US_HI": {
+        "US-HI": {
             "3220": "0.13%%"
         },
-        "US_IA": {
+        "US-IA": {
             "63683": "2.48%%"
         },
-        "US_ID": {
+        "US-ID": {
             "23979": "0.93%%"
         },
-        "US_IL": {
+        "US-IL": {
             "65618": "2.55%%"
         },
-        "US_IN": {
+        "US-IN": {
             "60006": "2.34%%"
         },
-        "US_KS": {
+        "US-KS": {
             "61630": "2.4%%"
         },
-        "US_KY": {
+        "US-KY": {
             "75607": "2.94%%"
         },
-        "US_LA": {
+        "US-LA": {
             "42183": "1.64%%"
         },
-        "US_MA": {
+        "US-MA": {
             "9873": "0.38%%"
         },
-        "US_MD": {
+        "US-MD": {
             "16061": "0.63%%"
         },
-        "US_ME": {
+        "US-ME": {
             "10899": "0.42%%"
         },
-        "US_MI": {
+        "US-MI": {
             "50510": "1.97%%"
         },
-        "US_MN": {
+        "US-MN": {
             "54666": "2.13%%"
         },
-        "US_MO": {
+        "US-MO": {
             "72571": "2.82%%"
         },
-        "US_MS": {
+        "US-MS": {
             "52981": "2.06%%"
         },
-        "US_MT": {
+        "US-MT": {
             "21116": "0.82%%"
         },
-        "US_NC": {
+        "US-NC": {
             "64837": "2.52%%"
         },
-        "US_ND": {
+        "US-ND": {
             "33243": "1.29%%"
         },
-        "US_NE": {
+        "US-NE": {
             "59070": "2.3%%"
         },
-        "US_NH": {
+        "US-NH": {
             "7067": "0.28%%"
         },
-        "US_NJ": {
+        "US-NJ": {
             "14477": "0.56%%"
         },
-        "US_NM": {
+        "US-NM": {
             "21104": "0.82%%"
         },
-        "US_NV": {
+        "US-NV": {
             "9692": "0.38%%"
         },
-        "US_NY": {
+        "US-NY": {
             "41249": "1.61%%"
         },
-        "US_OH": {
+        "US-OH": {
             "57374": "2.23%%"
         },
-        "US_OK": {
+        "US-OK": {
             "49148": "1.91%%"
         },
-        "US_OR": {
+        "US-OR": {
             "23912": "0.93%%"
         },
-        "US_PA": {
+        "US-PA": {
             "43930": "1.71%%"
         },
-        "US_RI": {
+        "US-RI": {
             "3088": "0.12%%"
         },
-        "US_SC": {
+        "US-SC": {
             "30358": "1.18%%"
         },
-        "US_SD": {
+        "US-SD": {
             "36480": "1.42%%"
         },
-        "US_TN": {
+        "US-TN": {
             "61581": "2.4%%"
         },
-        "US_TX": {
+        "US-TX": {
             "147633": "5.75%%"
         },
-        "US_UT": {
+        "US-UT": {
             "6546": "0.25%%"
         },
-        "US_VA": {
+        "US-VA": {
             "82522": "3.21%%"
         },
-        "US_VT": {
+        "US-VT": {
             "9641": "0.38%%"
         },
-        "US_WA": {
+        "US-WA": {
             "25935": "1.01%%"
         },
-        "US_WI": {
+        "US-WI": {
             "47114": "1.83%%"
         },
-        "US_WV": {
+        "US-WV": {
             "33905": "1.32%%"
         },
-        "US_WY": {
+        "US-WY": {
             "15284": "0.59%%"
+        }
+    },
+    "rollup_iso_region": {
+        "Percent": {
+            "Other": null,
+            "Africa": null,
+            "Asia": null,
+            "America": null,
+            "Europe": null,
+            "Oceania": null
         }
     }
 }
