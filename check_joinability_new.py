@@ -20,10 +20,22 @@ logging.basicConfig(filename=LOG_FILE,level=logging.DEBUG)
 
 def main():
     # Map single dataset
-    lista_dataset=[]
-    comando=sys.argv
-    lista_dataset=comando.split(" ")
-    print(lista_dataset)
+    check_dataset=[sys.argv[1].split(".csv")[0], sys.argv[2].split(".csv")[0]]
+    with open('joinable.json', 'r', encoding="utf-8") as outfile:
+        data_set=json.load(outfile)
+    
+    for type_dimension in data_set.items():
+        try:
+            print(str(type_dimension))
+            # Utilizzo l'or per far si che non va in errore qualora il "valore" che vede durante l'if nel caso in cui
+            # è uno zero non va in false
+            if (data_set[type_dimension][check_dataset[0]] or data_set[type_dimension][check_dataset[0]]==0) and (data_set[type_dimension][check_dataset[1]] or data_set[type_dimension][check_dataset[1]]==0):
+                print("Parlano la stessa dimensione la stessa dimensione"+str(type_dimension))
+        except Exception as e:
+            print("Non e' presente "+str(e.args)+" nella dimensione joinable "+str(type_dimension))
+
+
+
 	
 
 

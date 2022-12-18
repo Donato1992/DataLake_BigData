@@ -208,11 +208,15 @@ async def frequency(values,type_dimension):
 		if type_dimension=="iso_region":
 			q_result=GRAPH.query("""SELECT ?x ?k WHERE{?x property:inLevel level:iso_region. ?x property:refer_to ?y. ?y property:rollup ?z. ?z property:rollup ?k} ORDER BY ASC(?X)""")
 			#In this line I fill the dictionary
+			dict_temp={}
 			for row in q_result:
+				dict_temp[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
 				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
-		logging.debug(len(freq))
-		logging.debug(len(DICTIONARY_CONTINENT))
-		logging.debug(DICTIONARY_CONTINENT)
+			#logging.debug("Dizionario iso_region")
+			#logging.debug(dict_temp)
+		#logging.debug(len(freq))
+		#logging.debug(len(DICTIONARY_CONTINENT))
+		#logging.debug(DICTIONARY_CONTINENT)
 
 		
 		#dizionario[type_dimension]=dict(freq)
@@ -237,7 +241,7 @@ async def frequency(values,type_dimension):
 				await task
 			
 			print ("% s : % d : %s"%(key, value,percentual_value))
-			temp.append([value,str(str(percentual_value)+"%")])
+			temp.append([value,str(str(percentual_value))])
 			dizionario_key[re.sub('[^0-9a-zA-Z]-', '_', key)]=dict(temp)
 		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
 		# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
@@ -260,11 +264,9 @@ def continent_analysis(dataframe):
 
 async def all_continent(country,dataframe,percent_value):
 	
-	country=re.sub('[^0-9a-zA-Z]', '_', country)
+	country=re.sub('[^0-9a-zA-Z]-', '_', country)
 	try:
-		print("VEDIAMO COSA VEDIAMO--->"+str(DICTIONARY_CONTINENT[country])+str(country))
 		if DICTIONARY_CONTINENT[country]:
-			logging.debug("VEDIAMO COSA VEDIAMO--->"+str(DICTIONARY_CONTINENT[country])+str(country))
 			if dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]==None:
 					percent_sum=round(0.00+percent_value,2)
 					dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]=percent_sum
