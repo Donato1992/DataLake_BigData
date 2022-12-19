@@ -120,10 +120,10 @@
         "Slovenia": {
             "3320": "2.55%%"
         },
-        "South_Africa": {
+        "South Africa": {
             "192": "0.15%%"
         },
-        "South_Korea": {
+        "South Korea": {
             "1708": "1.31%%"
         },
         "Spain": {
@@ -135,29 +135,21 @@
         "Switzerland": {
             "4324": "3.32%%"
         },
-        "United_Kingdom": {
+        "United Kingdom": {
             "4262": "3.27%%"
         },
-        "United_States": {
+        "United States": {
             "3618": "2.78%%"
         }
     },
-    "rollup": {
-        "Country": {
-            "0": "Other",
-            "1": "Africa",
-            "2": "Asia",
-            "3": "America",
-            "4": "Europe",
-            "5": "Oceania"
-        },
+    "rollup_country": {
         "Percent": {
-            "0": [],
-            "1": 0.98,
-            "2": 11.49,
-            "3": 10.15,
-            "4": 70.72,
-            "5": 2.19
+            "Other": null,
+            "Africa": 0.98,
+            "Asia": 11.49,
+            "America": 10.15,
+            "Europe": 70.72,
+            "Oceania": 2.19
         }
     },
     "day": {
