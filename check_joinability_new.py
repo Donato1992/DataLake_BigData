@@ -46,8 +46,30 @@ def main():
         dict_second=json.load(sfile)
 
 
-#può esser fatto meglio, ci vorrebbe un altro filtro per la percentuale, ma devo vedere come convertire in int quella percentuale!
+    for item in dimension_joinable:
+        if item in dict_first.keys() and item == "day":
+            for anno in dict_first[item].keys():
+                for tuple in dict_first[item][anno]:
+                    dict_first[item][anno][tuple]=dict_first[item][anno][tuple].replace("%%","")
+                    if(int(tuple)>100) and (float(dict_first[item][anno][tuple])/100>0.35):
+                        print(anno+" "+tuple+" "+dict_first[item][anno][tuple])
+                        print("E' joinabile")
 
+
+
+                
+
+
+
+
+
+
+
+
+
+
+#può esser fatto meglio, ci vorrebbe un altro filtro per la percentuale, ma devo vedere come convertire in int quella percentuale!
+"""
     for x in dict_first.keys():
         for item in dimension_joinable:
             if item==x and x=="day":
@@ -57,7 +79,7 @@ def main():
                                 print(anno+" "+tuple+" "+dict_first[x][anno][tuple])
                                 print("E' joinabile")
 
-
+"""
 
     
 
