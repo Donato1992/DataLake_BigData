@@ -182,7 +182,7 @@ async def frequency(values,type_dimension):
 			dimension_colum=len(values)
 			percentual_time=str(round(value/dimension_colum*100, 2))+"%"
 			print ("% d : % d : %s"%(key, value, percentual_time))
-			temp.append([value,str(str(percentual_time)+"%")])
+			temp.append([value,str(str(percentual_time))])
 			dizionario_key[key]=dict(temp)
 		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)
 	else:
@@ -276,7 +276,7 @@ async def all_continent(country,dataframe,percent_value):
 
 	except KeyError:
 		
-		print("Non esiste-->"+str(country)+"nel nostro Grafo")
+		print("Not Exsits-->"+str(country)+"in Graph")
 		logging.debug("NON ESISTE-->"+str(country))
 	
 		#Print used only to see the results of the query	
