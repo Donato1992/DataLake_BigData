@@ -96,6 +96,49 @@ def check_argument(dict_check,dimensions,keys,datasets):
     except Exception as e:
         print("Not present the argument "+str(e.args[0])+" in dataset "+str(datasets))
 
+<<<<<<< HEAD
+=======
+    with open(check_dataset[1]+"_json_data.json","r",encoding="utf-8") as sfile:
+        dict_second=json.load(sfile)
+
+
+    for item in dimension_joinable:
+        if item in dict_first.keys() and item == "day":
+            for anno in dict_first[item].keys():
+                for tuple in dict_first[item][anno]:
+                    dict_first[item][anno][tuple]=dict_first[item][anno][tuple].replace("%%","")
+                    if(int(tuple)>100) and (float(dict_first[item][anno][tuple])/100>0.35):
+                        print(anno+" "+tuple+" "+dict_first[item][anno][tuple])
+                        print("E' joinabile")
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+#può esser fatto meglio, ci vorrebbe un altro filtro per la percentuale, ma devo vedere come convertire in int quella percentuale!
+"""
+    for x in dict_first.keys():
+        for item in dimension_joinable:
+            if item==x and x=="day":
+                    for anno in dict_first[x].keys():
+                        for tuple in dict_first[x][anno]:
+                            if(int(tuple)>100):
+                                print(anno+" "+tuple+" "+dict_first[x][anno][tuple])
+                                print("E' joinabile")
+
+"""
+
+    
+>>>>>>> c3e096e343176d34a3f579558f2686b0aa783be7
 
 
 if __name__ == "__main__":
