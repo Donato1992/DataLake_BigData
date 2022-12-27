@@ -25,12 +25,12 @@ def main():
 	# initialize. This is still hard-coded.
 	s1 = "datasets/bing_covid-19_data.csv"
 	s3 = "datasets/ecdc_cases.csv"
-	s5 = "datasets/covid-hospitalizations.csv"
+	s5 = "datasets/covid_policy_tracker.csv"
 
-	#Qua sotto mi prendo le colonne che hanno la data e le iso_3. Naturalmente le colonne le conosco di default	
-	c1 = [1,11]
+	#Qua sotto mi prendo le colonne che hanno la data day tempo e le iso_3. Naturalmente le colonne le conosco di default	
+	c1 = [11,10]
 	c3 = [0,8]
-	c5 = [1,2]
+	c5 = [1,36]
 
 	m1 = MinHash(num_perm=NUM_PERM)
 	m3 = MinHash(num_perm=NUM_PERM)
