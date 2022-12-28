@@ -1,5 +1,5 @@
 from rdflib import Bag, Graph, URIRef, Literal, BNode, Seq
-from rdflib.namespace import FOAF,RDF
+from rdflib.namespace import OWL,RDF
 from pprint import pprint
 import sys
 import os
@@ -14,13 +14,13 @@ from datetime import datetime
 from rdflib import Namespace
 import re
 
+
 DEFAULT_DIMENSIONS_DIR="dimensions/Geo_Continent/"
 DEFAULT_DIMENSIONS_DIRR="dimensions/"
 dl_dim= Namespace("http://w3id.org/kpionto/Dimension#")
 dl_lvl= Namespace("http://w3id.org/kpionto/Level#")
 dl_prop= Namespace("http://w3id.org/kpionto/#")
 dl_member= Namespace("http://w3id.org/kpionto/Member#")
-
 
 
 
@@ -268,8 +268,7 @@ def import_country_iso2_country_iso3(graph):
                 x=re.sub('[^0-9a-zA-Z]', '_', x)
             sub=URIRef("http://w3id.org/kpionto/Member#"+c)
             ogg=URIRef("http://w3id.org/kpionto/Member#"+x)
-            #consider that refer_to property is not defined in KPIonto,maybe is better to use anather property?
-            graph.add((sub,dl_prop.refer_to,ogg))
+            graph.add((sub,OWL.sameAs,ogg))
         etl_iso3={}
         for y in iso3.keys():
 
@@ -283,7 +282,7 @@ def import_country_iso2_country_iso3(graph):
                 x=re.sub('[^0-9a-zA-Z]', '_', x)
             sub=URIRef("http://w3id.org/kpionto/Member#"+c)
             ogg=URIRef("http://w3id.org/kpionto/Member#"+x)
-            graph.add((sub,dl_prop.refer_to,ogg))
+            graph.add((sub,OWL.sameAs,ogg))
 
 
 def import_iso_region(graph):
@@ -356,9 +355,9 @@ def main():
     graph.add((dl_lvl.iso2,dl_prop.inDimension,dl_dim.iso_code))
     graph.add((dl_lvl.iso3,RDF.type,dl_lvl.level))
     graph.add((dl_lvl.iso3,dl_prop.inDimension,dl_dim.iso_code))
-    #maybe 
     graph.add((dl_lvl.iso_region,RDF.type,dl_lvl.level))
-
+    graph.add((dl_lvl.iso2,OWL.sameAs,dl_lvl.country))
+    
 
     import_continent(graph)
     import_country(graph)

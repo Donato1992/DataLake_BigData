@@ -1,6 +1,7 @@
 @prefix dimension: <http://w3id.org/kpionto/Dimension#> .
 @prefix level: <http://w3id.org/kpionto/Level#> .
 @prefix member: <http://w3id.org/kpionto/Member#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix property: <http://w3id.org/kpionto/#> .
 
 level:mounth a level:level ;
@@ -2276,67 +2277,67 @@ member:2022-01-09 a member:member ;
 
 member:ABW a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Aruba .
+    owl:sameAs member:Aruba .
 
 member:AD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Andorra .
+    owl:sameAs member:Andorra .
 
 member:AE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:United_Arab_Emirates .
+    owl:sameAs member:United_Arab_Emirates .
 
 member:AF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Afghanistan .
+    owl:sameAs member:Afghanistan .
 
 member:AFG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Afghanistan .
+    owl:sameAs member:Afghanistan .
 
 member:AG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Antigua_and_Barbuda .
+    owl:sameAs member:Antigua_and_Barbuda .
 
 member:AGO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Angola .
+    owl:sameAs member:Angola .
 
 member:AI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Anguilla .
+    owl:sameAs member:Anguilla .
 
 member:AIA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Anguilla .
+    owl:sameAs member:Anguilla .
 
 member:AL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Albania .
+    owl:sameAs member:Albania .
 
 member:ALB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Albania .
+    owl:sameAs member:Albania .
 
 member:AM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Armenia .
+    owl:sameAs member:Armenia .
 
 member:AND a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Andorra .
+    owl:sameAs member:Andorra .
 
 member:AO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Angola .
+    owl:sameAs member:Angola .
 
 member:AQ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Antarctica .
+    owl:sameAs member:Antarctica .
 
 member:AR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Argentina .
+    owl:sameAs member:Argentina .
 
 member:AR-A a member:member ;
     property:inLevel level:iso_region ;
@@ -2397,27 +2398,27 @@ member:AR-Y a member:member ;
 
 member:ARE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:United_Arab_Emirates .
+    owl:sameAs member:United_Arab_Emirates .
 
 member:ARG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Argentina .
+    owl:sameAs member:Argentina .
 
 member:ARM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Armenia .
+    owl:sameAs member:Armenia .
 
 member:AS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:American_Samoa .
+    owl:sameAs member:American_Samoa .
 
 member:ASM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:American_Samoa .
+    owl:sameAs member:American_Samoa .
 
 member:AT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Austria .
+    owl:sameAs member:Austria .
 
 member:AT-1 a member:member ;
     property:inLevel level:iso_region ;
@@ -2433,15 +2434,15 @@ member:AT-8 a member:member ;
 
 member:ATA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Antarctica .
+    owl:sameAs member:Antarctica .
 
 member:ATG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Antigua_and_Barbuda .
+    owl:sameAs member:Antigua_and_Barbuda .
 
 member:AU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Australia .
+    owl:sameAs member:Australia .
 
 member:AU-ACT a member:member ;
     property:inLevel level:iso_region ;
@@ -2477,23 +2478,23 @@ member:AU-WA a member:member ;
 
 member:AUS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Australia .
+    owl:sameAs member:Australia .
 
 member:AUT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Austria .
+    owl:sameAs member:Austria .
 
 member:AW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Aruba .
+    owl:sameAs member:Aruba .
 
 member:AZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Azerbaijan .
+    owl:sameAs member:Azerbaijan .
 
 member:AZE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Azerbaijan .
+    owl:sameAs member:Azerbaijan .
 
 member:Aargau a member:member ;
     property:inLevel level:region ;
@@ -2597,111 +2598,111 @@ member:Azores a member:member ;
 
 member:BA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bosnia_and_Herzegovina .
+    owl:sameAs member:Bosnia_and_Herzegovina .
 
 member:BB a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Barbados .
+    owl:sameAs member:Barbados .
 
 member:BD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bangladesh .
+    owl:sameAs member:Bangladesh .
 
 member:BDI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Burundi .
+    owl:sameAs member:Burundi .
 
 member:BE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Belgium .
+    owl:sameAs member:Belgium .
 
 member:BEL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Belgium .
+    owl:sameAs member:Belgium .
 
 member:BEN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Benin .
+    owl:sameAs member:Benin .
 
 member:BES a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bonaire .
+    owl:sameAs member:Bonaire .
 
 member:BF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Burkina_Faso .
+    owl:sameAs member:Burkina_Faso .
 
 member:BFA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Burkina_Faso .
+    owl:sameAs member:Burkina_Faso .
 
 member:BG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bulgaria .
+    owl:sameAs member:Bulgaria .
 
 member:BGD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bangladesh .
+    owl:sameAs member:Bangladesh .
 
 member:BGR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bulgaria .
+    owl:sameAs member:Bulgaria .
 
 member:BH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bahrain .
+    owl:sameAs member:Bahrain .
 
 member:BHR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bahrain .
+    owl:sameAs member:Bahrain .
 
 member:BHS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bahamas .
+    owl:sameAs member:Bahamas .
 
 member:BI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Burundi .
+    owl:sameAs member:Burundi .
 
 member:BIH a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bosnia_and_Herzegovina .
+    owl:sameAs member:Bosnia_and_Herzegovina .
 
 member:BJ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Benin .
+    owl:sameAs member:Benin .
 
 member:BL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saint_Barth_lemy .
+    owl:sameAs member:Saint_Barth_lemy .
 
 member:BLM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saint_Barth_lemy .
+    owl:sameAs member:Saint_Barth_lemy .
 
 member:BLR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Belarus .
+    owl:sameAs member:Belarus .
 
 member:BLZ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Belize .
+    owl:sameAs member:Belize .
 
 member:BM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bermuda .
+    owl:sameAs member:Bermuda .
 
 member:BMU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bermuda .
+    owl:sameAs member:Bermuda .
 
 member:BN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Brunei .
+    owl:sameAs member:Brunei .
 
 member:BO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bolivia .
+    owl:sameAs member:Bolivia .
 
 member:BO-C a member:member ;
     property:inLevel level:iso_region ;
@@ -2736,11 +2737,11 @@ member:BO-T a member:member ;
 
 member:BOL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bolivia .
+    owl:sameAs member:Bolivia .
 
 member:BQ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bonaire .
+    owl:sameAs member:Bonaire .
 
 member:BQ-BO a member:member ;
     property:inLevel level:iso_region ;
@@ -2748,7 +2749,7 @@ member:BQ-BO a member:member ;
 
 member:BR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Brazil .
+    owl:sameAs member:Brazil .
 
 member:BR-AC a member:member ;
     property:inLevel level:iso_region ;
@@ -2851,43 +2852,43 @@ member:BR-TO a member:member ;
 
 member:BRA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Brazil .
+    owl:sameAs member:Brazil .
 
 member:BRB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Barbados .
+    owl:sameAs member:Barbados .
 
 member:BRN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Brunei .
+    owl:sameAs member:Brunei .
 
 member:BS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bahamas .
+    owl:sameAs member:Bahamas .
 
 member:BT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Bhutan .
+    owl:sameAs member:Bhutan .
 
 member:BTN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Bhutan .
+    owl:sameAs member:Bhutan .
 
 member:BW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Botswana .
+    owl:sameAs member:Botswana .
 
 member:BWA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Botswana .
+    owl:sameAs member:Botswana .
 
 member:BY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Belarus .
+    owl:sameAs member:Belarus .
 
 member:BZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Belize .
+    owl:sameAs member:Belize .
 
 member:Balearic_Islands a member:member ;
     property:inLevel level:region ;
@@ -2981,7 +2982,7 @@ member:Busan a member:member ;
 
 member:CA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Canada .
+    owl:sameAs member:Canada .
 
 member:CA-AB a member:member ;
     property:inLevel level:iso_region ;
@@ -3033,55 +3034,55 @@ member:CA-SK a member:member ;
 
 member:CAF a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Central_African_Republic .
+    owl:sameAs member:Central_African_Republic .
 
 member:CAN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Canada .
+    owl:sameAs member:Canada .
 
 member:CD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Congo__DRC_ .
+    owl:sameAs member:Congo__DRC_ .
 
 member:CF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Central_African_Republic .
+    owl:sameAs member:Central_African_Republic .
 
 member:CG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Congo .
+    owl:sameAs member:Congo .
 
 member:CH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Switzerland .
+    owl:sameAs member:Switzerland .
 
 member:CHE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Switzerland .
+    owl:sameAs member:Switzerland .
 
 member:CHL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Chile .
+    owl:sameAs member:Chile .
 
 member:CHN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:China__mainland_ .
+    owl:sameAs member:China__mainland_ .
 
 member:CI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:C_te_d_Ivoire .
+    owl:sameAs member:C_te_d_Ivoire .
 
 member:CIV a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:C_te_d_Ivoire .
+    owl:sameAs member:C_te_d_Ivoire .
 
 member:CK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cook_Islands .
+    owl:sameAs member:Cook_Islands .
 
 member:CL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Chile .
+    owl:sameAs member:Chile .
 
 member:CL-AN a member:member ;
     property:inLevel level:iso_region ;
@@ -3124,21 +3125,21 @@ member:CL-VS a member:member ;
 
 member:CM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cameroon .
+    owl:sameAs member:Cameroon .
 
 member:CMR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cameroon .
+    owl:sameAs member:Cameroon .
 
 member:CN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:China__mainland_ .
+    owl:sameAs member:China__mainland_ .
 
 member:CO a member:member ;
     property:inLevel level:iso2,
         level:region ;
-    property:refer_to member:Colombia ;
-    property:rollup member:Republic_of_the_Congo .
+    property:rollup member:Republic_of_the_Congo ;
+    owl:sameAs member:Colombia .
 
 member:CO-AMA a member:member ;
     property:inLevel level:iso_region .
@@ -3225,31 +3226,31 @@ member:CO-VID a member:member ;
 
 member:COD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Congo__DRC_ .
+    owl:sameAs member:Congo__DRC_ .
 
 member:COG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Congo .
+    owl:sameAs member:Congo .
 
 member:COK a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cook_Islands .
+    owl:sameAs member:Cook_Islands .
 
 member:COL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Colombia .
+    owl:sameAs member:Colombia .
 
 member:COM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Comoros .
+    owl:sameAs member:Comoros .
 
 member:CPV a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cabo_Verde .
+    owl:sameAs member:Cabo_Verde .
 
 member:CR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Costa_Rica .
+    owl:sameAs member:Costa_Rica .
 
 member:CR-A a member:member ;
     property:inLevel level:iso_region ;
@@ -3281,43 +3282,43 @@ member:CR-SJ a member:member ;
 
 member:CRI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Costa_Rica .
+    owl:sameAs member:Costa_Rica .
 
 member:CU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cuba .
+    owl:sameAs member:Cuba .
 
 member:CUB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cuba .
+    owl:sameAs member:Cuba .
 
 member:CUW a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Curaçao .
+    owl:sameAs member:Curaçao .
 
 member:CV a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cabo_Verde .
+    owl:sameAs member:Cabo_Verde .
 
 member:CW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Curaçao .
+    owl:sameAs member:Curaçao .
 
 member:CY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cyprus .
+    owl:sameAs member:Cyprus .
 
 member:CYM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cayman_Islands .
+    owl:sameAs member:Cayman_Islands .
 
 member:CYP a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cyprus .
+    owl:sameAs member:Cyprus .
 
 member:CZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Czechia .
+    owl:sameAs member:Czechia .
 
 member:CZ-412 a member:member ;
     property:inLevel level:iso_region ;
@@ -3345,7 +3346,7 @@ member:CZ-712 a member:member ;
 
 member:CZE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Czechia .
+    owl:sameAs member:Czechia .
 
 member:Callao a member:member ;
     property:inLevel level:region ;
@@ -3486,7 +3487,7 @@ member:Czech_Republic property:rollup member:Europe .
 
 member:DE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Germany .
+    owl:sameAs member:Germany .
 
 member:DE-BB a member:member ;
     property:inLevel level:iso_region ;
@@ -3522,35 +3523,35 @@ member:DE-ST a member:member ;
 
 member:DEU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Germany .
+    owl:sameAs member:Germany .
 
 member:DJ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Djibouti .
+    owl:sameAs member:Djibouti .
 
 member:DJI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Djibouti .
+    owl:sameAs member:Djibouti .
 
 member:DK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Denmark .
+    owl:sameAs member:Denmark .
 
 member:DM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Dominica .
+    owl:sameAs member:Dominica .
 
 member:DMA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Dominica .
+    owl:sameAs member:Dominica .
 
 member:DNK a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Denmark .
+    owl:sameAs member:Denmark .
 
 member:DO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Dominican_Republic .
+    owl:sameAs member:Dominican_Republic .
 
 member:DO-02 a member:member ;
     property:inLevel level:iso_region ;
@@ -3674,15 +3675,15 @@ member:DO-32 a member:member ;
 
 member:DOM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Dominican_Republic .
+    owl:sameAs member:Dominican_Republic .
 
 member:DZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Algeria .
+    owl:sameAs member:Algeria .
 
 member:DZA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Algeria .
+    owl:sameAs member:Algeria .
 
 member:Daegu a member:member ;
     property:inLevel level:region ;
@@ -3719,7 +3720,7 @@ member:Donetsk a member:member ;
 
 member:EC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Ecuador .
+    owl:sameAs member:Ecuador .
 
 member:EC-A a member:member ;
     property:inLevel level:iso_region ;
@@ -3819,19 +3820,19 @@ member:EC-Z a member:member ;
 
 member:ECU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Ecuador .
+    owl:sameAs member:Ecuador .
 
 member:EE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Estonia .
+    owl:sameAs member:Estonia .
 
 member:EG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Egypt .
+    owl:sameAs member:Egypt .
 
 member:EGY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Egypt .
+    owl:sameAs member:Egypt .
 
 member:EH a member:member ;
     property:inLevel level:iso2 .
@@ -3841,15 +3842,15 @@ member:EL a member:member ;
 
 member:ER a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Eritrea .
+    owl:sameAs member:Eritrea .
 
 member:ERI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Eritrea .
+    owl:sameAs member:Eritrea .
 
 member:ES a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Spain .
+    owl:sameAs member:Spain .
 
 member:ES-CB a member:member ;
     property:inLevel level:iso_region .
@@ -3898,19 +3899,19 @@ member:ESH a member:member ;
 
 member:ESP a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Spain .
+    owl:sameAs member:Spain .
 
 member:EST a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Estonia .
+    owl:sameAs member:Estonia .
 
 member:ET a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Ethiopia .
+    owl:sameAs member:Ethiopia .
 
 member:ETH a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Ethiopia .
+    owl:sameAs member:Ethiopia .
 
 member:East_Azerbaijan a member:member ;
     property:inLevel level:region ;
@@ -3940,35 +3941,35 @@ member:Esfahan a member:member ;
 
 member:FI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Finland .
+    owl:sameAs member:Finland .
 
 member:FIN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Finland .
+    owl:sameAs member:Finland .
 
 member:FJ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Fiji .
+    owl:sameAs member:Fiji .
 
 member:FJI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Fiji .
+    owl:sameAs member:Fiji .
 
 member:FK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Falkland_Islands .
+    owl:sameAs member:Falkland_Islands .
 
 member:FLK a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Falkland_Islands .
+    owl:sameAs member:Falkland_Islands .
 
 member:FO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Faroe_Islands .
+    owl:sameAs member:Faroe_Islands .
 
 member:FR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:France .
+    owl:sameAs member:France .
 
 member:FR-OCC a member:member ;
     property:inLevel level:iso_region ;
@@ -3976,11 +3977,11 @@ member:FR-OCC a member:member ;
 
 member:FRA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:France .
+    owl:sameAs member:France .
 
 member:FRO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Faroe_Islands .
+    owl:sameAs member:Faroe_Islands .
 
 member:Falkland_Islands_\(Malvinas\) a member:member ;
     property:inLevel level:country .
@@ -4030,15 +4031,15 @@ member:Fukushima a member:member ;
 
 member:GA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Gabon .
+    owl:sameAs member:Gabon .
 
 member:GAB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Gabon .
+    owl:sameAs member:Gabon .
 
 member:GB a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:United_Kingdom .
+    owl:sameAs member:United_Kingdom .
 
 member:GB-ENG a member:member ;
     property:inLevel level:iso_region ;
@@ -4058,15 +4059,15 @@ member:GB-WLS a member:member ;
 
 member:GBR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:United_Kingdom .
+    owl:sameAs member:United_Kingdom .
 
 member:GD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Grenada .
+    owl:sameAs member:Grenada .
 
 member:GE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Georgia .
+    owl:sameAs member:Georgia .
 
 member:GE-AB a member:member ;
     property:inLevel level:iso_region ;
@@ -4074,129 +4075,129 @@ member:GE-AB a member:member ;
 
 member:GEO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Georgia .
+    owl:sameAs member:Georgia .
 
 member:GF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:French_Guiana .
+    owl:sameAs member:French_Guiana .
 
 member:GG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Guernsey .
+    owl:sameAs member:Guernsey .
 
 member:GGY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Guernsey .
+    owl:sameAs member:Guernsey .
 
 member:GH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Ghana .
+    owl:sameAs member:Ghana .
 
 member:GHA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Ghana .
+    owl:sameAs member:Ghana .
 
 member:GI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Gibraltar .
+    owl:sameAs member:Gibraltar .
 
 member:GIB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Gibraltar .
+    owl:sameAs member:Gibraltar .
 
 member:GIN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Guinea .
+    owl:sameAs member:Guinea .
 
 member:GL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Greenland .
+    owl:sameAs member:Greenland .
 
 member:GLP a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:French-Guadeloupe,
+    owl:sameAs member:French-Guadeloupe,
         member:Guadeloupe .
 
 member:GM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:The_Gambia .
+    owl:sameAs member:The_Gambia .
 
 member:GMB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:The_Gambia .
+    owl:sameAs member:The_Gambia .
 
 member:GN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Guinea .
+    owl:sameAs member:Guinea .
 
 member:GNB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Guinea-Bissau .
+    owl:sameAs member:Guinea-Bissau .
 
 member:GNQ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Equatorial_Guinea .
+    owl:sameAs member:Equatorial_Guinea .
 
 member:GP a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:French-Guadeloupe,
+    owl:sameAs member:French-Guadeloupe,
         member:Guadeloupe .
 
 member:GQ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Equatorial_Guinea .
+    owl:sameAs member:Equatorial_Guinea .
 
 member:GR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Greece .
+    owl:sameAs member:Greece .
 
 member:GRC a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Greece .
+    owl:sameAs member:Greece .
 
 member:GRD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Grenada .
+    owl:sameAs member:Grenada .
 
 member:GRL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Greenland .
+    owl:sameAs member:Greenland .
 
 member:GT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Guatemala .
+    owl:sameAs member:Guatemala .
 
 member:GTM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Guatemala .
+    owl:sameAs member:Guatemala .
 
 member:GU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Guam .
+    owl:sameAs member:Guam .
 
 member:GUF a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:French_Guiana .
+    owl:sameAs member:French_Guiana .
 
 member:GUM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Guam .
+    owl:sameAs member:Guam .
 
 member:GUY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Guyana .
+    owl:sameAs member:Guyana .
 
 member:GW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Guinea-Bissau .
+    owl:sameAs member:Guinea-Bissau .
 
 member:GY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Guyana .
+    owl:sameAs member:Guyana .
 
 member:GZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Gaza_Strip .
+    owl:sameAs member:Gaza_Strip .
 
 member:Galicia a member:member ;
     property:inLevel level:region ;
@@ -4284,15 +4285,15 @@ member:Gyeonggi a member:member ;
 
 member:HK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Hong_Kong_SAR .
+    owl:sameAs member:Hong_Kong_SAR .
 
 member:HKG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Hong_Kong_SAR .
+    owl:sameAs member:Hong_Kong_SAR .
 
 member:HN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Honduras .
+    owl:sameAs member:Honduras .
 
 member:HN-AT a member:member ;
     property:inLevel level:iso_region ;
@@ -4368,27 +4369,27 @@ member:HN-YO a member:member ;
 
 member:HND a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Honduras .
+    owl:sameAs member:Honduras .
 
 member:HR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Croatia .
+    owl:sameAs member:Croatia .
 
 member:HRV a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Croatia .
+    owl:sameAs member:Croatia .
 
 member:HT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Haiti .
+    owl:sameAs member:Haiti .
 
 member:HTI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Haiti .
+    owl:sameAs member:Haiti .
 
 member:HU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Hungary .
+    owl:sameAs member:Hungary .
 
 member:HU-BA a member:member ;
     property:inLevel level:iso_region ;
@@ -4475,7 +4476,7 @@ member:HU-ZA a member:member ;
 
 member:HUN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Hungary .
+    owl:sameAs member:Hungary .
 
 member:Hainan a member:member ;
     property:inLevel level:region ;
@@ -4538,7 +4539,7 @@ member:Hyogo a member:member ;
 
 member:ID a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Indonesia .
+    owl:sameAs member:Indonesia .
 
 member:ID-AC a member:member ;
     property:inLevel level:iso_region ;
@@ -4592,27 +4593,27 @@ member:ID-YO a member:member ;
 
 member:IDN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Indonesia .
+    owl:sameAs member:Indonesia .
 
 member:IE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Ireland .
+    owl:sameAs member:Ireland .
 
 member:IL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Israel .
+    owl:sameAs member:Israel .
 
 member:IM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Isle_of_Man .
+    owl:sameAs member:Isle_of_Man .
 
 member:IMN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Isle_of_Man .
+    owl:sameAs member:Isle_of_Man .
 
 member:IN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:India .
+    owl:sameAs member:India .
 
 member:IN-AN a member:member ;
     property:inLevel level:iso_region ;
@@ -4747,23 +4748,23 @@ member:IN-WB a member:member ;
 
 member:IND a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:India .
+    owl:sameAs member:India .
 
 member:IO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:British_Indian_Ocean_Territory .
+    owl:sameAs member:British_Indian_Ocean_Territory .
 
 member:IOT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:British_Indian_Ocean_Territory .
+    owl:sameAs member:British_Indian_Ocean_Territory .
 
 member:IQ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Iraq .
+    owl:sameAs member:Iraq .
 
 member:IR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Iran .
+    owl:sameAs member:Iran .
 
 member:IR-06 a member:member ;
     property:inLevel level:iso_region ;
@@ -4779,31 +4780,31 @@ member:IR-26 a member:member ;
 
 member:IRL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Ireland .
+    owl:sameAs member:Ireland .
 
 member:IRN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Iran .
+    owl:sameAs member:Iran .
 
 member:IRQ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Iraq .
+    owl:sameAs member:Iraq .
 
 member:IS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Iceland .
+    owl:sameAs member:Iceland .
 
 member:ISL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Iceland .
+    owl:sameAs member:Iceland .
 
 member:ISR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Israel .
+    owl:sameAs member:Israel .
 
 member:IT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Italy .
+    owl:sameAs member:Italy .
 
 member:IT-23 a member:member ;
     property:inLevel level:iso_region ;
@@ -4847,7 +4848,7 @@ member:IT-78 a member:member ;
 
 member:ITA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Italy .
+    owl:sameAs member:Italy .
 
 member:Ilam a member:member ;
     property:inLevel level:region ;
@@ -4893,31 +4894,31 @@ member:Ivory_Coast property:rollup member:Africa .
 
 member:JAM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Jamaica .
+    owl:sameAs member:Jamaica .
 
 member:JE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Jersey .
+    owl:sameAs member:Jersey .
 
 member:JEY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Jersey .
+    owl:sameAs member:Jersey .
 
 member:JM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Jamaica .
+    owl:sameAs member:Jamaica .
 
 member:JO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Jordan .
+    owl:sameAs member:Jordan .
 
 member:JOR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Jordan .
+    owl:sameAs member:Jordan .
 
 member:JP a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Japan .
+    owl:sameAs member:Japan .
 
 member:JP-02 a member:member ;
     property:inLevel level:iso_region ;
@@ -5017,7 +5018,7 @@ member:JP-47 a member:member ;
 
 member:JPN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Japan .
+    owl:sameAs member:Japan .
 
 member:Jakarta a member:member ;
     property:inLevel level:region ;
@@ -5065,43 +5066,43 @@ member:Jura a member:member ;
 
 member:KAZ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Kazakhstan .
+    owl:sameAs member:Kazakhstan .
 
 member:KE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Kenya .
+    owl:sameAs member:Kenya .
 
 member:KEN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Kenya .
+    owl:sameAs member:Kenya .
 
 member:KG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Kyrgyzstan .
+    owl:sameAs member:Kyrgyzstan .
 
 member:KGZ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Kyrgyzstan .
+    owl:sameAs member:Kyrgyzstan .
 
 member:KH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cambodia .
+    owl:sameAs member:Cambodia .
 
 member:KHM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Cambodia .
+    owl:sameAs member:Cambodia .
 
 member:KI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Kiribati .
+    owl:sameAs member:Kiribati .
 
 member:KIR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Kiribati .
+    owl:sameAs member:Kiribati .
 
 member:KM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Comoros .
+    owl:sameAs member:Comoros .
 
 member:KN a member:member ;
     property:inLevel level:iso2 .
@@ -5111,27 +5112,27 @@ member:KNA a member:member ;
 
 member:KOR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:South_Korea .
+    owl:sameAs member:South_Korea .
 
 member:KR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:South_Korea .
+    owl:sameAs member:South_Korea .
 
 member:KW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Kuwait .
+    owl:sameAs member:Kuwait .
 
 member:KWT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Kuwait .
+    owl:sameAs member:Kuwait .
 
 member:KY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Cayman_Islands .
+    owl:sameAs member:Cayman_Islands .
 
 member:KZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Kazakhstan .
+    owl:sameAs member:Kazakhstan .
 
 member:Kabardino-Balkaria a member:member ;
     property:inLevel level:region ;
@@ -5271,91 +5272,91 @@ member:Kyoto a member:member ;
 
 member:LA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Laos .
+    owl:sameAs member:Laos .
 
 member:LAO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Laos .
+    owl:sameAs member:Laos .
 
 member:LB a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Lebanon .
+    owl:sameAs member:Lebanon .
 
 member:LBN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Lebanon .
+    owl:sameAs member:Lebanon .
 
 member:LBR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Liberia .
+    owl:sameAs member:Liberia .
 
 member:LBY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Libya .
+    owl:sameAs member:Libya .
 
 member:LC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saint_Lucia .
+    owl:sameAs member:Saint_Lucia .
 
 member:LCA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saint_Lucia .
+    owl:sameAs member:Saint_Lucia .
 
 member:LI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Liechtenstein .
+    owl:sameAs member:Liechtenstein .
 
 member:LIE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Liechtenstein .
+    owl:sameAs member:Liechtenstein .
 
 member:LK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Sri_Lanka .
+    owl:sameAs member:Sri_Lanka .
 
 member:LKA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Sri_Lanka .
+    owl:sameAs member:Sri_Lanka .
 
 member:LR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Liberia .
+    owl:sameAs member:Liberia .
 
 member:LS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Lesotho .
+    owl:sameAs member:Lesotho .
 
 member:LSO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Lesotho .
+    owl:sameAs member:Lesotho .
 
 member:LT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Lithuania .
+    owl:sameAs member:Lithuania .
 
 member:LTU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Lithuania .
+    owl:sameAs member:Lithuania .
 
 member:LU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Luxembourg .
+    owl:sameAs member:Luxembourg .
 
 member:LUX a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Luxembourg .
+    owl:sameAs member:Luxembourg .
 
 member:LV a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Latvia .
+    owl:sameAs member:Latvia .
 
 member:LVA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Latvia .
+    owl:sameAs member:Latvia .
 
 member:LY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Libya .
+    owl:sameAs member:Libya .
 
 member:Latium a member:member ;
     property:inLevel level:region ;
@@ -5407,67 +5408,67 @@ member:Lviv a member:member ;
 
 member:MA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Morocco .
+    owl:sameAs member:Morocco .
 
 member:MAC a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Macao_SAR .
+    owl:sameAs member:Macao_SAR .
 
 member:MAF a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saint_Martin .
+    owl:sameAs member:Saint_Martin .
 
 member:MAR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Morocco .
+    owl:sameAs member:Morocco .
 
 member:MC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Monaco .
+    owl:sameAs member:Monaco .
 
 member:MCO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Monaco .
+    owl:sameAs member:Monaco .
 
 member:MD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Moldova .
+    owl:sameAs member:Moldova .
 
 member:MDA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Moldova .
+    owl:sameAs member:Moldova .
 
 member:MDG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Madagascar .
+    owl:sameAs member:Madagascar .
 
 member:MDV a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Maldives .
+    owl:sameAs member:Maldives .
 
 member:ME a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Montenegro .
+    owl:sameAs member:Montenegro .
 
 member:MEX a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mexico .
+    owl:sameAs member:Mexico .
 
 member:MF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saint_Martin .
+    owl:sameAs member:Saint_Martin .
 
 member:MG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Madagascar .
+    owl:sameAs member:Madagascar .
 
 member:MH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Marshall_Islands .
+    owl:sameAs member:Marshall_Islands .
 
 member:MHL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Marshall_Islands .
+    owl:sameAs member:Marshall_Islands .
 
 member:MI a member:member ;
     property:inLevel level:region ;
@@ -5475,116 +5476,116 @@ member:MI a member:member ;
 
 member:MK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:North_Macedonia .
+    owl:sameAs member:North_Macedonia .
 
 member:MKD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:North_Macedonia .
+    owl:sameAs member:North_Macedonia .
 
 member:ML a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mali .
+    owl:sameAs member:Mali .
 
 member:MLI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mali .
+    owl:sameAs member:Mali .
 
 member:MLT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Malta .
+    owl:sameAs member:Malta .
 
 member:MM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Myanmar .
+    owl:sameAs member:Myanmar .
 
 member:MMR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Myanmar .
+    owl:sameAs member:Myanmar .
 
 member:MN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mongolia .
+    owl:sameAs member:Mongolia .
 
 member:MNE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Montenegro .
+    owl:sameAs member:Montenegro .
 
 member:MNG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mongolia .
+    owl:sameAs member:Mongolia .
 
 member:MNP a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Northern_Mariana_Islands .
+    owl:sameAs member:Northern_Mariana_Islands .
 
 member:MO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Macao_SAR .
+    owl:sameAs member:Macao_SAR .
 
 member:MOZ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mozambique .
+    owl:sameAs member:Mozambique .
 
 member:MP a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Northern_Mariana_Islands .
+    owl:sameAs member:Northern_Mariana_Islands .
 
 member:MQ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:French-Martinique,
+    owl:sameAs member:French-Martinique,
         member:Martinique .
 
 member:MR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mauritania .
+    owl:sameAs member:Mauritania .
 
 member:MRT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mauritania .
+    owl:sameAs member:Mauritania .
 
 member:MS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Montserrat .
+    owl:sameAs member:Montserrat .
 
 member:MSF a member:member ;
     property:inLevel level:iso3 .
 
 member:MSR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Montserrat .
+    owl:sameAs member:Montserrat .
 
 member:MT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Malta .
+    owl:sameAs member:Malta .
 
 member:MTQ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:French-Martinique,
+    owl:sameAs member:French-Martinique,
         member:Martinique .
 
 member:MU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mauritius .
+    owl:sameAs member:Mauritius .
 
 member:MUS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mauritius .
+    owl:sameAs member:Mauritius .
 
 member:MV a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Maldives .
+    owl:sameAs member:Maldives .
 
 member:MW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Malawi .
+    owl:sameAs member:Malawi .
 
 member:MWI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Malawi .
+    owl:sameAs member:Malawi .
 
 member:MX a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mexico .
+    owl:sameAs member:Mexico .
 
 member:MX-AGU a member:member ;
     property:inLevel level:iso_region ;
@@ -5700,7 +5701,7 @@ member:MX-ZAC a member:member ;
 
 member:MY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Malaysia .
+    owl:sameAs member:Malaysia .
 
 member:MY-02 a member:member ;
     property:inLevel level:iso_region ;
@@ -5740,15 +5741,15 @@ member:MY-13 a member:member ;
 
 member:MYS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Malaysia .
+    owl:sameAs member:Malaysia .
 
 member:MYT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Mayotte .
+    owl:sameAs member:Mayotte .
 
 member:MZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mozambique .
+    owl:sameAs member:Mozambique .
 
 member:Madeira_Island a member:member ;
     property:inLevel level:region ;
@@ -5824,47 +5825,47 @@ member:Mykolayiv a member:member ;
     property:inLevel level:region ;
     property:rollup member:Ukraine .
 
-member:NA property:refer_to member:Namibia .
+member:NA owl:sameAs member:Namibia .
 
 member:NAM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Namibia .
+    owl:sameAs member:Namibia .
 
 member:NC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:New_Caledonia .
+    owl:sameAs member:New_Caledonia .
 
 member:NCL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:New_Caledonia .
+    owl:sameAs member:New_Caledonia .
 
 member:NE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Niger .
+    owl:sameAs member:Niger .
 
 member:NER a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Niger .
+    owl:sameAs member:Niger .
 
 member:NG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Nigeria .
+    owl:sameAs member:Nigeria .
 
 member:NGA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Nigeria .
+    owl:sameAs member:Nigeria .
 
 member:NI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Nicaragua .
+    owl:sameAs member:Nicaragua .
 
 member:NIC a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Nicaragua .
+    owl:sameAs member:Nicaragua .
 
 member:NL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Netherlands .
+    owl:sameAs member:Netherlands .
 
 member:NL-DR a member:member ;
     property:inLevel level:iso_region ;
@@ -5900,11 +5901,11 @@ member:NL-ZE a member:member ;
 
 member:NLD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Netherlands .
+    owl:sameAs member:Netherlands .
 
 member:NO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Norway .
+    owl:sameAs member:Norway .
 
 member:NO-02 a member:member ;
     property:inLevel level:iso_region ;
@@ -5940,23 +5941,23 @@ member:NO-38 a member:member ;
 
 member:NOR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Norway .
+    owl:sameAs member:Norway .
 
 member:NP a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Nepal .
+    owl:sameAs member:Nepal .
 
 member:NPL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Nepal .
+    owl:sameAs member:Nepal .
 
 member:NZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:New_Zealand .
+    owl:sameAs member:New_Zealand .
 
 member:NZL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:New_Zealand .
+    owl:sameAs member:New_Zealand .
 
 member:Narino a member:member ;
     property:inLevel level:region ;
@@ -6068,11 +6069,11 @@ member:Novosibirsk a member:member ;
 
 member:OM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Oman .
+    owl:sameAs member:Oman .
 
 member:OMN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Oman .
+    owl:sameAs member:Oman .
 
 member:Obwalden a member:member ;
     property:inLevel level:region ;
@@ -6120,19 +6121,19 @@ member:Ostergotland_County a member:member ;
 
 member:PA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Panama .
+    owl:sameAs member:Panama .
 
 member:PAK a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Pakistan .
+    owl:sameAs member:Pakistan .
 
 member:PAN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Panama .
+    owl:sameAs member:Panama .
 
 member:PE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Peru .
+    owl:sameAs member:Peru .
 
 member:PE-AMA a member:member ;
     property:inLevel level:iso_region ;
@@ -6216,27 +6217,27 @@ member:PE-UCA a member:member ;
 
 member:PER a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Peru .
+    owl:sameAs member:Peru .
 
 member:PF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:French_Polynesia .
+    owl:sameAs member:French_Polynesia .
 
 member:PG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Papua_New_Guinea .
+    owl:sameAs member:Papua_New_Guinea .
 
 member:PH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Philippines .
+    owl:sameAs member:Philippines .
 
 member:PHL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Philippines .
+    owl:sameAs member:Philippines .
 
 member:PK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Pakistan .
+    owl:sameAs member:Pakistan .
 
 member:PK-SD a member:member ;
     property:inLevel level:iso_region ;
@@ -6244,7 +6245,7 @@ member:PK-SD a member:member ;
 
 member:PL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Poland .
+    owl:sameAs member:Poland .
 
 member:PL-02 a member:member ;
     property:inLevel level:iso_region ;
@@ -6312,47 +6313,47 @@ member:PL-32 a member:member ;
 
 member:PLW a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Palau .
+    owl:sameAs member:Palau .
 
 member:PM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saint_Pierre_and_Miquelon .
+    owl:sameAs member:Saint_Pierre_and_Miquelon .
 
 member:PNG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Papua_New_Guinea .
+    owl:sameAs member:Papua_New_Guinea .
 
 member:POL a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Poland .
+    owl:sameAs member:Poland .
 
 member:PR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Puerto_Rico .
+    owl:sameAs member:Puerto_Rico .
 
 member:PRI a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Puerto_Rico .
+    owl:sameAs member:Puerto_Rico .
 
 member:PRT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Portugal .
+    owl:sameAs member:Portugal .
 
 member:PRY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Paraguay .
+    owl:sameAs member:Paraguay .
 
 member:PS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:West_Bank .
+    owl:sameAs member:West_Bank .
 
 member:PSE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:West_Bank .
+    owl:sameAs member:West_Bank .
 
 member:PT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Portugal .
+    owl:sameAs member:Portugal .
 
 member:PT-06 a member:member ;
     property:inLevel level:iso_region ;
@@ -6372,11 +6373,11 @@ member:PT-13 a member:member ;
 
 member:PW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Palau .
+    owl:sameAs member:Palau .
 
 member:PY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Paraguay .
+    owl:sameAs member:Paraguay .
 
 member:PY-1 a member:member ;
     property:inLevel level:iso_region ;
@@ -6448,7 +6449,7 @@ member:PY-ASU a member:member ;
 
 member:PYF a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:French_Polynesia .
+    owl:sameAs member:French_Polynesia .
 
 member:Palestine a member:member ;
     property:inLevel level:country ;
@@ -6501,11 +6502,11 @@ member:Punjab a member:member ;
 
 member:QA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Qatar .
+    owl:sameAs member:Qatar .
 
 member:QAT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Qatar .
+    owl:sameAs member:Qatar .
 
 member:Qazvin a member:member ;
     property:inLevel level:region ;
@@ -6521,39 +6522,39 @@ member:Quindio a member:member ;
 
 member:RE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Réunion .
+    owl:sameAs member:Réunion .
 
 member:REU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Réunion .
+    owl:sameAs member:Réunion .
 
 member:RO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Romania .
+    owl:sameAs member:Romania .
 
 member:ROU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Romania .
+    owl:sameAs member:Romania .
 
 member:RS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Serbia .
+    owl:sameAs member:Serbia .
 
 member:RU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Russia .
+    owl:sameAs member:Russia .
 
 member:RUS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Russia .
+    owl:sameAs member:Russia .
 
 member:RW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Rwanda .
+    owl:sameAs member:Rwanda .
 
 member:RWA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Rwanda .
+    owl:sameAs member:Rwanda .
 
 member:Razavi_Khorasan_Province a member:member ;
     property:inLevel level:region ;
@@ -6585,123 +6586,123 @@ member:Rostov a member:member ;
 
 member:SA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saudi_Arabia .
+    owl:sameAs member:Saudi_Arabia .
 
 member:SAU a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saudi_Arabia .
+    owl:sameAs member:Saudi_Arabia .
 
 member:SB a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Solomon_Islands .
+    owl:sameAs member:Solomon_Islands .
 
 member:SC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Seychelles .
+    owl:sameAs member:Seychelles .
 
 member:SD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Sudan .
+    owl:sameAs member:Sudan .
 
 member:SDN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Sudan .
+    owl:sameAs member:Sudan .
 
 member:SE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Sweden .
+    owl:sameAs member:Sweden .
 
 member:SEN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Senegal .
+    owl:sameAs member:Senegal .
 
 member:SG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Singapore .
+    owl:sameAs member:Singapore .
 
 member:SGP a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Singapore .
+    owl:sameAs member:Singapore .
 
 member:SI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Slovenia .
+    owl:sameAs member:Slovenia .
 
 member:SK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Slovakia .
+    owl:sameAs member:Slovakia .
 
 member:SL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Sierra_Leone .
+    owl:sameAs member:Sierra_Leone .
 
 member:SLB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Solomon_Islands .
+    owl:sameAs member:Solomon_Islands .
 
 member:SLE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Sierra_Leone .
+    owl:sameAs member:Sierra_Leone .
 
 member:SLV a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:El_Salvador .
+    owl:sameAs member:El_Salvador .
 
 member:SM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:San_Marino .
+    owl:sameAs member:San_Marino .
 
 member:SMR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:San_Marino .
+    owl:sameAs member:San_Marino .
 
 member:SN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Senegal .
+    owl:sameAs member:Senegal .
 
 member:SO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Somalia .
+    owl:sameAs member:Somalia .
 
 member:SOM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Somalia .
+    owl:sameAs member:Somalia .
 
 member:SPM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saint_Pierre_and_Miquelon .
+    owl:sameAs member:Saint_Pierre_and_Miquelon .
 
 member:SR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Suriname .
+    owl:sameAs member:Suriname .
 
 member:SRB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Serbia .
+    owl:sameAs member:Serbia .
 
 member:SS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:South_Sudan .
+    owl:sameAs member:South_Sudan .
 
 member:SSD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:South_Sudan .
+    owl:sameAs member:South_Sudan .
 
 member:ST a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:S_o_Tom__and_Pr_ncipe .
+    owl:sameAs member:S_o_Tom__and_Pr_ncipe .
 
 member:STP a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:S_o_Tom__and_Pr_ncipe .
+    owl:sameAs member:S_o_Tom__and_Pr_ncipe .
 
 member:SUR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Suriname .
+    owl:sameAs member:Suriname .
 
 member:SV a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:El_Salvador .
+    owl:sameAs member:El_Salvador .
 
 member:SV-AH a member:member ;
     property:inLevel level:iso_region ;
@@ -6759,19 +6760,19 @@ member:SV-US a member:member ;
 
 member:SVK a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Slovakia .
+    owl:sameAs member:Slovakia .
 
 member:SVN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Slovenia .
+    owl:sameAs member:Slovenia .
 
 member:SWE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Sweden .
+    owl:sameAs member:Sweden .
 
 member:SWZ a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Eswatini .
+    owl:sameAs member:Eswatini .
 
 member:SX a member:member ;
     property:inLevel level:iso2 .
@@ -6781,19 +6782,19 @@ member:SXM a member:member ;
 
 member:SY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Syria .
+    owl:sameAs member:Syria .
 
 member:SYC a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Seychelles .
+    owl:sameAs member:Seychelles .
 
 member:SYR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Syria .
+    owl:sameAs member:Syria .
 
 member:SZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Eswatini .
+    owl:sameAs member:Eswatini .
 
 member:Saint_Helena__Ascension_and_Tristan_da_Cunha a member:member ;
     property:inLevel level:country .
@@ -7025,99 +7026,99 @@ member:Sverdlovsk a member:member ;
 
 member:TC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Turks_and_Caicos_Islands .
+    owl:sameAs member:Turks_and_Caicos_Islands .
 
 member:TCA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Turks_and_Caicos_Islands .
+    owl:sameAs member:Turks_and_Caicos_Islands .
 
 member:TCD a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Chad .
+    owl:sameAs member:Chad .
 
 member:TD a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Chad .
+    owl:sameAs member:Chad .
 
 member:TG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Togo .
+    owl:sameAs member:Togo .
 
 member:TGO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Togo .
+    owl:sameAs member:Togo .
 
 member:TH a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Thailand .
+    owl:sameAs member:Thailand .
 
 member:THA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Thailand .
+    owl:sameAs member:Thailand .
 
 member:TJ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Tajikistan .
+    owl:sameAs member:Tajikistan .
 
 member:TJK a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Tajikistan .
+    owl:sameAs member:Tajikistan .
 
 member:TL a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Timor-Leste .
+    owl:sameAs member:Timor-Leste .
 
 member:TLS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Timor-Leste .
+    owl:sameAs member:Timor-Leste .
 
 member:TN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Tunisia .
+    owl:sameAs member:Tunisia .
 
 member:TO a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Tonga .
+    owl:sameAs member:Tonga .
 
 member:TON a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Tonga .
+    owl:sameAs member:Tonga .
 
 member:TR a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Turkey .
+    owl:sameAs member:Turkey .
 
 member:TT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Trinidad_and_Tobago .
+    owl:sameAs member:Trinidad_and_Tobago .
 
 member:TTO a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Trinidad_and_Tobago .
+    owl:sameAs member:Trinidad_and_Tobago .
 
 member:TUN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Tunisia .
+    owl:sameAs member:Tunisia .
 
 member:TUR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Turkey .
+    owl:sameAs member:Turkey .
 
 member:TW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Taiwan .
+    owl:sameAs member:Taiwan .
 
 member:TWN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Taiwan .
+    owl:sameAs member:Taiwan .
 
 member:TZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Tanzania .
+    owl:sameAs member:Tanzania .
 
 member:TZA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Tanzania .
+    owl:sameAs member:Tanzania .
 
 member:Tambov a member:member ;
     property:inLevel level:region ;
@@ -7222,30 +7223,30 @@ member:Tyrol a member:member ;
 
 member:UA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Ukraine .
+    owl:sameAs member:Ukraine .
 
 member:UG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Uganda .
+    owl:sameAs member:Uganda .
 
 member:UGA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Uganda .
+    owl:sameAs member:Uganda .
 
 member:UK a member:member ;
     property:inLevel level:iso2 .
 
 member:UKR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Ukraine .
+    owl:sameAs member:Ukraine .
 
 member:URY a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Uruguay .
+    owl:sameAs member:Uruguay .
 
 member:US a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:United_States .
+    owl:sameAs member:United_States .
 
 member:US-AK a member:member ;
     property:inLevel level:iso_region ;
@@ -7471,19 +7472,19 @@ member:US-WY a member:member ;
 
 member:USA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:United_States .
+    owl:sameAs member:United_States .
 
 member:UY a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Uruguay .
+    owl:sameAs member:Uruguay .
 
 member:UZ a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Uzbekistan .
+    owl:sameAs member:Uzbekistan .
 
 member:UZB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Uzbekistan .
+    owl:sameAs member:Uzbekistan .
 
 member:Udmurtia a member:member ;
     property:inLevel level:region ;
@@ -7520,61 +7521,61 @@ member:Uri a member:member ;
 
 member:VA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Vatican_City .
+    owl:sameAs member:Vatican_City .
 
 member:VAT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Vatican_City .
+    owl:sameAs member:Vatican_City .
 
 member:VC a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saint_Vincent_and_the_Grenadines .
+    owl:sameAs member:Saint_Vincent_and_the_Grenadines .
 
 member:VCT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saint_Vincent_and_the_Grenadines .
+    owl:sameAs member:Saint_Vincent_and_the_Grenadines .
 
 member:VE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Venezuela .
+    owl:sameAs member:Venezuela .
 
 member:VEN a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Venezuela .
+    owl:sameAs member:Venezuela .
 
 member:VG a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:British_Virgin_Islands .
+    owl:sameAs member:British_Virgin_Islands .
 
 member:VGB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:British_Virgin_Islands .
+    owl:sameAs member:British_Virgin_Islands .
 
 member:VI a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:US_Virgin_Islands,
+    owl:sameAs member:US_Virgin_Islands,
         member:U_S__Virgin_Islands .
 
 member:VIR a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:US_Virgin_Islands,
+    owl:sameAs member:US_Virgin_Islands,
         member:U_S__Virgin_Islands .
 
 member:VN a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Vietnam .
+    owl:sameAs member:Vietnam .
 
 member:VNM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Vietnam .
+    owl:sameAs member:Vietnam .
 
 member:VU a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Vanuatu .
+    owl:sameAs member:Vanuatu .
 
 member:VUT a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Vanuatu .
+    owl:sameAs member:Vanuatu .
 
 member:Valais a member:member ;
     property:inLevel level:region ;
@@ -7646,19 +7647,19 @@ member:Västernorrland a member:member ;
 
 member:WF a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Wallis_and_Futuna .
+    owl:sameAs member:Wallis_and_Futuna .
 
 member:WLF a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Wallis_and_Futuna .
+    owl:sameAs member:Wallis_and_Futuna .
 
 member:WS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Samoa .
+    owl:sameAs member:Samoa .
 
 member:WSM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Samoa .
+    owl:sameAs member:Samoa .
 
 member:West_Azerbaijan a member:member ;
     property:inLevel level:region ;
@@ -7702,26 +7703,26 @@ member:Worldwide a member:member ;
 
 member:XK a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Kosovo .
+    owl:sameAs member:Kosovo .
 
 member:XKS a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Kosovo .
+    owl:sameAs member:Kosovo .
 
 member:XKX a member:member ;
     property:inLevel level:iso3 .
 
 member:XS a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Saba .
+    owl:sameAs member:Saba .
 
 member:XSA a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Saba .
+    owl:sameAs member:Saba .
 
 member:XXG a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Gaza_Strip .
+    owl:sameAs member:Gaza_Strip .
 
 member:Xinjiang a member:member ;
     property:inLevel level:region ;
@@ -7733,15 +7734,15 @@ member:Xizang a member:member ;
 
 member:YE a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Yemen .
+    owl:sameAs member:Yemen .
 
 member:YEM a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Yemen .
+    owl:sameAs member:Yemen .
 
 member:YT a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Mayotte .
+    owl:sameAs member:Mayotte .
 
 member:Yamaguchi a member:member ;
     property:inLevel level:region ;
@@ -7769,27 +7770,27 @@ member:Yunnan a member:member ;
 
 member:ZA a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:South_Africa .
+    owl:sameAs member:South_Africa .
 
 member:ZAF a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:South_Africa .
+    owl:sameAs member:South_Africa .
 
 member:ZM a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Zambia .
+    owl:sameAs member:Zambia .
 
 member:ZMB a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Zambia .
+    owl:sameAs member:Zambia .
 
 member:ZW a member:member ;
     property:inLevel level:iso2 ;
-    property:refer_to member:Zimbabwe .
+    owl:sameAs member:Zimbabwe .
 
 member:ZWE a member:member ;
     property:inLevel level:iso3 ;
-    property:refer_to member:Zimbabwe .
+    owl:sameAs member:Zimbabwe .
 
 member:Zabaykalsky_Krai a member:member ;
     property:inLevel level:region ;
