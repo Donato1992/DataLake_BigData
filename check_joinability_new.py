@@ -25,6 +25,7 @@ DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
 NUM_PERM = 256
 NUM_PART = 32
 THRESHOLD = 0.95
+THRESHOLD_VALUE=5.00
 
 
 def main():
@@ -66,46 +67,56 @@ def main():
                 if n_first_keys>=n_second_keys:
                     
                     for x_key in list(dict_first[type_dimension].keys()):
-                        dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0])
-                        dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1])
+                        flag_rollup=False
+                        dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0],flag_rollup)
+                        dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1],flag_rollup)
+
 
                         # Nella rollup lo fa n volte perchè nel caso di progetti futuri si poteva fare anche un analisi per singolo
                         # "argomento"
-                        if isinstance(dataset_value_1,dict) and isinstance(dataset_value_2,dict):
-                            lenght_rollup=range(len(list(dataset_value_1.values())))
-                            for n in lenght_rollup:
-                                if list(dataset_value_1.values())[n]==None or list(dataset_value_2.values())[n]==None:
-                                    print("Not confrontable")
-                                else:
-                                    if abs(float(list(dataset_value_1.values())[n])-float(list(dataset_value_2.values())[n]))<2.00:
-                                        print("Joinable in "+str(list(dataset_value_1.keys())[n]))
-                                    else:
-                                        print("Not Joinable in "+str(list(dataset_value_1.keys())[n]))
-                        
-                            
-                        else:
-                            if(float(dataset_value_1.split("%")[0])>30.00 and float(dataset_value_2.split("%")[0])>30.00):
-                                print("Datasets are joinable in "+str(x_key))
-                            elif abs(float(dataset_value_1.split("%")[0])-float(dataset_value_2.split("%")[0]))>5.00:
+                        try:
+                            if abs(float(dataset_value_1.split("%")[0])-float(dataset_value_2.split("%")[0]))>THRESHOLD_VALUE:
                                 print("Datasets non joinable in "+str(x_key))
                             else:
-                                print("joinable in "+str(x_key))
-
-                         
+                                #print("joinable in "+str(x_key))
+                                logging.debug("joinable in "+str(x_key))
+                        except Exception as e:
+                            print("Errore"+str(e.args))
+                    flag_rollup=True
+                    dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0],flag_rollup)
+                    dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1],flag_rollup)
+                    check_rollup(dataset_value_1,dataset_value_2,type_dimension)
+                            
                 else:
-                    for x_key in n_second_keys:
-                        check_argument(dict_first,type_dimension,x_key)
-                        check_argument(dict_first,type_dimension,x_key,check_dataset[0])
-                
+                    
+                    for x_key in list(dict_second[type_dimension].keys()):
+                        flag_rollup=False
+                        dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0],flag_rollup)
+                        dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1],flag_rollup)
+
+                        try:
+                            if abs(float(dataset_value_1.split("%")[0])-float(dataset_value_2.split("%")[0]))>THRESHOLD_VALUE:
+                                print("Datasets non joinable in "+str(x_key))
+                            else:
+                                #print("joinable in "+str(x_key))
+                                logging.debug("joinable in "+str(x_key))
+                        except Exception as e:
+                            print("Errore"+str(e.args))
+                    flag_rollup=True
+                    dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0],flag_rollup)
+                    dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1],flag_rollup)
+                    check_rollup(dataset_value_1,dataset_value_2,type_dimension) 
 
                     
                 dimension_joinable.append(type_dimension)
         except Exception as e:
             print("Not present "+str(e.args)+" in dimension joinable "+str(type_dimension))
 
-def check_argument(dict_check,dimensions,keys,datasets):
+def check_argument(dict_check,dimensions,keys,datasets,rollup):
     try:
-        if dimensions != "day":
+        
+        if rollup:
+            
             return dict_check["rollup_"+dimensions]["Percent"]
         else:
             
@@ -114,6 +125,18 @@ def check_argument(dict_check,dimensions,keys,datasets):
         #return list(dict_check[dimensions][keys].values())[0]
     except Exception as e:
         print("Not present the argument "+str(e.args[0])+" in dataset "+str(datasets))
+
+def check_rollup(dataset_value_1,dataset_value_2,dimension):
+    lenght_rollup=range(len(list(dataset_value_1.values())))
+    for n in lenght_rollup:
+        if list(dataset_value_1.values())[n]==None or list(dataset_value_2.values())[n]==None:
+            print("Not confrontable")
+        else:
+            if abs(float(list(dataset_value_1.values())[n])-float(list(dataset_value_2.values())[n]))<2.00:
+                #print("Joinable in "+str(list(dataset_value_1.keys())[n]))
+                logging.debug("Joinable in "+"rollup "+str(dimension)+":"+str(list(dataset_value_1.keys())[n]))
+            else:
+                print("Not Joinable in "+str(list(dataset_value_1.keys())[n]))
 
 
 def check_joinability(dataset_1,dataset_2, c1,c2):
