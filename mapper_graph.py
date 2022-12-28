@@ -71,10 +71,6 @@ def map_file(mydir, filename, suffix):
 			if x==dimension:
 				counter=counter+1
 				m.update_batch([content.encode('utf8')])
-			#for d in content:
-			#	m.update(d.encode('utf8'))
-			#print(index)
-			#print(f"{row.x}")
 		index.append(tuple((x,m,counter)))
 		
 	lshensemble.index(index)		
@@ -92,14 +88,12 @@ def map_file(mydir, filename, suffix):
 		durationsQuery=[]
 		for c in range(entry["num_columns"]):
 			
-			#print(entry["num_columns"])
+			
 			m1 = MinHash(NUM_PERM)
 			with open(DEFAULT_COD_DIR+filename+"."+str(c),"r") as col:
-				#print(DEFAULT_COD_DIR+filename+"."+str(c))
 				startTimeHashing = time.time()
 				values=col.read().split("\n")
 				valori=set(values)
-				#print("Vediamo"+str(len(valori)))
 				for v in valori:
 					m1.update(v.encode('utf8'))
 				#m1.update_batch([s.encode('utf8') for s in values])
@@ -165,17 +159,16 @@ async def frequency(values,type_dimension):
 	dizionario_key={}
 	# We calculate the percentage for the single year only
 	dataframe_continent=continent_analysis(CONTINET_PERCENT)
-	if (type_dimension=="day"):
-		for item in values:
-			date_str = str(item)
-			if(date_str!=""):
+	try:
+		date_str = str(item)
+		if(date_str!=""):
 				now = datetime.strptime(date_str, '%Y-%m-%d').date()
-				year = now.strftime("%Y")
-				year=int(year)
-				if (year in freq):
-					freq[year] += 1
+				#year = now.strftime("%Y")
+				#year=int(year)
+				if (now in freq):
+					freq[now] += 1
 				else:
-					freq[year] = 1
+					freq[now] = 1
 		
 		for key, value in freq.items():
 			temp=[]
@@ -185,70 +178,58 @@ async def frequency(values,type_dimension):
 			temp.append([value,str(str(percentual_time))])
 			dizionario_key[key]=dict(temp)
 		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)
-	else:
-		for item in values:
-			if(item!=""):
-				if (item in freq):
-					freq[item] += 1
+	except Exception as e:
+		print ("Format Date not valid")
+	
+	for item in values:
+		if(item!=""):
+			if (item in freq):
+				freq[item] += 1
 
-				else:
-					freq[item] = 1
+			else:
+				freq[item] = 1
 
-		numeber_sum=0
-		if type_dimension=="country":
-			q_result=GRAPH.query("""SELECT ?x ?y WHERE {?x property:rollup ?y. ?x property:inLevel level:country.} ORDER BY ASC(?X)""")
-			#In this line I fill the dictionary
-			for row in q_result:
-				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
-		if type_dimension=="iso2" or type_dimension=="iso3":
-			q_result=GRAPH.query("""SELECT ?y ?z ?x WHERE {?x property:refer_to ?y. ?x property:inLevel level:"""+str(type_dimension)+""". ?y property:rollup ?z} ORDER BY ASC(?X)""")
-			#In this line I fill the dictionary
-			for row in q_result:
-				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.z).split("#")[1]
-		if type_dimension=="iso_region":
-			q_result=GRAPH.query("""SELECT ?x ?k WHERE{?x property:inLevel level:iso_region. ?x property:refer_to ?y. ?y property:rollup ?z. ?z property:rollup ?k} ORDER BY ASC(?X)""")
-			#In this line I fill the dictionary
-			dict_temp={}
-			for row in q_result:
-				dict_temp[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
-				DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
-			#logging.debug("Dizionario iso_region")
-			#logging.debug(dict_temp)
-		#logging.debug(len(freq))
-		#logging.debug(len(DICTIONARY_CONTINENT))
-		#logging.debug(DICTIONARY_CONTINENT)
+	numeber_sum=0
+	if type_dimension=="country":
+		q_result=GRAPH.query("""SELECT ?x ?y WHERE {?x property:rollup ?y. ?x property:inLevel level:country.} ORDER BY ASC(?X)""")
+		#In this line I fill the dictionary
+		for row in q_result:
+			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
+	if type_dimension=="iso2" or type_dimension=="iso3":
+		q_result=GRAPH.query("""SELECT ?y ?z ?x WHERE {?x property:refer_to ?y. ?x property:inLevel level:"""+str(type_dimension)+""". ?y property:rollup ?z} ORDER BY ASC(?X)""")
+		#In this line I fill the dictionary
+		for row in q_result:
+			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.z).split("#")[1]
+	if type_dimension=="iso_region":
+		q_result=GRAPH.query("""SELECT ?x ?k WHERE{?x property:inLevel level:iso_region. ?x property:refer_to ?y. ?y property:rollup ?z. ?z property:rollup ?k} ORDER BY ASC(?X)""")
+		#In this line I fill the dictionary
+		dict_temp={}
+		for row in q_result:
+			dict_temp[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
+			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
 
+	
+	for key, value in freq.items():
+		temp=[]
+		dimension_colum=len(values)
+		number_percent=round(float(value)/dimension_colum*100, 2)
+		numeber_sum=numeber_sum+number_percent
+		percentual_value=str(number_percent)+"%"
+
+		if type_dimension!="region":
+			task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
+			await task
 		
-		#dizionario[type_dimension]=dict(freq)
-		for key, value in freq.items():
-			temp=[]
-			dimension_colum=len(values)
-			number_percent=round(float(value)/dimension_colum*100, 2)
-			numeber_sum=numeber_sum+number_percent
-			percentual_value=str(number_percent)+"%"
-
-			if type_dimension=="country":
-				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
-				await task
-			if type_dimension=="iso2":
-				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
-				await task
-			if type_dimension=="iso3":
-				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
-				await task
-			if type_dimension=="iso_region":
-				task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
-				await task
-			
-			print ("% s : % d : %s"%(key, value,percentual_value))
-			temp.append([value,str(str(percentual_value))])
-			dizionario_key[re.sub('[^0-9a-zA-Z]-', '_', key)]=dict(temp)
-		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
-		# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
-		if type_dimension=="country" or type_dimension=="iso2" or type_dimension=="iso3" or type_dimension=="iso_region":
-			logging.debug(dataframe_continent)
-			print(dataframe_continent)
-			DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
+		print ("% s : % d : %s"%(key, value,percentual_value))
+		temp.append([value,str(str(percentual_value))])
+		dizionario_key[re.sub('[^0-9a-zA-Z-]', '_', key)]=dict(temp)
+	logging.debug("MIA SOMMA-->"+str(numeber_sum))
+	DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
+	# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
+	if type_dimension=="country" or type_dimension=="iso2" or type_dimension=="iso3" or type_dimension=="iso_region":
+		logging.debug(dataframe_continent)
+		print(dataframe_continent)
+		DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
 
 def continent_analysis(dataframe):
 	read_continent = open(GEO_CONTINENT, "r")
@@ -264,7 +245,8 @@ def continent_analysis(dataframe):
 
 async def all_continent(country,dataframe,percent_value):
 	
-	country=re.sub('[^0-9a-zA-Z]-', '_', country)
+	country=re.sub('[^0-9a-zA-Z-]', '_', country)
+	
 	try:
 		if DICTIONARY_CONTINENT[country]:
 			if dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]==None:
@@ -277,7 +259,7 @@ async def all_continent(country,dataframe,percent_value):
 	except KeyError:
 		
 		print("Not Exsits-->"+str(country)+"in Graph")
-		logging.debug("NON ESISTE-->"+str(country))
+		logging.debug("Non Esiste-->"+str(country))
 	
 		#Print used only to see the results of the query	
 		#print(f" {row.x}")		
