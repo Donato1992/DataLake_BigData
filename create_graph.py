@@ -13,6 +13,7 @@ import time
 from datetime import datetime
 from rdflib import Namespace
 import re
+import owlrl
 
 
 DEFAULT_DIMENSIONS_DIR="dimensions/Geo_Continent/"
@@ -227,6 +228,7 @@ def import_iso2(graph):
                     graph.add((sub,RDF.type,dl_member.member))
                     graph.add((sub,dl_prop.inLevel,dl_lvl.iso2))
 
+
 def import_iso3(graph):
     with open("dimensions/Geo.country_iso3","r",encoding="utf-8") as f:
             values = f.read().split("\n")
@@ -269,6 +271,8 @@ def import_country_iso2_country_iso3(graph):
             sub=URIRef("http://w3id.org/kpionto/Member#"+c)
             ogg=URIRef("http://w3id.org/kpionto/Member#"+x)
             graph.add((sub,OWL.sameAs,ogg))
+            graph.add((ogg,OWL.sameAs,sub))
+
         etl_iso3={}
         for y in iso3.keys():
 
@@ -283,6 +287,8 @@ def import_country_iso2_country_iso3(graph):
             sub=URIRef("http://w3id.org/kpionto/Member#"+c)
             ogg=URIRef("http://w3id.org/kpionto/Member#"+x)
             graph.add((sub,OWL.sameAs,ogg))
+            graph.add((ogg,OWL.sameAs,sub))
+
 
 
 def import_iso_region(graph):
@@ -322,7 +328,7 @@ def import_region_iso(graph):
 
             sub=URIRef("http://w3id.org/kpionto/Member#"+c)
             ogg=URIRef("http://w3id.org/kpionto/Member#"+x)
-            graph.add((sub,dl_prop.refer_to,ogg))
+            graph.add((sub,OWL.sameAs,ogg))
             
                
         
@@ -356,8 +362,8 @@ def main():
     graph.add((dl_lvl.iso3,RDF.type,dl_lvl.level))
     graph.add((dl_lvl.iso3,dl_prop.inDimension,dl_dim.iso_code))
     graph.add((dl_lvl.iso_region,RDF.type,dl_lvl.level))
-    graph.add((dl_lvl.iso2,OWL.sameAs,dl_lvl.country))
-    
+    #graph.add((OWL.sameAs,RDF.type,OWL.SymmetricProperty))
+
 
     import_continent(graph)
     import_country(graph)
@@ -377,6 +383,8 @@ def main():
     import_country_iso2_country_iso3(graph)
     import_iso_region(graph)
     import_region_iso(graph)
+    owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(graph)
+
 
     graph.serialize(destination = "knowladge_graph.ttl", format = "turtle")
 
