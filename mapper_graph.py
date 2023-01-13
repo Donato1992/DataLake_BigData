@@ -12,6 +12,7 @@ from datetime import datetime
 import rdflib
 import re
 import asyncio
+import owlrl
 
 #Debugging
 LOG_FILE='test_graph_nofile_dict.log'
@@ -29,7 +30,6 @@ DEFAULT_DIM_CHECK="filter.csv"
 GEO_CONTINENT="./dimensions/Geo.continent"
 DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
 COLUMS_JOINABLE="./joinable.json"
-print(DEFAULT_ENTRY_FILE)
 NUM_PERM = 512
 NUM_PART = 32
 THRESHOLD = 0.8
@@ -51,6 +51,7 @@ def map_file(mydir, filename, suffix):
 
 	# Initialize LSHEnsemble
 	
+	#Retrieve dimensions from the graph
 	q_result=GRAPH.query("""SELECT ?x ?y  WHERE {?x ?z ?y.FILTER(?z=property:inLevel && ?x!=member:month && ?x!=member:year)}""")
 	my_dimension=[]
 	index=[]
@@ -86,6 +87,15 @@ def map_file(mydir, filename, suffix):
 		#for each column of the data source
 		durationsHashing=[]
 		durationsQuery=[]
+
+		#Here we extend the graph in such a way as to obtain logical inferences (Consider creating two files for the two graphs)
+		owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(GRAPH)
+		q_result=GRAPH.query("""SELECT ?x ?y WHERE{{SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?y. ?x property:inLevel level:country} ORDER BY ASC(?X)} UNION {SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?k. ?k property:rollup ?y.?x property:inLevel level:region}ORDER BY ASC(?X)}}""")
+		#In this line I fill the dictionary
+		for row in q_result:
+			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
+
+		
 		for c in range(entry["num_columns"]):
 			
 			
@@ -157,7 +167,7 @@ def main():
 async def frequency(values,type_dimension):
 	freq = {}
 	dizionario_key={}
-	# We calculate the percentage for the single year only
+	# We calculate the percentage for the single item
 	dataframe_continent=continent_analysis(CONTINET_PERCENT)
 	try:
 		date_str = str(item)
@@ -190,23 +200,6 @@ async def frequency(values,type_dimension):
 				freq[item] = 1
 
 	numeber_sum=0
-	if type_dimension=="country":
-		q_result=GRAPH.query("""SELECT ?x ?y WHERE {?x property:rollup ?y. ?x property:inLevel level:country.} ORDER BY ASC(?X)""")
-		#In this line I fill the dictionary
-		for row in q_result:
-			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
-	if type_dimension=="iso2" or type_dimension=="iso3":
-		q_result=GRAPH.query("""SELECT ?y ?z ?x WHERE {?x property:refer_to ?y. ?x property:inLevel level:"""+str(type_dimension)+""". ?y property:rollup ?z} ORDER BY ASC(?X)""")
-		#In this line I fill the dictionary
-		for row in q_result:
-			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.z).split("#")[1]
-	if type_dimension=="iso_region":
-		q_result=GRAPH.query("""SELECT ?x ?k WHERE{?x property:inLevel level:iso_region. ?x property:refer_to ?y. ?y property:rollup ?z. ?z property:rollup ?k} ORDER BY ASC(?X)""")
-		#In this line I fill the dictionary
-		dict_temp={}
-		for row in q_result:
-			dict_temp[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
-			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.k).split("#")[1]
 
 	
 	for key, value in freq.items():
@@ -216,20 +209,19 @@ async def frequency(values,type_dimension):
 		numeber_sum=numeber_sum+number_percent
 		percentual_value=str(number_percent)+"%"
 
-		if type_dimension!="region":
-			task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
-			await task
+		task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
+		await task
 		
 		print ("% s : % d : %s"%(key, value,percentual_value))
 		temp.append([value,str(str(percentual_value))])
 		dizionario_key[re.sub('[^0-9a-zA-Z-]', '_', key)]=dict(temp)
 	logging.debug("MIA SOMMA-->"+str(numeber_sum))
 	DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
+
 	# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
-	if type_dimension=="country" or type_dimension=="iso2" or type_dimension=="iso3" or type_dimension=="iso_region":
-		logging.debug(dataframe_continent)
-		print(dataframe_continent)
-		DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
+	logging.debug(dataframe_continent)
+	print(dataframe_continent)
+	DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
 
 def continent_analysis(dataframe):
 	read_continent = open(GEO_CONTINENT, "r")
@@ -243,23 +235,25 @@ def continent_analysis(dataframe):
 	return dataframe_new
 
 
-async def all_continent(country,dataframe,percent_value):
+async def all_continent(item,dataframe,percent_value):
 	
-	country=re.sub('[^0-9a-zA-Z-]', '_', country)
+	item=re.sub('[^0-9a-zA-Z-]', '_', item)
 	
+	#check whether the element is present in the graph using the dictionary
+	#later if it exists I rollup for the continent
 	try:
-		if DICTIONARY_CONTINENT[country]:
-			if dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]==None:
+		if DICTIONARY_CONTINENT[item]:
+			if dataframe.loc[DICTIONARY_CONTINENT[item],"Percent"]==None:
 					percent_sum=round(0.00+percent_value,2)
-					dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]=percent_sum
+					dataframe.loc[DICTIONARY_CONTINENT[item],"Percent"]=percent_sum
 			else:
-				percent_sum=round(float(dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"])+percent_value,2)
-				dataframe.loc[DICTIONARY_CONTINENT[country],"Percent"]=percent_sum
+				percent_sum=round(float(dataframe.loc[DICTIONARY_CONTINENT[item],"Percent"])+percent_value,2)
+				dataframe.loc[DICTIONARY_CONTINENT[item],"Percent"]=percent_sum
 
 	except KeyError:
 		
-		print("Not Exsits-->"+str(country)+"in Graph")
-		logging.debug("Non Esiste-->"+str(country))
+		print("Not Exsits-->"+str(item)+"in Graph")
+		logging.debug("Non Esiste-->"+str(item))
 	
 		#Print used only to see the results of the query	
 		#print(f" {row.x}")		

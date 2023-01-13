@@ -80,7 +80,7 @@ def map_file(mydir, filename, suffix):
 				startTimeHashing = time.time()
 				values=col.read().split("\n")
 				valori=set(values)
-				#print("Vediamo"+str(len(valori)))
+				print("Vediamo"+str(len(valori)))
 				for v in valori:
 					m1.update(v.encode('utf8'))
 				#m1.update_batch([s.encode('utf8') for s in values])

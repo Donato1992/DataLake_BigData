@@ -383,7 +383,7 @@ def main():
     import_country_iso2_country_iso3(graph)
     import_iso_region(graph)
     import_region_iso(graph)
-    owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(graph)
+    #owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(graph)
 
 
     graph.serialize(destination = "knowladge_graph.ttl", format = "turtle")

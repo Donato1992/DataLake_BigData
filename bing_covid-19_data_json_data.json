@@ -2161,6 +2161,16 @@
             "51": "0.0%"
         }
     },
+    "rollup_day": {
+        "Percent": {
+            "Other": null,
+            "Africa": null,
+            "Asia": null,
+            "America": null,
+            "Europe": null,
+            "Oceania": null
+        }
+    },
     "iso2": {
         "AF": {
             "679": "0.02%"
@@ -6939,6 +6949,16 @@
             "199": "0.01%"
         }
     },
+    "rollup_region": {
+        "Percent": {
+            "Other": null,
+            "Africa": 0.02,
+            "Asia": 18.1,
+            "America": 69.07,
+            "Europe": 8.37,
+            "Oceania": 0.16
+        }
+    },
     "iso_region": {
         "AR-B": {
             "137": "0.01%"
@@ -8421,7 +8441,7 @@
         "Percent": {
             "Other": null,
             "Africa": null,
-            "Asia": 13.14,
+            "Asia": 17.14,
             "America": 77.27,
             "Europe": 3.43,
             "Oceania": 0.16
