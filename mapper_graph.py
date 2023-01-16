@@ -29,6 +29,7 @@ DEFAULT_COD_DIR = "_cod_lists/"
 GEO_CONTINENT="./dimensions/Geo.continent"
 DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
 COLUMS_JOINABLE="./joinable.json"
+JSON_FOLDER="datasets_json_map/"
 NUM_PERM = 512
 NUM_PART = 32
 THRESHOLD = 0.8
@@ -114,7 +115,7 @@ def map_file(mydir, filename, suffix):
 					colums_joinable(mapping,filename,c)
 					logging.debug("Column "+str(c)+" -> "+mapping)
 					asyncio.run(frequency(values,mapping))
-				with open(filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
+				with open(JSON_FOLDER+filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
 					json.dump(DICTIONARY_FREQUENCY, outfile, 
                         indent=4,  
                         separators=(',',': '))

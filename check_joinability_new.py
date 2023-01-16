@@ -20,6 +20,7 @@ logging.basicConfig(filename=LOG_FILE,level=logging.DEBUG)
 
 DEFAULT_DIR = "datasets/"
 DEFAULT_DIMENSIONS_DIR="dimensions/"
+JSON_FOLDER="datasets_json_map/"
 NUM_PERM = 256
 NUM_PART = 32
 THRESHOLD = 0.95
@@ -36,10 +37,10 @@ def main():
         data_set=json.load(outfile)
 
     #Load First Json Dataset File
-    with open(check_dataset[0]+"_json_data.json","r",encoding="utf-8") as ffile:
+    with open(JSON_FOLDER+check_dataset[0]+"_json_data.json","r",encoding="utf-8") as ffile:
         dict_first=json.load(ffile) 
     #Load Second Json Dataset file
-    with open(check_dataset[1]+"_json_data.json","r",encoding="utf-8") as sfile:
+    with open(JSON_FOLDER+check_dataset[1]+"_json_data.json","r",encoding="utf-8") as sfile:
         dict_second=json.load(sfile)
 
     c1=[]
