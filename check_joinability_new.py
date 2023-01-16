@@ -20,8 +20,6 @@ logging.basicConfig(filename=LOG_FILE,level=logging.DEBUG)
 
 DEFAULT_DIR = "datasets/"
 DEFAULT_DIMENSIONS_DIR="dimensions/"
-DEFAULT_COD_DIR = "_cod_lists/"
-DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
 NUM_PERM = 256
 NUM_PART = 32
 THRESHOLD = 0.95

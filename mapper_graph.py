@@ -26,7 +26,6 @@ logging.basicConfig(filename=LOG_FILE,level=logging.DEBUG)
 DEFAULT_DIR = "datasets/"
 DEFAULT_DIMENSIONS_DIR="dimensions/"
 DEFAULT_COD_DIR = "_cod_lists/"
-DEFAULT_DIM_CHECK="filter.csv"
 GEO_CONTINENT="./dimensions/Geo.continent"
 DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
 COLUMS_JOINABLE="./joinable.json"
@@ -81,7 +80,7 @@ def map_file(mydir, filename, suffix):
 	# Read the entry for the input file
 	print("Reading source metadata...")
 	with open(DEFAULT_ENTRY_FILE,"r") as entryF:
-		#print(DEFAULT_ENTRY_FILE)
+		
 		entries_decoded=json.load(entryF)
 		entry = entries_decoded[mydir+filename+"."+suffix]
 		#for each column of the data source
