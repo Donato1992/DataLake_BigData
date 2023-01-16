@@ -95,7 +95,7 @@ def map_file(mydir, filename, suffix):
 		for row in q_result:
 			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
 
-		
+
 		for c in range(entry["num_columns"]):
 			
 			
@@ -215,7 +215,6 @@ async def frequency(values,type_dimension):
 		print ("% s : % d : %s"%(key, value,percentual_value))
 		temp.append([value,str(str(percentual_value))])
 		dizionario_key[re.sub('[^0-9a-zA-Z-]', '_', key)]=dict(temp)
-	logging.debug("MIA SOMMA-->"+str(numeber_sum))
 	DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
 
 	# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
@@ -253,7 +252,9 @@ async def all_continent(item,dataframe,percent_value):
 	except KeyError:
 		
 		print("Not Exsits-->"+str(item)+"in Graph")
-		logging.debug("Non Esiste-->"+str(item))
+		
+		# If you want print exception in a log file, decomment the next row
+		#logging.debug("Not Exsists-->"+str(item))
 	
 		#Print used only to see the results of the query	
 		#print(f" {row.x}")		
