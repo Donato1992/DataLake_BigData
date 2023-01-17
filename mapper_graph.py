@@ -8,6 +8,7 @@ import math
 import json
 from datasketch import MinHashLSHEnsemble, MinHash
 import time
+import datetime
 from datetime import datetime
 import rdflib
 import re
@@ -35,12 +36,6 @@ NUM_PART = 32
 THRESHOLD = 0.8
 DICTIONARY_CONTINENT={}
 DICTIONARY_FREQUENCY={}
-DATA=[]
-LABEL=[]
-CONTINET_PERCENT=pd.DataFrame([],
-	[],
-	columns=['Percent']
-	)
 GRAPH = rdflib.Graph()
 GRAPH.parse("knowladge_graph.ttl",format="turtle")
 
@@ -80,63 +75,85 @@ def map_file(mydir, filename, suffix):
 
 	# Read the entry for the input file
 	print("Reading source metadata...")
-	with open(DEFAULT_ENTRY_FILE,"r") as entryF:
+	print("Importing data from "+filename+" ...")
+
+	#read the file
+	df = pd.read_csv(DEFAULT_DIR+filename+".csv", dtype='unicode')
+
+	list_df = list(df)
+	
+	durationsHashing=[]
+	durationsQuery=[]
+
+	#Here we extend the graph in such a way as to obtain logical inferences (Consider creating two files for the two graphs)
+	owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(GRAPH)
+	q_result=GRAPH.query("""SELECT ?x ?y WHERE{{SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?y. ?x property:inLevel level:country} ORDER BY ASC(?X)} UNION {SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?k. ?k property:rollup ?y.?x property:inLevel level:region}ORDER BY ASC(?X)}}""")
+	#In this line I fill the dictionary
+	for row in q_result:
+		DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
+
+	c=0
+	for i in list_df:
 		
-		entries_decoded=json.load(entryF)
-		entry = entries_decoded[mydir+filename+"."+suffix]
-		#for each column of the data source
-		durationsHashing=[]
-		durationsQuery=[]
-
-		#Here we extend the graph in such a way as to obtain logical inferences (Consider creating two files for the two graphs)
-		owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(GRAPH)
-		q_result=GRAPH.query("""SELECT ?x ?y WHERE{{SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?y. ?x property:inLevel level:country} ORDER BY ASC(?X)} UNION {SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?k. ?k property:rollup ?y.?x property:inLevel level:region}ORDER BY ASC(?X)}}""")
-		#In this line I fill the dictionary
-		for row in q_result:
-			DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
-
-
-		for c in range(entry["num_columns"]):
-			
-			
-			m1 = MinHash(NUM_PERM)
-			with open(DEFAULT_COD_DIR+filename+"."+str(c),"r") as col:
-				startTimeHashing = time.time()
-				values=col.read().split("\n")
-				valori=set(values)
-				for v in valori:
-					m1.update(v.encode('utf8'))
-				#m1.update_batch([s.encode('utf8') for s in values])
-				durationHashing = time.time() - startTimeHashing
-				durationsHashing.append(durationHashing)
-				startTimeQuery = time.time()
-				for mapping in lshensemble.query(m1, len(valori)):		
-					print("Column "+str(c)+" -> "+mapping)
-					colums_joinable(mapping,filename,c)
-					logging.debug("Column "+str(c)+" -> "+mapping)
-					asyncio.run(frequency(values,mapping))
-				with open(JSON_FOLDER+filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
-					json.dump(DICTIONARY_FREQUENCY, outfile, 
-                        indent=4,  
-                        separators=(',',': '))
-			
-				durationQuery = time.time() - startTimeQuery
-				durationsQuery.append(durationQuery)
-		sum_durations = sum(durationsHashing)
-		print("Sum durations hashing = "+str(sum_durations))
-		print("Avg durations hashing = "+str((sum_durations/len(durationsHashing))))
-		sum_durations_query = sum(durationsQuery)
-		print("Sum durations query = "+str(sum_durations_query))
-		print("Avg durations query = "+str((sum_durations_query/len(durationsQuery))))
-		logging.debug(DICTIONARY_FREQUENCY)
+		item_values=[]
+		m1 = MinHash(NUM_PERM)
+		startTimeHashing = time.time()
+		column_values = df[i].tolist()
+		column_values = list(filter(None, column_values))
+		for s in column_values:
+			if isinstance(s,str) or not math.isnan(s):
+				item_values.append(str(s))
+		values=item_values
+		valori=set(values)
+		for v in valori:
+			m1.update(v.encode('utf8'))
+		#m1.update_batch([s.encode('utf8') for s in values])
+		durationHashing = time.time() - startTimeHashing
+		durationsHashing.append(durationHashing)
+		startTimeQuery = time.time()
+		for mapping in lshensemble.query(m1, len(valori)):		
+			print("Column "+str(c)+" -> "+mapping)
+			colums_joinable(mapping,filename,c)
+			logging.debug("Column "+str(c)+" -> "+mapping)
+			asyncio.run(frequency(values,mapping))
+		with open(JSON_FOLDER+filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
+			json.dump(DICTIONARY_FREQUENCY, outfile, 
+				indent=4,  
+				separators=(',',': '))
+		c=c+1
+	
+		durationQuery = time.time() - startTimeQuery
+		durationsQuery.append(durationQuery)
+	sum_durations = sum(durationsHashing)
+	print("Sum durations hashing = "+str(sum_durations))
+	print("Avg durations hashing = "+str((sum_durations/len(durationsHashing))))
+	sum_durations_query = sum(durationsQuery)
+	print("Sum durations query = "+str(sum_durations_query))
+	print("Avg durations query = "+str((sum_durations_query/len(durationsQuery))))
+	logging.debug(DICTIONARY_FREQUENCY)
 
 		
 def read_entries():
 	with open(DEFAULT_ENTRY_FILE,"r") as f:
 		data_decoded = json.load(f)
 		print(data_decoded.keys())
-
-
+"""
+def main():
+	if(os.path.exists("datasets/bing_covid-19_data.csv")):
+			path = "datasets/bing_covid-19_data.csv"
+			mydir=path[:path.rfind("/")+1]
+			filename=path[path.rfind("/")+1:path.rfind(".")]
+			suffix=path[path.rfind(".")+1:]
+			if os.path.exists(COLUMS_JOINABLE):
+				map_file(mydir,filename,suffix)
+			else:
+				with open(COLUMS_JOINABLE, 'w') as f_json:
+					print("The json file is created")
+				f_json.close()
+				map_file(mydir,filename,suffix)
+	else:
+		print("Error: no such file.")
+"""			
 def main():
 	# Map single dataset
 	print(sys.argv[1])
@@ -164,33 +181,39 @@ def main():
 	else:
 		print("Error: invalid call. Usage: mapper [list | source sourcename]")
 
+
 async def frequency(values,type_dimension):
 	freq = {}
+	freq_year={}
 	dizionario_key={}
 	# We calculate the percentage for the single item
-	dataframe_continent=continent_analysis(CONTINET_PERCENT)
-	try:
-		date_str = str(item)
-		if(date_str!=""):
-				now = datetime.strptime(date_str, '%Y-%m-%d').date()
-				#year = now.strftime("%Y")
-				#year=int(year)
-				if (now in freq):
-					freq[now] += 1
-				else:
-					freq[now] = 1
-		
-		for key, value in freq.items():
+	dataframe_continent=continent_analysis()
+	for item in values:
+			date_str = str(item)
+			if(date_str!=""):
+				try:
+					now = datetime.strptime(date_str, '%Y-%m-%d').date()
+					year = now.strftime("%Y")
+					year=int(year)
+					if (year in freq_year):
+						freq_year[year] += 1
+					else:
+						freq_year[year] = 1
+				except Exception as e:
+					i=0
+					#print ("Format Date not valid")
+	if freq_year!={}:
+		for key, value in freq_year.items():
 			temp=[]
 			dimension_colum=len(values)
 			percentual_time=str(round(value/dimension_colum*100, 2))+"%"
 			print ("% d : % d : %s"%(key, value, percentual_time))
+			logging.debug("% d : % d : %s"%(key, value, percentual_time))
 			temp.append([value,str(str(percentual_time))])
 			dizionario_key[key]=dict(temp)
-		DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)
-	except Exception as e:
-		print ("Format Date not valid")
-	
+		DICTIONARY_FREQUENCY["rollup_day"]=dict(dizionario_key)
+		dizionario_key={}
+
 	for item in values:
 		if(item!=""):
 			if (item in freq):
@@ -200,7 +223,6 @@ async def frequency(values,type_dimension):
 				freq[item] = 1
 
 	numeber_sum=0
-
 	
 	for key, value in freq.items():
 		temp=[]
@@ -219,10 +241,11 @@ async def frequency(values,type_dimension):
 
 	# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
 	logging.debug(dataframe_continent)
-	print(dataframe_continent)
-	DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
+	#dependency must be maintained because the rollup of dates is different from the rest
+	if(type_dimension!="day"):
+		DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
 
-def continent_analysis(dataframe):
+def continent_analysis():
 	read_continent = open(GEO_CONTINENT, "r")
 	rows=[]
 	for x in read_continent:
