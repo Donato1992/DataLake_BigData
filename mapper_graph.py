@@ -26,9 +26,8 @@ logging.basicConfig(filename=LOG_FILE,level=logging.DEBUG)
 
 DEFAULT_DIR = "datasets/"
 DEFAULT_DIMENSIONS_DIR="dimensions/"
-DEFAULT_COD_DIR = "_cod_lists/"
 GEO_CONTINENT="./dimensions/Geo.continent"
-DEFAULT_ENTRY_FILE = DEFAULT_COD_DIR+"list_sources"
+DEFAULT_ENTRY_FILE = "datasets/list_sources"
 COLUMS_JOINABLE="./joinable.json"
 JSON_FOLDER="datasets_json_map/"
 NUM_PERM = 512
@@ -132,11 +131,7 @@ def map_file(mydir, filename, suffix):
 	print("Avg durations query = "+str((sum_durations_query/len(durationsQuery))))
 	logging.debug(DICTIONARY_FREQUENCY)
 
-		
-def read_entries():
-	with open(DEFAULT_ENTRY_FILE,"r") as f:
-		data_decoded = json.load(f)
-		print(data_decoded.keys())
+
 """
 def main():
 	if(os.path.exists("datasets/bing_covid-19_data.csv")):
