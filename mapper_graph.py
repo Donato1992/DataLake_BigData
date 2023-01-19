@@ -1,9 +1,7 @@
 import sys
 import logging
 import os
-import csv
 import pandas as pd
-from itertools import zip_longest
 import math
 import json
 from datasketch import MinHashLSHEnsemble, MinHash
@@ -36,6 +34,8 @@ THRESHOLD = 0.8
 DICTIONARY_CONTINENT={}
 DICTIONARY_FREQUENCY={}
 GRAPH = rdflib.Graph()
+
+#Upload knowladge_graph
 GRAPH.parse("knowladge_graph.ttl",format="turtle")
 
 def map_file(mydir, filename, suffix):
@@ -59,7 +59,7 @@ def map_file(mydir, filename, suffix):
 		counter=0
 		for row in q_result:
 			# Create the MinHash for the i-th level
-			# encoding = 'ISO-8859-1' in caso estremo ma meglio utilizzare utf-8 in quanto ha molto più caratteri
+			# encoding = 'ISO-8859-1' if UTF-8 not work
 			dimension=str(row.y).split("#")[1]
 			content=str(row.x).split("#")[1]
 			# Update the MinHash
@@ -86,11 +86,15 @@ def map_file(mydir, filename, suffix):
 
 	#Here we extend the graph in such a way as to obtain logical inferences (Consider creating two files for the two graphs)
 	owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(GRAPH)
+
+	#Size selection with respective rollups
 	q_result=GRAPH.query("""SELECT ?x ?y WHERE{{SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?y. ?x property:inLevel level:country} ORDER BY ASC(?X)} UNION {SELECT DISTINCT ?x ?y WHERE{?x property:rollup ?k. ?k property:rollup ?y.?x property:inLevel level:region}ORDER BY ASC(?X)}}""")
+	
 	#In this line I fill the dictionary
 	for row in q_result:
 		DICTIONARY_CONTINENT[str(row.x).split("#")[1]]=str(row.y).split("#")[1]
 
+	#We take the values of the individual columns of the dataset
 	c=0
 	for i in list_df:
 		
@@ -106,7 +110,6 @@ def map_file(mydir, filename, suffix):
 		valori=set(values)
 		for v in valori:
 			m1.update(v.encode('utf8'))
-		#m1.update_batch([s.encode('utf8') for s in values])
 		durationHashing = time.time() - startTimeHashing
 		durationsHashing.append(durationHashing)
 		startTimeQuery = time.time()
@@ -130,25 +133,7 @@ def map_file(mydir, filename, suffix):
 	print("Sum durations query = "+str(sum_durations_query))
 	print("Avg durations query = "+str((sum_durations_query/len(durationsQuery))))
 	logging.debug(DICTIONARY_FREQUENCY)
-
-
-"""
-def main():
-	if(os.path.exists("datasets/bing_covid-19_data.csv")):
-			path = "datasets/bing_covid-19_data.csv"
-			mydir=path[:path.rfind("/")+1]
-			filename=path[path.rfind("/")+1:path.rfind(".")]
-			suffix=path[path.rfind(".")+1:]
-			if os.path.exists(COLUMS_JOINABLE):
-				map_file(mydir,filename,suffix)
-			else:
-				with open(COLUMS_JOINABLE, 'w') as f_json:
-					print("The json file is created")
-				f_json.close()
-				map_file(mydir,filename,suffix)
-	else:
-		print("Error: no such file.")
-"""			
+		
 def main():
 	# Map single dataset
 	print(sys.argv[1])
@@ -195,8 +180,9 @@ async def frequency(values,type_dimension):
 					else:
 						freq_year[year] = 1
 				except Exception as e:
-					i=0
-					#print ("Format Date not valid")
+					# String_print is used only if I want print my exception
+					string_print="Format Date not valid"
+					#print (string_print)
 	if freq_year!={}:
 		for key, value in freq_year.items():
 			temp=[]
