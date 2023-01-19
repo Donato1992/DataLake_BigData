@@ -169,40 +169,42 @@ async def frequency(values,type_dimension):
 	# We calculate the percentage for the single item
 	dataframe_continent=continent_analysis()
 	for item in values:
+		try:
 			date_str = str(item)
 			if(date_str!=""):
-				try:
-					now = datetime.strptime(date_str, '%Y-%m-%d').date()
-					year = now.strftime("%Y")
-					year=int(year)
-					if (year in freq_year):
-						freq_year[year] += 1
-					else:
-						freq_year[year] = 1
-				except Exception as e:
-					# String_print is used only if I want print my exception
-					string_print="Format Date not valid"
-					#print (string_print)
-	if freq_year!={}:
-		for key, value in freq_year.items():
-			temp=[]
-			dimension_colum=len(values)
-			percentual_time=str(round(value/dimension_colum*100, 2))+"%"
-			print ("% d : % d : %s"%(key, value, percentual_time))
-			logging.debug("% d : % d : %s"%(key, value, percentual_time))
-			temp.append([value,str(str(percentual_time))])
-			dizionario_key[key]=dict(temp)
+				now = datetime.strptime(date_str, '%Y-%m-%d').date()
+				
+				year = now.strftime("%Y")
+				year=int(year)
+				if (year in freq_year):
+					freq_year[year] += 1
+					freq[item]+=1
+				else:
+					freq_year[year] = 1
+					freq[item]=1
+
+					
+
+		except Exception as e:
+			if(item!=""):
+				if (item in freq):
+					freq[item] += 1
+
+				else:
+					freq[item] = 1
+
+	for key, value in freq_year.items():
+		temp=[]
+		dimension_colum=len(values)
+		percentual_time=str(round(value/dimension_colum*100, 2))+"%"
+		print ("% d : % d : %s"%(key, value, percentual_time))
+		logging.debug("% d : % d : %s"%(key, value, percentual_time))
+		temp.append([value,str(str(percentual_time))])
+		dizionario_key[key]=dict(temp)
 		DICTIONARY_FREQUENCY["rollup_day"]=dict(dizionario_key)
 		dizionario_key={}
 
-	for item in values:
-		if(item!=""):
-			if (item in freq):
-				freq[item] += 1
-
-			else:
-				freq[item] = 1
-
+		
 	numeber_sum=0
 	
 	for key, value in freq.items():
