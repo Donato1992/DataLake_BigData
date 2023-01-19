@@ -4,12 +4,12 @@
         "covid-hospitalizations": 2,
         "covid_policy_tracker": 2,
         "covid_tracking": 0,
-        "ecdc_cases": 13
+        "ecdc_cases": 12
     },
     "iso2": {
         "bing_covid-19_data": 10,
-        "covid_policy_tracker": 36,
-        "ecdc_cases": 12
+        "covid_policy_tracker": 33,
+        "ecdc_cases": 11
     },
     "iso3": {
         "bing_covid-19_data": 11,
@@ -26,9 +26,12 @@
     },
     "iso_region": {
         "bing_covid-19_data": 14,
-        "covid_tracking": 28
+        "covid_tracking": 27
     },
     "continent": {
-        "ecdc_cases": 10
+        "ecdc_cases": 9
+    },
+    "year": {
+        "ecdc_cases": 3
     }
 }

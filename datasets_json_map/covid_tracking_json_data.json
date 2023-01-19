@@ -1261,6 +1261,14 @@
             "1": "0.0%"
         }
     },
+    "rollup_day": {
+        "2021": {
+            "3960": "17.79%"
+        },
+        "2020": {
+            "18301": "82.21%"
+        }
+    },
     "iso_region": {
         "US-AK": {
             "367": "1.65%"
@@ -1438,7 +1446,7 @@
         "Percent": {
             "Other": null,
             "Africa": null,
-            "Asia": null,
+            "Asia": 1.66,
             "America": 83.63,
             "Europe": null,
             "Oceania": null

@@ -113,16 +113,19 @@ def map_file(mydir, filename, suffix):
 		durationHashing = time.time() - startTimeHashing
 		durationsHashing.append(durationHashing)
 		startTimeQuery = time.time()
-		for mapping in lshensemble.query(m1, len(valori)):		
-			print("Column "+str(c)+" -> "+mapping)
-			colums_joinable(mapping,filename,c)
-			logging.debug("Column "+str(c)+" -> "+mapping)
-			asyncio.run(frequency(values,mapping))
-		with open(JSON_FOLDER+filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
-			json.dump(DICTIONARY_FREQUENCY, outfile, 
-				indent=4,  
-				separators=(',',': '))
-		c=c+1
+		try:
+			for mapping in lshensemble.query(m1, len(valori)):		
+				print("Column "+str(c)+" -> "+mapping)
+				colums_joinable(mapping,filename,c)
+				logging.debug("Column "+str(c)+" -> "+mapping)
+				asyncio.run(frequency(values,mapping))
+			with open(JSON_FOLDER+filename+'_json_data.json', 'w', encoding="utf-8") as outfile:
+				json.dump(DICTIONARY_FREQUENCY, outfile, 
+					indent=4,  
+					separators=(',',': '))
+			c=c+1
+		except Exception as e:
+			logging.debug(e)
 	
 		durationQuery = time.time() - startTimeQuery
 		durationsQuery.append(durationQuery)
@@ -132,7 +135,7 @@ def map_file(mydir, filename, suffix):
 	sum_durations_query = sum(durationsQuery)
 	print("Sum durations query = "+str(sum_durations_query))
 	print("Avg durations query = "+str((sum_durations_query/len(durationsQuery))))
-	logging.debug(DICTIONARY_FREQUENCY)
+	#logging.debug(DICTIONARY_FREQUENCY)
 		
 def main():
 	# Map single dataset
@@ -169,6 +172,8 @@ async def frequency(values,type_dimension):
 	# We calculate the percentage for the single item
 	dataframe_continent=continent_analysis()
 	for item in values:
+		# We use the try and catch in order to handle dates as the frequency of dates is done differently
+		# from the following dimensions
 		try:
 			date_str = str(item)
 			if(date_str!=""):
@@ -193,17 +198,6 @@ async def frequency(values,type_dimension):
 				else:
 					freq[item] = 1
 
-	for key, value in freq_year.items():
-		temp=[]
-		dimension_colum=len(values)
-		percentual_time=str(round(value/dimension_colum*100, 2))+"%"
-		print ("% d : % d : %s"%(key, value, percentual_time))
-		logging.debug("% d : % d : %s"%(key, value, percentual_time))
-		temp.append([value,str(str(percentual_time))])
-		dizionario_key[key]=dict(temp)
-		DICTIONARY_FREQUENCY["rollup_day"]=dict(dizionario_key)
-		dizionario_key={}
-
 		
 	numeber_sum=0
 	
@@ -213,21 +207,35 @@ async def frequency(values,type_dimension):
 		number_percent=round(float(value)/dimension_colum*100, 2)
 		numeber_sum=numeber_sum+number_percent
 		percentual_value=str(number_percent)+"%"
-
+		# With this function we calculate the frequencies per continent
 		task=asyncio.create_task(all_continent(key,dataframe_continent,number_percent))
 		await task
 		
 		print ("% s : % d : %s"%(key, value,percentual_value))
 		temp.append([value,str(str(percentual_value))])
 		dizionario_key[re.sub('[^0-9a-zA-Z-]', '_', key)]=dict(temp)
-	DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)	
+	DICTIONARY_FREQUENCY[type_dimension]=dict(dizionario_key)
+	dizionario_key={}
 
-	# CONTROLLARE SE IL DATAFRAME E' VUOTO NON LO INSERIRE NEL LOG
-	logging.debug(dataframe_continent)
+	if freq_year!={}:
+		for key, value in freq_year.items():
+			temp=[]
+			dimension_colum=len(values)
+			percentual_time=str(round(value/dimension_colum*100, 2))+"%"
+			print ("% d : % d : %s"%(key, value, percentual_time))
+			logging.debug("% d : % d : %s"%(key, value, percentual_time))
+			temp.append([value,str(str(percentual_time))])
+			dizionario_key[key]=dict(temp)
+		DICTIONARY_FREQUENCY["rollup_day"]=dict(dizionario_key)
+		dizionario_key={}	
+
+
 	#dependency must be maintained because the rollup of dates is different from the rest
 	if(type_dimension!="day"):
+		logging.debug(dataframe_continent)
 		DICTIONARY_FREQUENCY["rollup_"+str(type_dimension)]=dict(dataframe_continent.to_dict())
 
+# In this function I build the Initial Dataframe of the Continents
 def continent_analysis():
 	read_continent = open(GEO_CONTINENT, "r")
 	rows=[]
@@ -279,7 +287,8 @@ def colums_joinable(dimension,dataset,colum):
 			dictObj = json.load(fp)
 		except:
 			dictObj=dict()
-		print("File Json Empty")
+			print("File Json Empty")
+		
 
 	if bool(dictObj):
 		try:
@@ -293,14 +302,14 @@ def colums_joinable(dimension,dataset,colum):
 
 	
 	# Verify updated dict
-	print(dictObj)
+	#print(dictObj)
 	
 	with open(COLUMS_JOINABLE, 'w', encoding="utf-8") as json_file:
 		json.dump(dictObj, json_file, 
 							indent=4,  
 							separators=(',',': '))
 	
-	print('Successfully written to the JSON file')
+	#print('Successfully written to the JSON file')
 	
 	
 if __name__ == "__main__":

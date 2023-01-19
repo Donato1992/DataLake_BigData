@@ -562,11 +562,11 @@
     "rollup_iso3": {
         "Percent": {
             "Other": null,
-            "Africa": null,
-            "Asia": null,
-            "America": null,
-            "Europe": null,
-            "Oceania": null
+            "Africa": 15.04,
+            "Asia": 13.12,
+            "America": 38.77,
+            "Europe": 14.4,
+            "Oceania": 2.56
         }
     },
     "day": {
@@ -2794,6 +2794,17 @@
             "312": "0.13%"
         }
     },
+    "rollup_day": {
+        "2020": {
+            "114192": "49.39%"
+        },
+        "2021": {
+            "113880": "49.26%"
+        },
+        "2022": {
+            "3120": "1.35%"
+        }
+    },
     "iso2": {
         "AW": {
             "741": "0.32%"
@@ -3351,11 +3362,11 @@
     "rollup_iso2": {
         "Percent": {
             "Other": null,
-            "Africa": null,
-            "Asia": null,
-            "America": null,
-            "Europe": null,
-            "Oceania": null
+            "Africa": 14.72,
+            "Asia": 13.12,
+            "America": 38.96,
+            "Europe": 14.41,
+            "Oceania": 2.56
         }
     }
 }

@@ -33,6 +33,8 @@ def main():
     dimension_joinable=[]
     # Map single dataset
     check_dataset=[sys.argv[1].split(".csv")[0], sys.argv[2].split(".csv")[0]]
+    #check_dataset=["bing_covid-19_data", "covid-hospitalizations"]
+
     with open('joinable.json', 'r', encoding="utf-8") as outfile:
         data_set=json.load(outfile)
 
@@ -47,7 +49,6 @@ def main():
     c2=[] 
     
     for type_dimension in data_set.keys():
-        print(type_dimension)
         try:
             # Utilizzo l'or per far si che non va in errore qualora il "valore" che vede durante l'if nel caso in cui
             # è uno zero non va in false
@@ -59,6 +60,7 @@ def main():
                 else:
                     c1.insert(1,data_set[type_dimension][check_dataset[0]])
                     c2.insert(1,data_set[type_dimension][check_dataset[1]])
+                    #check_joinability("bing_covid-19_data.csv", "covid-hospitalizations.csv", c1,c2)
                     check_joinability(sys.argv[1], sys.argv[2], c1,c2)
                 n_first_keys=len(list(dict_first[type_dimension].keys()))
                 n_second_keys=len(list(dict_second[type_dimension].keys()))
@@ -80,7 +82,8 @@ def main():
                                 #print("joinable in "+str(x_key))
                                 logging.debug("joinable in "+str(x_key))
                         except Exception as e:
-                            print("Errore"+str(e.args))
+                            e
+                            #print("Errore"+str(e.args))
                     flag_rollup=True
                     dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0],flag_rollup)
                     dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1],flag_rollup)
@@ -100,7 +103,8 @@ def main():
                                 #print("joinable in "+str(x_key))
                                 logging.debug("joinable in "+str(x_key))
                         except Exception as e:
-                            print("Errore"+str(e.args))
+                            e
+                            #print("Errore"+str(e.args))
                     flag_rollup=True
                     dataset_value_1=check_argument(dict_first,type_dimension,x_key,check_dataset[0],flag_rollup)
                     dataset_value_2=check_argument(dict_second,type_dimension,x_key,check_dataset[1],flag_rollup)
@@ -109,7 +113,9 @@ def main():
                     
                 dimension_joinable.append(type_dimension)
         except Exception as e:
-            print("Not present "+str(e.args)+" in dimension joinable "+str(type_dimension))
+            e
+            #If you want to see which data is in one dataset and not the other, uncomment the line below
+            #print("Not present "+str(e.args)+" in dimension joinable "+str(type_dimension))
 
 def check_argument(dict_check,dimensions,keys,datasets,rollup):
     try:
@@ -123,7 +129,8 @@ def check_argument(dict_check,dimensions,keys,datasets,rollup):
 
         #return list(dict_check[dimensions][keys].values())[0]
     except Exception as e:
-        print("Not present the argument "+str(e.args[0])+" in dataset "+str(datasets))
+        e
+        #print("Not present the argument "+str(e.args[0])+" in dataset "+str(datasets))
 
 def check_rollup(dataset_value_1,dataset_value_2,dimension):
     lenght_rollup=range(len(list(dataset_value_1.values())))
@@ -191,11 +198,11 @@ def check_joinability(dataset_1,dataset_2, c1,c2):
         lshensemble = MinHashLSHEnsemble(threshold=q, num_perm=NUM_PERM, num_part=NUM_PART)
         lshensemble.index([("s1",m1,len(df1_total))])
 		#lshensemble.index([("s5",m5,len(df5_total))])
-        print("First = "+str(first)+" Last: "+str(last)+"\n")
+        #print("First = "+str(first)+" Last: "+str(last)+"\n")
 		# Check if source 1 is joinable to source 5. Then it needs to be done the other way round, between s5 and s1. The highest of the two final values is kept.
         for k in lshensemble.query(m2,len(df2_total)):
-            print(k)
-            print("Result:\n\tsources joinable with containment > "+str(q))
+            #print(k)
+            #print("Result:\n\tsources joinable with containment > "+str(q))
             found = True
         if(found):
             first = q

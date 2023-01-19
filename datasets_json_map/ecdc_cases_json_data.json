@@ -1051,6 +1051,32 @@
             "67": "0.11%"
         }
     },
+    "rollup_day": {
+        "2020": {
+            "61833": "99.89%"
+        },
+        "2019": {
+            "67": "0.11%"
+        }
+    },
+    "year": {
+        "2020": {
+            "61833": "99.89%"
+        },
+        "2019": {
+            "67": "0.11%"
+        }
+    },
+    "rollup_year": {
+        "Percent": {
+            "Other": null,
+            "Africa": null,
+            "Asia": null,
+            "America": null,
+            "Europe": null,
+            "Oceania": null
+        }
+    },
     "country": {
         "Afghanistan": {
             "340": "0.55%"
@@ -1698,7 +1724,7 @@
     "rollup_country": {
         "Percent": {
             "Other": null,
-            "Africa": 21.62,
+            "Africa": 22.0,
             "Asia": 22.62,
             "America": 15.68,
             "Europe": 22.8,
@@ -2349,11 +2375,11 @@
     "rollup_iso2": {
         "Percent": {
             "Other": null,
-            "Africa": null,
-            "Asia": null,
-            "America": null,
-            "Europe": null,
-            "Oceania": null
+            "Africa": 21.33,
+            "Asia": 22.14,
+            "America": 15.87,
+            "Europe": 22.17,
+            "Oceania": 2.24
         }
     },
     "iso3": {
@@ -2997,11 +3023,11 @@
     "rollup_iso3": {
         "Percent": {
             "Other": null,
-            "Africa": null,
-            "Asia": null,
-            "America": null,
-            "Europe": null,
-            "Oceania": null
+            "Africa": 21.76,
+            "Asia": 21.54,
+            "America": 15.87,
+            "Europe": 22.81,
+            "Oceania": 2.24
         }
     },
     "continent": {
@@ -3022,6 +3048,16 @@
         },
         "Other": {
             "64": "0.1%"
+        }
+    },
+    "rollup_continent": {
+        "Percent": {
+            "Other": null,
+            "Africa": null,
+            "Asia": null,
+            "America": null,
+            "Europe": null,
+            "Oceania": null
         }
     }
 }

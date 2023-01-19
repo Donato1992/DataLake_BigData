@@ -1,0 +1,63 @@
+DEBUG:root:Column 0 -> day
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root: 2020 :  61833 : 99.89%
+DEBUG:root: 2019 :  67 : 0.11%
+DEBUG:root:Column 3 -> year
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root:        Percent
+Other      None
+Africa     None
+Asia       None
+America    None
+Europe     None
+Oceania    None
+DEBUG:root:Column 6 -> country
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root:        Percent
+Other      None
+Africa     22.0
+Asia      22.62
+America   15.68
+Europe     22.8
+Oceania    2.22
+DEBUG:root:Column 7 -> iso2
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root:        Percent
+Other      None
+Africa    21.33
+Asia      22.14
+America   15.87
+Europe    22.17
+Oceania    2.24
+DEBUG:root:Column 8 -> iso3
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root:        Percent
+Other      None
+Africa    21.76
+Asia      21.54
+America   15.87
+Europe    22.81
+Oceania    2.24
+DEBUG:root:float division by zero
+DEBUG:root:Column 9 -> continent
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root:        Percent
+Other      None
+Africa     None
+Asia       None
+America    None
+Europe     None
+Oceania    None
+DEBUG:root:Column 11 -> iso2
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root:        Percent
+Other      None
+Africa    21.33
+Asia      22.14
+America   15.87
+Europe    22.17
+Oceania    2.24
+DEBUG:root:Column 12 -> day
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:root: 2020 :  61833 : 99.89%
+DEBUG:root: 2019 :  67 : 0.11%
