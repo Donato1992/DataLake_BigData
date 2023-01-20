@@ -36,7 +36,7 @@ DICTIONARY_FREQUENCY={}
 GRAPH = rdflib.Graph()
 
 #Upload knowladge_graph
-GRAPH.parse("knowladge_graph.ttl",format="turtle")
+GRAPH.parse("knowledge_graph.ttl",format="turtle")
 
 def map_file(mydir, filename, suffix):
 	print("Initializing the mapper...")

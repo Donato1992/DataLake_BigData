@@ -386,7 +386,7 @@ def main():
     #owlrl.DeductiveClosure(owlrl.CombinedClosure.RDFS_OWLRL_Semantics,datatype_axioms=True).expand(graph)
 
 
-    graph.serialize(destination = "knowladge_graph.ttl", format = "turtle")
+    graph.serialize(destination = "knowledge_graph.ttl", format = "turtle")
 
 
 
