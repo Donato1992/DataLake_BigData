@@ -23,5 +23,5 @@ Il progetto è stato suddiviso in cartelle e file su cui consigliamo di mantener
     - python3 check_joinability_new.py [nome_dataset_1].csv [nome_dataset_2].csv
 
 
-* Di Zinno Donato
-* Tigano Costantino
+Di Zinno Donato
+Tigano Costantino
