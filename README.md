@@ -3,5 +3,5 @@
 Progetto sui Data Lake
 
 
-* Di Zinno Donato
-* Tigano Costantino
+> Di Zinno Donato
+> Tigano Costantino
